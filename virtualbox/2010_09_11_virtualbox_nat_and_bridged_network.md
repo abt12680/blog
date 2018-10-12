@@ -30,7 +30,7 @@ VBoxManage showvminfo "VM name" --machinereadable
 让 VMachine 使用 Host 的 DNS 来解析域名。
 VBoxManage modifyvm "VM name" --natdnshostresolver1 on
 
-但是，vm1 和 vm2 直接是无法访问的，因为每个独立的 vm 都是一个独立的 NAT。
+但是，vm1 和 vm2 之间是无法访问的，因为每个独立的 vm 都是一个独立的 NAT。
 ```
 ## Bridged Network
 
