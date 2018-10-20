@@ -15,16 +15,24 @@ SKIP_DIRS = ('poem', 'html-gen',)
 
 def getFiles(pattern):
 	fromPath = path.join(FROM_PATH, pattern)
-	return glob.glob(fromPath)
+	files = glob.glob(fromPath)
 
-def genMarkdownToHTML(makedownFiles):
-	# copy file to dest directory
-	for filePath in markdownFiles:
+	result = []
+	for filePath in files:
 		sourceDir, fileName = filePath.split(os.sep)[-2:]
 		if sourceDir in SKIP_DIRS:
 			continue
 
+		result.append(filePath)
+
+	return result
+
+def genMarkdownToHTML(makedownFiles):
+	# copy file to dest directory
+	for filePath in markdownFiles:
 		print 'processing', filePath
+
+		sourceDir, fileName = filePath.split(os.sep)[-2:]
 
 		# make sure the dest dir is exists
 		destDir = path.join(TO_PATH, sourceDir)
