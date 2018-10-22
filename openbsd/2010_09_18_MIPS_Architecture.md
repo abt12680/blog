@@ -1,4 +1,4 @@
-# MIPS - Simple Architecture
+# [MIPS] Simple Architecture
 
 mips构架的简化版，其中 Register File 就是一堆 registers。
 
