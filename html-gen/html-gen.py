@@ -11,11 +11,21 @@ import markdown
 
 FROM_PATH = path.abspath('../')
 TO_PATH   = path.abspath('../../kasicass.github.io')
-SKIP_DIRS = ('html-gen',)
+SKIP_DIRS = ('poem', 'html-gen',)
 
 def getFiles(pattern):
 	fromPath = path.join(FROM_PATH, pattern)
-	return glob.glob(fromPath)
+	files = glob.glob(fromPath)
+
+	result = []
+	for filePath in files:
+		sourceDir, fileName = filePath.split(os.sep)[-2:]
+		if sourceDir in SKIP_DIRS:
+			continue
+
+		result.append(filePath)
+
+	return result
 
 def genMarkdownToHTML(makedownFiles):
 	# copy file to dest directory
@@ -23,8 +33,6 @@ def genMarkdownToHTML(makedownFiles):
 		print 'processing', filePath
 
 		sourceDir, fileName = filePath.split(os.sep)[-2:]
-		if sourceDir in SKIP_DIRS:
-			continue
 
 		# make sure the dest dir is exists
 		destDir = path.join(TO_PATH, sourceDir)
