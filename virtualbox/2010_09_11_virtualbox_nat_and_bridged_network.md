@@ -3,12 +3,12 @@
 ## NAT 结构
 
 ```
-                Internet
+                  Internet
                      |
-                  Host
+                    Host
                      |
    |------------------------|-------------- ....
-VMachine1        VMachine2
+VMachine1                VMachine2
 
 Host, 192.168.0.76
 VMachine1, 10.0.2.15
@@ -36,10 +36,10 @@ VBoxManage modifyvm "VM name" --natdnshostresolver1 on
 
 ```
 VMachine 相当于与 host 处于同一网络。
-                         Internet
+                           Internet
                               |
    |---------------|-------------------|----------- ...
-Host        VMachine1        VMachine2
+Host            VMachine1           VMachine2
 
 Host, 192.168.0.76
 VMachine1, 192.168.0.15
