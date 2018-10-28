@@ -58,12 +58,42 @@ def genMarkdownToHTML(makedownFiles):
 		with open(destPath, 'w') as f:
 			f.write(html.encode('utf-8'))
 
+# link to generated .html
 def genIndexFile(markdownFiles):
 	print 'generating index.html'
 
 	mds = [filePath.split(os.sep)[-2:] for filePath in markdownFiles]
 	mds = [path.join(*m) for m in mds]
 	hrefs = [m.replace('.md', '.html') for m in mds]
+
+	mds = ['* ['+m+']['+str(i+1)+']' for i, m in enumerate(mds)]
+	hrefs = ['['+str(i+1)+']:'+h for i, h in enumerate(hrefs)]
+
+	html = '# kasicass\' blog\n' + '\n'.join(mds) + '\n' + '\n'.join(hrefs)
+	html = markdown.markdown(html.decode('utf-8'))
+	html = '''
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>''' + html + '''
+</body>
+</html>
+'''
+
+	indexFile = path.join(TO_PATH, 'index.html')
+	with open(indexFile, 'w') as f:
+		f.write(html.encode('utf-8'))
+
+# linke to github's repo .md
+def genIndexFile2(markdownFiles):
+	print 'generating index.html'
+
+	pre = 'https://github.com/kasicass/blog/blob/master/'
+
+	mds = [filePath.split(os.sep)[-2:] for filePath in markdownFiles]
+	mds = [path.join(*m).replace('\\', '/') for m in mds]
+	hrefs = [pre + m for m in mds]
 
 	mds = ['* ['+m+']['+str(i+1)+']' for i, m in enumerate(mds)]
 	hrefs = ['['+str(i+1)+']:'+h for i, h in enumerate(hrefs)]
@@ -91,7 +121,7 @@ def copyFiles(fileList):
 		toPath = fromPath.replace(FROM_PATH, TO_PATH)
 		copyfile(fromPath, toPath)
 
-if __name__ == '__main__':
+def main():
 	# md => html
 	markdownFiles = getFiles('*/*.md')
 	genMarkdownToHTML(markdownFiles)
@@ -101,3 +131,10 @@ if __name__ == '__main__':
 	pngFiles = getFiles('*/*.png')
 	copyFiles(pngFiles)
 
+def main2():
+	# only generate index.html
+	markdownFiles = getFiles('*/*.md')
+	genIndexFile2(markdownFiles)
+
+if __name__ == '__main__':
+	main2()
