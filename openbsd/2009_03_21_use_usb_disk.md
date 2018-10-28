@@ -16,7 +16,7 @@ sd2: 1906MB, 243 cyl, 255 head, 63 sec, 512 bytes/sec, 3905407 sec total
 注意看 sd2 那个，说明 /dev/sd2i 是对应的U盘的 device。只需：
 
 ```
-mount_msdos /dev/sd2 /mnt/usb
+mount_msdos /dev/sd2i /mnt/usb
 ```
 
 即可。
