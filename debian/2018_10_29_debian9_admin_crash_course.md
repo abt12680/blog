@@ -1,4 +1,4 @@
-# Debian 9.5 Admin Crash Course
+# Debian 9.5 Crash Course
 
 ## 安装系统
 
