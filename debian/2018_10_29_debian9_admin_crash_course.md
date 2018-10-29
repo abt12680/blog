@@ -111,12 +111,29 @@ LimitNPROC=64000
 ## 启用 mysql
 
 ```
-# aptitude install mysql-server 
+# aptitude install mysql-server
 ```
 
 mysql配置文件
 
 * /etc/mysql/my.cnf
+
+默认dbpath
+
+* /var/lib/mysql
+
+debian9开始，mysql使用系统的认证。让某个 user 可以通过 mysql client 访问 mysql-server，需要：
+```
+# su
+# mysql
+
+> USE mysql;
+> CREATE USER 'YOUR_SYSTEM_USER'@'localhost' IDENTIFIED VIA unix_socket;
+> exit;
+```
+
+* 参考，[https://wiki.debian.org/MySql][5]
+* 重置密码，[https://www.vultr.com/docs/reset-mysql-root-password-on-debian-ubuntu][6]
 
 ## vim & tmux 的基本配置
 
@@ -145,3 +162,5 @@ bind r source ~/.tmux.conf\; display "/.tmux.conf sourced!"
 [2]:http://mirrors.163.com/debian/
 [3]:http://www.freedesktop.org/wiki/Software/systemd/
 [4]:https://docs.mongodb.com/manual/reference/ulimit/#linux-distributions-using-systemd
+[5]:https://wiki.debian.org/MySql
+[6]:https://www.vultr.com/docs/reset-mysql-root-password-on-debian-ubuntu
