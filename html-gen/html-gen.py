@@ -72,7 +72,7 @@ def genIndexFile(markdownFiles):
 			result.append('[' + str(i) + ']:' + url)
 			i += 1
 
-	print '\n'.join(result)
+	# print '\n'.join(result)
 
 	# .md => .html
 	html = '# kasicass\' blog\n' + '\n'.join(result)
