@@ -1,6 +1,6 @@
 # 安装 Debian 9.5
 
-下载 small cd
+下载 netinst.iso
 
 * [http://mirrors.163.com/debian-cd/9.5.0/amd64/iso-cd/][1]
 
