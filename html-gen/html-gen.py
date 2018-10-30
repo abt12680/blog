@@ -51,10 +51,16 @@ def genIndexFile(markdownFiles):
 	lastTag = None
 	for tag, f in tag_files:
 		if tag != lastTag:
+			if lastTag != None:
+				# reverse sort by date
+				mds[lastTag].reverse()
+				hrefs[lastTag].reverse()
+			
 			tags.append(tag)
 			lastTag    = tag
 			mds[tag]   = []
 			hrefs[tag] = []
+
 		mds[tag].append(f)
 		hrefs[tag].append(pre + path.join(tag, f).replace('\\', '/'))
 
