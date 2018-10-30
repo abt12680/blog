@@ -17,7 +17,7 @@ def getFiles(pattern):
 
 	result = []
 	for filePath in files:
-		sourceDir, fileName = filePath.split(os.sep)[-2:]
+		sourceDir, _ = filePath.split(os.sep)[-2:]
 		if sourceDir in SKIP_DIRS:
 			continue
 
@@ -96,7 +96,6 @@ def genIndexFile(markdownFiles):
 	indexFile = path.join(TO_PATH, 'index.html')
 	with open(indexFile, 'w') as f:
 		f.write(html.encode('utf-8'))
-
 
 def main():
 	# only generate index.html
