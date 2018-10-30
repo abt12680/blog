@@ -84,7 +84,7 @@ ObjectId('5aea56b9dafe745a9c758bfe')
 
 ## ObjectID 格式
 
-![](2018_10_31_03_use_pymongo_image_01.png)
+![](03_use_pymongo_image_01.png)
 
 ```python
 >>>> c.find_one({"name":"kk"})
