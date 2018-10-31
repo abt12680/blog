@@ -10,21 +10,21 @@
 
 void *mythr(void *arg)
 {
-        printf("hello world! %d\n", (int)arg);
+    printf("hello world! %d\n", (int)arg);
 
-        // 这里写 pthread_exit((void *) 4); 和下面的效果一样
-        return (void *)4;
+    // 这里写 pthread_exit((void *) 4); 和下面的效果一样
+    return (void *)4;
 }
 
 int main()
 {
-        pthread_t pid;
-        void *ret;
+    pthread_t pid;
+    void *ret;
 
-        pthread_create(&pid, NULL, mythr, (void *)3);   // 第二个参数是 attr
-        pthread_join(pid, &ret);   // 等待线程结束，第二个参数是 return_value
-        printf("done! = %d\n", (int)ret);
-        return 0;
+    pthread_create(&pid, NULL, mythr, (void *)3);   // 第二个参数是 attr
+    pthread_join(pid, &ret);   // 等待线程结束，第二个参数是 return_value
+    printf("done! = %d\n", (int)ret);
+    return 0;
 }
 ```
 
@@ -42,29 +42,29 @@ done! = 4
 
 void mycleanup(void *arg)
 {
-        printf("cleaner = %d\n", (int)arg);
+    printf("cleaner = %d\n", (int)arg);
 }
 
 void *mythr(void *arg)
 {
-        pthread_cleanup_push(mycleanup, (void *)1);
-        pthread_cleanup_push(mycleanup, (void *)2);
+    pthread_cleanup_push(mycleanup, (void *)1);
+    pthread_cleanup_push(mycleanup, (void *)2);
 
-        pthread_cleanup_pop(1);         // 1 - exec cleanup func, 0 - no exec
+    pthread_cleanup_pop(1);         // 1 - exec cleanup func, 0 - no exec
 
-        printf("hello world! %d\n", (int)arg);
-        return (void *)4;
+    printf("hello world! %d\n", (int)arg);
+    return (void *)4;
 }
 
 int main()
 {
-        pthread_t pid;
-        void *ret;
+    pthread_t pid;
+    void *ret;
 
-        pthread_create(&pid, NULL, mythr, (void *)3);
-        pthread_join(pid, &ret);
-        printf("done! = %d\n", (int)ret);
-        return 0;
+    pthread_create(&pid, NULL, mythr, (void *)3);
+    pthread_join(pid, &ret);
+    printf("done! = %d\n", (int)ret);
+    return 0;
 }
 ```
 
