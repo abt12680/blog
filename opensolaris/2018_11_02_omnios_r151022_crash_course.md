@@ -19,6 +19,7 @@ See Solaris Runs~
 
 没有 OpenIndiana 的 DNS 问题，赞。
 
+
 ## 软件安装
 
 相比 OpenIndiana，OmniOS 的 package 少了很多。不过少一些更好，找起来更方便。
@@ -50,8 +51,44 @@ basename   file   usr/gnu/share/terminfo/t/tmux pkg:/library/ncurses@6.0.2017072
 basename   file   usr/gnu/share/terminfo/t/tmux pkg:/library/ncurses@6.1.20180428-0.151022
 basename   file   usr/bin/tmux                  pkg:/terminal/tmux@2.3-0.151022
 pkg.fmri   set    omnios/terminal/tmux          pkg:/terminal/tmux@2.3-0.151022
+
 # pkg install /terminal/tmux
 bla ... bla ...
+```
+
+
+## 常用软件
+
+```
+# pkg install /terminal/tmux
+# pkg install /developer/gcc51
+# pkg install /developer/build/autoconf
+# pkg install /developer/build/automake
+# pkg install /developer/build/libtool
+```
+
+
+## vim & tmux 的基本配置
+
+```
+$ cat ~/.vimrc
+" basic
+syn on
+set tabstop=4
+set nobackup
+set background=dark
+colorscheme desert
+set number
+
+$ cat ~/.tmux.conf
+# hjkl pane traversal
+bind h select-pan -L
+bind j select-pan -D
+bind k select-pan -U
+bind l select-pan -R
+
+# reload me
+bind r source ~/.tmux.conf\; display "/.tmux.conf sourced!"
 ```
 
 
