@@ -93,6 +93,13 @@ bind l select-pan -R
 bind r source ~/.tmux.conf\; display "/.tmux.conf sourced!"
 ```
 
+## 问题
+
+* DNS的问题
+* gcc 找不到 stdlib.h, stdio.h 这些基本库
+* 玩不动，换一个 OpenSolaris 的发布版试试 -- [OmniOSce][3]
+
+
 ## 附录1：手工配置网络
 
 nwam 是自动配置网络的服务。关闭之，切换到手动配置。（关闭 nwam，现有网卡就全部不工作了）
@@ -144,3 +151,4 @@ e1000g0: flags=1000842<BROADCAST,RUNNING,MULTICAST,IPv4> mtu 1500 index 4
 
 [1]:http://dlc.openindiana.org/isos/hipster/latest/OI-hipster-text-20181023.iso
 [2]:https://www.openindiana.org/packages/
+[3]:https://omniosce.org/

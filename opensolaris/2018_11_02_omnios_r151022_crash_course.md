@@ -1,0 +1,62 @@
+# OmniOSce r151022 Crash Course
+
+## 安装系统
+
+[官网][2] 下载 ISO，图形化安装，很简单。
+
+* [https://downloads.omniosce.org/media/lts/omniosce-r151022s.iso][1]
+
+选完 time zone，系统安装完后，选择 "Configure the installed OmniOS system"
+
+* 设置网络
+* 设置 root 密码
+* 创建新用户 
+* 启用 SSH Server
+
+See Solaris Runs~
+
+![](2018_11_02_omnios_r151022_crash_course_image_01.png)
+
+没有 OpenIndiana 的 DNS 问题，赞。
+
+## 软件安装
+
+相比 OpenIndiana，OmniOS 的 package 少了很多。不过少一些更好，找起来更方便。
+
+OmniOS 将 package 总体上分为 core 和 extra 两部分。core 只放编译整个OS所需要的内容。
+
+ * package 介绍，[https://omniosce.org/info/ipsrepos.html][3]
+ * core，[https://pkg.omniosce.org/r151022/core/en/catalog.shtml][4]
+ * extra，[https://pkg.omniosce.org/r151022/extra/en/catalog.shtml][5]
+
+看看默认安装的 package
+
+```
+# pkg list
+NAME (PUBLISHER)                                  VERSION                    IFO
+SUNWcs                                            0.5.11-0.151022            i--
+SUNWcsd                                           0.5.11-0.151022            i--
+compatibility/ucb                                 0.5.11-0.151022            i--
+compress/bzip2                                    1.0.6-0.151022             i--
+...
+```
+
+基本操作，search & install
+
+```
+# pkg search tmux
+INDEX      ACTION VALUE                         PACKAGE
+basename   file   usr/gnu/share/terminfo/t/tmux pkg:/library/ncurses@6.0.20170722-0.151022
+basename   file   usr/gnu/share/terminfo/t/tmux pkg:/library/ncurses@6.1.20180428-0.151022
+basename   file   usr/bin/tmux                  pkg:/terminal/tmux@2.3-0.151022
+pkg.fmri   set    omnios/terminal/tmux          pkg:/terminal/tmux@2.3-0.151022
+# pkg install /terminal/tmux
+bla ... bla ...
+```
+
+
+[1]:https://downloads.omniosce.org/media/lts/omniosce-r151022s.iso
+[2]:https://omniosce.org/
+[3]:https://omniosce.org/info/ipsrepos.html
+[4]:https://pkg.omniosce.org/r151022/core/en/catalog.shtml
+[5]:https://pkg.omniosce.org/r151022/extra/en/catalog.shtml
