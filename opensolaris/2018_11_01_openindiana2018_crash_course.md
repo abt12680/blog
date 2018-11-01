@@ -63,6 +63,13 @@ basename        link   usr/bin/python3                               pkg:/runtim
 ```
 
 
+## 常用软件
+
+```
+# pkg install pkg:/runtime/python-35@3.5.6-2018.0.0.0
+# pkg install pkg:/developer/gcc-8@8.2.0-2018.0.0.2
+```
+
 ## vim & tmux 的基本配置
 
 ```
