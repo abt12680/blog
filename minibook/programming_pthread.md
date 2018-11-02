@@ -1,4 +1,4 @@
-# Programming Pthread
+# Programming PThreads
 
 pthread 标准中定义的所有函数，总算给介绍完了。此文做一个总体索引吧。
 
