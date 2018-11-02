@@ -1,5 +1,32 @@
-TODO
- * mongodb/2018_10_31_01_install_mongodb.md，这类读书笔记
-   生成 index.html 的时候，去掉 2018_10_31 这个日期。
+==== TODO ====
 
-DONE
+ * zeromq, http://kasicass.blog.163.com/blog/static/39561920101118112913724/
+ * svn, http://kasicass.blog.163.com/blog/static/3956192012688920408/
+ * git, context needs update, http://kasicass.blog.163.com/blog/static/39561920133494116606/
+ * fatengine, 
+ * shell, http://kasicass.blog.163.com/blog/static/39561920106135629645/
+ * net, http://kasicass.blog.163.com/blog/#m=0&t=1&c=fks_087066081082087074093074085074081080080074
+ * game-dev, http://kasicass.blog.163.com/blog/#m=0&t=1&c=fks_087065087083082075080087086095087095084069085095
+
+ * html-gen, weixin image
+ * html-gen, rss/atom feed
+
+==== DONE ====
+
+2018.11.03
+ * drop all [net_ACE]
+ * drop all [net_libev]
+ * drop all [net_libevent]
+ * drop all [net_Ice]
+ * drop [net_Orleans]
+ * drop [net_Twisted]
+ * drop [net_RakNet]
+
+2018.11.02
+ * [nginx] is moved.
+ * [pthread] is moved.
+ * [c] is moved. (remove all C++ articles)
+ * html-gen, minibook/timeline supported
+
+2018.10.29
+ * [openbsd] is moved.
