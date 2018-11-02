@@ -53,7 +53,10 @@ pthread 函数返回值的规则，请先看此文。
 
 ## FreeBSD 相关
 
-pthread 还是和实现相关的。
+ * [gcc 关于 -pthread 和 -lpthread 的区别][18]
+ * [FreeBSD 的几个pthread的实现：libc_r / libkse / libthr][19]
+ * [libthr 分析 (1) -- libthr 如何与 libc 合作][20]
+ * [libthr 分析 (2) -- thread 的生与死][21]
 
 [1]:https://github.com/kasicass/blog/blob/master/pthread/2009_12_30_func_return_value.md
 [2]:https://github.com/kasicass/blog/blob/master/pthread/2009_12_25_thread_create_and_exit.md
@@ -72,4 +75,7 @@ pthread 还是和实现相关的。
 [15]:https://github.com/kasicass/blog/blob/master/pthread/2009_12_29_thread_concurrency.md
 [16]:https://github.com/kasicass/blog/blob/master/pthread/2010_01_06_barrier.md
 [17]:https://github.com/kasicass/blog/blob/master/pthread/2010_01_08_spin_lock.md
-
+[18]:https://github.com/kasicass/blog/blob/master/freebsd/2009_10_24_gcc_pthread.md
+[19]:https://github.com/kasicass/blog/blob/master/freebsd/2009_12_15_freebsd8_remove_KSE.md
+[20]:https://github.com/kasicass/blog/blob/master/freebsd/2010_12_03_how_libthr_work_with_libc.md
+[21]:https://github.com/kasicass/blog/blob/master/freebsd/2010_12_03_libthr_thread_lifecycle.md
