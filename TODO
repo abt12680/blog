@@ -10,6 +10,7 @@
 
  * html-gen, weixin image
  * html-gen, rss/atom feed
+ * html-gen, a crontab, auto run html-gen
 
 ==== DONE ====
 
