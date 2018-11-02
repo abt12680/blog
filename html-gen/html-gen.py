@@ -95,7 +95,8 @@ def genIndexFile(markdownFiles):
 	for tag in tags:
 		result.append('## ' + tag)
 		for f in mds[tag]:
-			result.append('* [' + f + '][' + str(i) + ']')
+			display_f = f.replace('_', ' ') # '2018_12_02' => '2018 12 02'
+			result.append('* [' + display_f + '][' + str(i) + ']')
 			i += 1
 	
 	i = 1
