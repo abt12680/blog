@@ -85,9 +85,9 @@ def genIndexFile(markdownFiles):
 	tags.insert(1, tag)
 	mds[tag]   = []
 	hrefs[tag] = []
-	for _, f in timeline_tag_files:
+	for t, f in timeline_tag_files:
 		mds[tag].append(f)
-		hrefs[tag].append(pre + path.join(tag, f).replace('\\', '/'))
+		hrefs[tag].append(pre + path.join(t, f).replace('\\', '/'))
 
 	# generate .md
 	result = []
