@@ -4,12 +4,14 @@
 
 import os
 import glob
+import copy
 from os import path
 import markdown
 
 FROM_PATH = path.abspath('../')
 TO_PATH   = path.abspath('../../kasicass.github.io')
 SKIP_DIRS = ('poem', 'html-gen',)
+TIMELINE_COUNT = 5 # show recent 5 articles
 
 def getFiles(pattern):
 	fromPath = path.join(FROM_PATH, pattern)
@@ -45,7 +47,7 @@ def genIndexFile(markdownFiles):
 	mds   = {}
 	hrefs = {}
 
-	# [(tag, file), ...]
+	# [(tag, file), ('freebsd', '2018_09_23_name.md')...]
 	tag_files = [filePath.split(os.sep)[-2:] for filePath in markdownFiles]
 
 	lastTag = None
@@ -68,6 +70,26 @@ def genIndexFile(markdownFiles):
 		mds[tag].append(f)
 		hrefs[tag].append(pre + path.join(tag, f).replace('\\', '/'))
 
+	# 'minibook' to first
+	n = tags.index('minibook')
+	tags.pop(n)
+	tags.insert(0, 'minibook')
+
+	# timeline - recent 5 articles
+	timeline_tag_files = copy.copy(tag_files)
+	timeline_tag_files = [(t, f) for t, f in timeline_tag_files if t != 'minibook']
+	timeline_tag_files.sort(lambda a, b: cmp(a[1], b[1]), reverse=True)
+	timeline_tag_files = timeline_tag_files[:TIMELINE_COUNT]
+
+	tag = 'timeline'
+	tags.insert(1, tag)
+	mds[tag]   = []
+	hrefs[tag] = []
+	for _, f in timeline_tag_files:
+		mds[tag].append(f)
+		hrefs[tag].append(pre + path.join(tag, f).replace('\\', '/'))
+
+	# generate .md
 	result = []
 	i = 1
 	for tag in tags:
