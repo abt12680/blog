@@ -59,12 +59,32 @@ bla ... bla ...
 
 ## 常用软件
 
+/developer/sunstudio12.1
+
+* gcc 找不到的 stdio.h, sys/socket.h 都在这里
+
+```
+$ /opt/sunstudio12.1/bin/CC test.c
+$ ./a.out
+```
+
+/developer/illumos-tools 用来 build illumos kernel 的。
+
+* Summary: Single meta-package containing required tools to build illumos
+
+```
+# pkg install /developer/illumos-tools
+```
+
 ```
 # pkg install /terminal/tmux
 # pkg install /developer/gcc51
 # pkg install /developer/build/autoconf
 # pkg install /developer/build/automake
 # pkg install /developer/build/libtool
+# pkg install /developer/versioning/git
+
+# pkg install /library/libffi
 ```
 
 
