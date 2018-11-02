@@ -2,9 +2,9 @@
 
 ## 改进前
 
-只有一个 MainThread, produce/compress/crypt/send packet 都在此线程中。
-
-当玩家增多，数据量增大后，MainThread 明显花费了大量 cpu 在 compress, crypt, send 中。玩法逻辑处理不过来，导致玩家感觉“卡”。
+ * 只有一个 MainThread, produce/compress/crypt/send packet 都在此线程中。
+ * 当玩家增多，数据量增大后，MainThread 明显花费了大量 cpu 在 compress, crypt, send 中。
+ * 玩法逻辑处理不过来，导致玩家感觉“卡”。
 
 
 ## 改进后
@@ -65,7 +65,7 @@ Case 5:
 
 ## 应用案例
 
-大话、梦幻服务端的网络发包线程，整体设计应该就是这样的。
+大话、梦幻服务端的网络发包线程，整体设计就是这样的。
 
 
 ## 参考实现
