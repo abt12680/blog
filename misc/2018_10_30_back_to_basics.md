@@ -173,9 +173,9 @@ HTTP/TCP/IP 是写应用程序需要接触到的，最常用的协议栈。多�
 
 ## About 公众号排版
 
-[Markdown懒办法排版][8]
+将 Markdown 转换为 富文本，然后贴到公众号平台即可。
 
-TODO
+ * [http://md.aclickall.com/][33]
 
 
 [1]:http://ant.apache.org/
@@ -210,3 +210,4 @@ TODO
 [30]:https://www.mongodb.com/
 [31]:https://www.mysql.com/
 [32]:https://mariadb.org/
+[33]:http://md.aclickall.com/
