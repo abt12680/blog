@@ -407,7 +407,7 @@ Python 的书也很多，看完下面两本，剩下的再参考官方 manual �
 
 各种敏捷方法中，我个人比较喜欢 scrum，公司好几个工作室也在实施。下面是个人的一点总结，仅供参考：
 
- * [http://kasicass.blog.163.com/blog/static/39561920081289380384/][91]
+ * [https://github.com/kasicass/blog/blob/master/scrum/2008_02_28_about_xp.md][91]
 
 最后一句话：方法是死的，灵活运用，找到属于自己团队最佳的实践。
 
@@ -542,13 +542,13 @@ THE COMPUTER GRAPHICS LIBRARY
 [88]:http://www.douban.com/subject/1232017/
 [89]:http://www.douban.com/subject/1137259/
 [90]:http://www.douban.com/subject/1444890/
-[91]:[http://kasicass.blog.163.com/blog/static/39561920081289380384/
+[91]:https://github.com/kasicass/blog/blob/master/scrum/2008_02_28_about_xp.md
 [92]:http://www.douban.com/subject/1477390/
 [93]:http://blog.codingnow.com/cloud/CodeComplete
 [94]:http://www.douban.com/subject/2230248/
 [95]:http://www.douban.com/subject/3259433/
 [96]:http://www.douban.com/subject/1801394/
-[97]:[http://www.douban.com/subject/1153186/
+[97]:http://www.douban.com/subject/1153186/
 [98]:http://www.douban.com/subject/1220623/
 [99]:https://github.com/miloyip/game-programmer
 [100]:http://mrelusive.com/books/books.html
