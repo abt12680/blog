@@ -214,258 +214,241 @@ Mud OS / LDMud
 
 SQLite / MySQL
 
- * http://www.sqlite.org/
- * http://www.mysql.com/
+ * [http://www.sqlite.org/][44]
+ * [http://www.mysql.com/][45]
  * SQLite 是基于文件的DB，配合 GUI 程序用来做存储，还是很不错的。
 
 
 ## L6 - Layer 6 (2D/3D)
 
 《游戏编程大师技巧》 Vol 1/2
-http://www.douban.com/subject/1230286/
-http://www.douban.com/subject/1321769/
-两本书本别介绍了 2D/3D 的基础。非常非常好的入门资料，特别是 3D 那本，介绍了写3D程序所需要的数学/3D知识。
+
+ * [http://www.douban.com/subject/1230286/][46]
+ * [http://www.douban.com/subject/1321769/][47]
+ * 两本书本别介绍了 2D/3D 的基础。非常非常好的入门资料，特别是 3D 那本，介绍了写3D程序所需要的数学/3D知识。
 
 《3D Engine Design》
-http://www.china-pub.com/192098&ref=ps
-介绍了主流的3D游戏引擎应如何设计。作者同时实现了 WildMagic，一款开源的3D引擎。
+
+ * [https://book.douban.com/subject/3554163/][48]
+ * 介绍了主流的3D游戏引擎应如何设计。作者同时实现了 WildMagic，一款开源的3D引擎。
 
 WindSoul
-http://blog.codingnow.com
-http://www.codingnow.com/2000/index.html
-云风GG的力作，2D游戏引擎。
+
+ * [http://blog.codingnow.com][49]
+ * [http://www.codingnow.com/2000/index.html][50]
+ * 云风GG的力作，2D游戏引擎。
 
 HGE
-http://hge.relishgames.com/
-2D 引擎的另一个发展方向，用 3D 渲染 2D。（利用硬件加速）
+
+ * [http://hge.relishgames.com/][51]
+ * 2D 引擎的另一个发展方向，用 3D 渲染 2D。（利用硬件加速）
 
 Box2D
-http://www.box2d.org/
-2D 物理引擎
+
+ * [http://www.box2d.org/][52]
+ * 2D 物理引擎
 
 IrrLicht
-http://irrlicht.sourceforge.net/
-代码清晰，结构简单，适合入门阅读。
+
+ * [http://irrlicht.sourceforge.net/][53]
+ * 代码清晰，结构简单，适合入门阅读。
 
 ogre
-http://www.ogre3d.org/
-结构清晰，但重量级的开源3D引擎
 
-Bullet
-http://www.bulletphysics.com/wordpress/
-ODE
-http://www.ode.org/
-两款开源的3D物理引擎
+ * [http://www.ogre3d.org/][54]
+ * 结构清晰，但重量级的开源3D引擎
 
+Bullet / ODE
 
-
+ * [http://www.bulletphysics.com/wordpress/][55]
+ * [http://www.ode.org/][56]
+ * 两款开源的3D物理引擎
 
 
-
-**************************************************************************
-* 语言篇
-************************
+## 语言篇
 
 语言是工具，语言没有好坏，只有是否适用，以及你对其有多少的熟练度。
+
 越熟悉，才能写出结构更好、效率更高的代码。
+
 我只列出游戏部常用的开发语言，C#/Java/Lisp 不在此列。:-)
 
 
-
-=========================================================
-======                                              C/C++                                            ======
-=========================================================
+### C/C++                                            
 
 C++ 是门不算古老但足够复杂的语言。实践中，高级的 template 特性的滥用，会导致代码不好维护。
+
 所以在考虑深入 C++ 的高级特性前，可以先读读此 blog。Just thinking, 项目中需要这么多高级特性么？
-http://blog.csdn.net/pongba/archive/2007/05/16/1611593.aspx
+
+ * [http://blog.csdn.net/pongba/archive/2007/05/16/1611593.aspx][57]
+
 下面我就不列出我认为有点“偏”的 C++ 图书了。虽然只想列几本重点的，也发现列了不少。- -#
 
 进入 C++ 11，C++ 又进化了许多，虽然依旧 evil。看看 pongba 同学对 C++ 11 的实践：
-http://mindhacks.cn/2012/08/27/modern-cpp-practices/
-Modern C++，http://msdn.microsoft.com/en-us/library/vstudio/hh279654.aspx
+
+ * [http://mindhacks.cn/2012/08/27/modern-cpp-practices/][58]
+
+Modern C++，
+
+ * [http://msdn.microsoft.com/en-us/library/vstudio/hh279654.aspx][59]
 
 《The C Programming Language》《C++ Primer》《The C++ Programming Language》
-http://www.douban.com/subject/1236999/
-http://www.douban.com/subject/2696025/
-http://www.douban.com/subject/1767741/
-三本基础书，C++ 的读其中一本即可。
+ * [http://www.douban.com/subject/1236999/][60]
+ * [http://www.douban.com/subject/2696025/][61]
+ * [http://www.douban.com/subject/1767741/][62]
+ * 三本基础书，C++ 的读其中一本即可。
 
-《C陷阱与缺陷》
-http://www.douban.com/subject/1102097/
-《C专家编程》
-http://www.douban.com/subject/2377310/
-《C/C++ 深层探索》
-http://www.douban.com/subject/1232030/
-C/C++ 的提高篇
+《C陷阱与缺陷》《C专家编程》《C/C++ 深层探索》
+ * [http://www.douban.com/subject/1102097/][63]
+ * [http://www.douban.com/subject/2377310/][64]
+ * [http://www.douban.com/subject/1232030/][65]
+ * C/C++ 的提高篇
 
 《Effective C++》《More Effective C++》《Effective STL》
-http://www.douban.com/subject/1453373/
-http://www.douban.com/subject/1457891/
-http://www.douban.com/subject/1792179/
-Effective 三套件
+ * [http://www.douban.com/subject/1453373/][66]
+ * [http://www.douban.com/subject/1457891/][67]
+ * [http://www.douban.com/subject/1792179/][68]
+ * Effective 三套件
 
 《C++ 编程规范》
-http://www.douban.com/subject/1480481/
-编码规范的书很多，看一本就好，其他的东西，实践中慢慢体会。
+ * [http://www.douban.com/subject/1480481/][69]
+ * 编码规范的书很多，看一本就好，其他的东西，实践中慢慢体会。
 
-《C++标准程序库自修教程与参考手册》
-http://www.douban.com/subject/1110941/
-《STL 源码剖析》
-http://www.douban.com/subject/1110934/
-STL 最好的两本参考手册。
+《C++标准程序库自修教程与参考手册》《STL 源码剖析》
+ * [http://www.douban.com/subject/1110941/][70]
+ * [http://www.douban.com/subject/1110934/][71]
+ * STL 最好的两本参考手册。
 
-《Imperfect C++》
-http://www.douban.com/subject/1470838/
-《深度探索C++对象模型》
-http://www.douban.com/subject/1091086/
-提升 C++ 内力的两本书。
+《Imperfect C++》《深度探索C++对象模型》
+ * [http://www.douban.com/subject/1470838/][72]
+ * [http://www.douban.com/subject/1091086/][73]
+ * 提升 C++ 内力的两本书。
 
-《道法自然：面向对象实践指南》
-http://www.douban.com/subject/1231194/
-《C++实践之路》
-http://www.douban.com/subject/1102104/
-上面的书，如果都还偏理论的话，这两本书就是用实践说话了。
+《道法自然：面向对象实践指南》《C++实践之路》
+ * [http://www.douban.com/subject/1231194/][74]
+ * [http://www.douban.com/subject/1102104/][75]
+ * 上面的书，如果都还偏理论的话，这两本书就是用实践说话了。
 
 
+### Lua                                                
 
-=========================================================
-======                                             Lua                                                  ======
-=========================================================
-
-《Programming Lua, 2nd》
-http://www.douban.com/subject/3076942/
-
-《Lua Reference》
-http://www.lua.org/manual/5.1/
 我最喜欢这种简单的语言 :-) 书籍少，好学，但又很实用。
 
+《Programming Lua, 2nd》
+ * [http://www.douban.com/subject/3076942/][76]
+
+《Lua Reference》
+ * [http://www.lua.org/manual/5.1/][77]
 
 
-=========================================================
-======                                             Python                                            ======
-=========================================================
+### Python
 
 Python 的书也很多，看完下面两本，剩下的再参考官方 manual 也就差不多了。
 
 《Learning Python》
-http://www.douban.com/subject/3243372/
-基础篇
+ * [http://www.douban.com/subject/3243372/][78]
+ * 基础篇
 
 《Python Cookbook》
-http://www.douban.com/subject/1418172/
-提高篇
+ * [http://www.douban.com/subject/1418172/
+ 
 
-
-
-=========================================================
-======                                             Java                                             ======
-=========================================================
+### Java
 
 最近开始对 Java 又产生了点兴趣（2011.03），也列一些 Java 的书吧。
 
 《Java Power Tools》
-http://book.douban.com/subject/3034363/
-编译、构建、bug追踪、自动测试、持续集成。介绍你每天都必须使用的工具，All in One book。
+ * [http://book.douban.com/subject/3034363/][80]
+ * 编译、构建、bug追踪、自动测试、持续集成。介绍你每天都必须使用的工具，All in One book。
 
 
-**************************************************************************
-* 算法/数据结构篇
-************************
+## 算法/数据结构篇
+
 
 算法涉及的范畴也很广泛，这里偏重介绍数据结构的基础书籍。
 
 《算法导论》
-http://www.douban.com/subject/1152912/
-理论基础篇
+ * [http://www.douban.com/subject/1152912/][81]
+ * 理论基础篇
 
 《Art of Computer Programming》
-http://www.douban.com/subject/1418402/
-没啥可介绍的，算法著作中的《葵花宝典》。
+ * [http://www.douban.com/subject/1418402/][82]
+ * 没啥可介绍的，算法著作中的《葵花宝典》。
 
 
-
-
-
-**************************************************************************
-* 软件设计篇
-************************
+## 软件设计篇
 
 设计模式就是些名词，方便大家交流时，更准确地了解对方用了怎样的程序结构。
 
-《设计模式》
-http://www.douban.com/subject/1099305/
-《Head First Design Pattern》
-http://www.douban.com/subject/1400656/
-《大话设计模式》
-http://www.douban.com/subject/2334288/
-第一本是经典著作，但有点理论化，稍显晦涩。后两本则是通俗易懂型的，老外的例子和我们生活上有点差异，
-好像第三本更适合我们，呵呵。
+《设计模式》《Head First Design Pattern》《大话设计模式》
+ * [http://www.douban.com/subject/1099305/][83]
+ * [http://www.douban.com/subject/1400656/][84]
+ * [http://www.douban.com/subject/2334288/][85]
+ * 第一本是经典著作，但有点理论化，稍显晦涩。后两本则是通俗易懂型的，老外的例子和我们生活上有点差异，
+ * 好像第三本更适合我们，呵呵。
 
 《重构》
-http://www.douban.com/subject/1229923/
+ * [http://www.douban.com/subject/1229923/][86]
 
 《UNIX编程艺术》
-http://www.douban.com/subject/1467587/
-软件设计的 KISS 原则 (Keep It Simple, Stupid)
+ * [http://www.douban.com/subject/1467587/][87]
+ * 软件设计的 KISS 原则 (Keep It Simple, Stupid)
 
 《Pattern-Oriented Software Architecture》 Vol 1/2/3/4/5
-http://www.douban.com/subject/1232017/
-http://www.douban.com/subject/1137259/
-http://www.douban.com/subject/1444890/
-一共五卷，不过中文版似乎还只有三卷。其中卷二对网络框架的设计有比较大的参考意义。
+ * [http://www.douban.com/subject/1232017/][88]
+ * [http://www.douban.com/subject/1137259/][89]
+ * [http://www.douban.com/subject/1444890/][90]
+ * 一共五卷，不过中文版似乎还只有三卷。其中卷二对网络框架的设计有比较大的参考意义。
 
 
+## 开发方法篇
 
+不同的开发方法论，适用于不同规模的开发团队。传统的软件工程，比较适合需求固定的庞大的系统。而游戏开发与之相反，团队规模小而需求变化快，所以 Agile Development (敏捷方法) 比较适合我们。
 
-
-
-**************************************************************************
-* 开发方法篇
-************************
-
-不同的开发方法论，适用于不同规模的开发团队。传统的软件工程，比较适合需求固定的庞大的系统。而游戏
-开发与之相反，团队规模小而需求变化快，所以 Agile Development (敏捷方法) 比较适合我们。
 各种敏捷方法中，我个人比较喜欢 scrum，公司好几个工作室也在实施。下面是个人的一点总结，仅供参考：
-http://kasicass.blog.163.com/blog/static/39561920081289380384/
+
+ * [http://kasicass.blog.163.com/blog/static/39561920081289380384/][]
+
 最后一句话：方法是死的，灵活运用，找到属于自己团队最佳的实践。
 
 《代码大全》
-http://www.douban.com/subject/1477390/
-http://blog.codingnow.com/cloud/CodeComplete
+ * [http://www.douban.com/subject/1477390/][92]
+ * [http://blog.codingnow.com/cloud/CodeComplete][93]
 
 
 《人月神话》
-http://www.douban.com/subject/2230248/
-说起项目管理，这本书总还是要去读读的。
+ * [http://www.douban.com/subject/2230248/][94]
+ * 说起项目管理，这本书总还是要去读读的。
 
 《I. M. Wright's Hard Code》
-http://www.douban.com/subject/3259433/
-来自 M$ 的项目管理经验书
+ * [http://www.douban.com/subject/3259433/][95]
+ * 来自 M$ 的项目管理经验书
 
 《敏捷迭代开发管理者指南》
-http://www.douban.com/subject/1801394/
+ * [http://www.douban.com/subject/1801394/][96]
 
 《Agile Software Development with Scrum》
-http://www.douban.com/subject/1153186/
-Scrum 发起者的著作，用于理解 scrum 的各种概念
+ * [http://www.douban.com/subject/1153186/][97]
+ * Scrum 发起者的著作，用于理解 scrum 的各种概念
 
 《超越传统的软件开发》
-http://www.douban.com/subject/1220623/
-上面的都是国外和尚念的经，这里强烈推荐一本国人的作品，写得很实在。可惜网上已经买不到了，公司图书馆里还有得借。
+ * [http://www.douban.com/subject/1220623/][98]
+ * 上面的都是国外和尚念的经，这里强烈推荐一本国人的作品，写得很实在。可惜网上已经买不到了，公司图书馆里还有得借。
 
 
-Milo Yip 推荐之书单
-https://github.com/miloyip/game-programmer
+## 其他人推荐的书单
+
+Milo Yip 推荐的游戏程序员书单
+ * [https://github.com/miloyip/game-programmer][99]
 
 Books For Game Developers
-http://mrelusive.com/books/books.html
+ * [http://mrelusive.com/books/books.html][100]
 
 THE COMPUTER GRAPHICS LIBRARY
-http://fabiensanglard.net/Computer_Graphics_Principles_and_Practices/index.php
+ * [http://fabiensanglard.net/Computer_Graphics_Principles_and_Practices/index.php][101]
 
 附上pongba同学的书单
-http://mindhacks.cn/2011/11/04/how-to-interview-a-person-for-two-years/
+ * [http://mindhacks.cn/2011/11/04/how-to-interview-a-person-for-two-years/][102]
 
 
 
@@ -512,4 +495,62 @@ http://mindhacks.cn/2011/11/04/how-to-interview-a-person-for-two-years/
 [41]:http://www.bearnip.com/lars/proj/ldmud.html
 [42]:http://www.douban.com/subject/3012338/
 [43]:http://www.douban.com/subject/3101726/
-
+[44]:http://www.sqlite.org/
+[45]:http://www.mysql.com/
+[46]:http://www.douban.com/subject/1230286/
+[47]:http://www.douban.com/subject/1321769/
+[48]:https://book.douban.com/subject/3554163/
+[49]:http://blog.codingnow.com
+[50]:http://www.codingnow.com/2000/index.html
+[51]:http://hge.relishgames.com/
+[52]:http://www.box2d.org/
+[53]:http://irrlicht.sourceforge.net/
+[54]:http://www.ogre3d.org/
+[55]:http://www.bulletphysics.com/wordpress/
+[56]:http://www.ode.org/
+[57]:http://blog.csdn.net/pongba/archive/2007/05/16/1611593.aspx
+[58]:http://mindhacks.cn/2012/08/27/modern-cpp-practices/
+[59]:http://msdn.microsoft.com/en-us/library/vstudio/hh279654.aspx
+[60]:http://www.douban.com/subject/1236999/
+[61]:http://www.douban.com/subject/2696025/
+[62]:http://www.douban.com/subject/1767741/
+[63]:http://www.douban.com/subject/1102097/
+[64]:http://www.douban.com/subject/2377310/
+[65]:http://www.douban.com/subject/1232030/
+[66]:http://www.douban.com/subject/1453373/
+[67]:http://www.douban.com/subject/1457891/
+[68]:http://www.douban.com/subject/1792179/
+[69]:http://www.douban.com/subject/1480481/
+[70]:http://www.douban.com/subject/1110941/
+[71]:http://www.douban.com/subject/1110934/
+[72]:http://www.douban.com/subject/1470838/
+[73]:http://www.douban.com/subject/1091086/
+[74]:http://www.douban.com/subject/1231194/
+[75]:http://www.douban.com/subject/1102104/
+[76]:http://www.douban.com/subject/3076942/
+[77]:http://www.lua.org/manual/5.1/
+[78]:http://www.douban.com/subject/3243372/
+[79]:http://www.douban.com/subject/1418172/
+[80]:http://book.douban.com/subject/3034363/
+[81]:http://www.douban.com/subject/1152912/
+[82]:http://www.douban.com/subject/1418402/
+[83]:http://www.douban.com/subject/1099305/
+[84]:http://www.douban.com/subject/1400656/
+[85]:http://www.douban.com/subject/2334288/
+[86]:http://www.douban.com/subject/1229923/
+[87]:http://www.douban.com/subject/1467587/ 
+[88]:http://www.douban.com/subject/1232017/
+[89]:http://www.douban.com/subject/1137259/
+[90]:http://www.douban.com/subject/1444890/
+[91]:[http://kasicass.blog.163.com/blog/static/39561920081289380384/
+[92]:http://www.douban.com/subject/1477390/
+[93]:http://blog.codingnow.com/cloud/CodeComplete
+[94]:http://www.douban.com/subject/2230248/
+[95]:http://www.douban.com/subject/3259433/
+[96]:http://www.douban.com/subject/1801394/
+[97]:[http://www.douban.com/subject/1153186/
+[98]:http://www.douban.com/subject/1220623/
+[99]:https://github.com/miloyip/game-programmer
+[100]:http://mrelusive.com/books/books.html
+[101]:http://fabiensanglard.net/Computer_Graphics_Principles_and_Practices/index.php
+[102]:http://mindhacks.cn/2011/11/04/how-to-interview-a-person-for-two-years/
