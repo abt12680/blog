@@ -78,7 +78,7 @@ int main(void)
 	printw("Hello World!");   // Print Hello World
 	refresh();                // Print it on the real screen
 	getch();                  // Wait for user input
-    endwin();                 // End curses mode
+	endwin();                 // End curses mode
 
 	return 0;
 }
@@ -145,7 +145,7 @@ int main(void)
 
 	refresh();                // Print it on the real screen
 	getch();                  // Wait for user input
-    endwin();                 // End curses mode
+	endwin();                 // End curses mode
 
 	return 0;
 }
