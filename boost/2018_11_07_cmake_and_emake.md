@@ -43,6 +43,67 @@ emake 其实是 gnu make 加强版，简单、易用。
 
 * [https://github.com/kasicass/bootstrap-emake][4]
 
+构建前
+
+```
+.
+|-- 3rdparty
+|   |-- README.md
+|   |-- boost-emake
+|   |   |-- program_options.mak
+|   |   |-- system.mak
+|   |   `-- thread.mak
+|   |-- clean.sh
+|   |-- download.sh
+|   |-- gflags.mak
+|   |-- glog.mak
+|   `-- prepare.sh
+|-- build_3rdparty.sh
+|-- build_all.sh
+|-- clang.ini
+`-- src
+    |-- boost
+    |   `-- thread
+    |       |-- simple_thread.cpp
+    |       `-- simple_thread.mak
+    |-- test-gflags
+    |   |-- main.cpp
+    |   `-- test-gflags.mak
+    `-- test-glog
+        |-- main.cpp
+        `-- test-glog.mak
+```
+
+下载 & 构建 3rdparty
+
+```
+$ sh 3rdparty/download.sh         # 下载 source
+$ sh 3rdparty/prepare.sh          # 生成 .h / .cpp
+$ sh build_3rdparty.sh            # emake 编译 .a
+
+$ sh build_all.sh                 # 编译自己的项目 test-glog 等
+```
+
+构建后会多出 bin, lib, build 三个目录
+
+```
+|-- bin
+|   |-- simple-thread
+|   |-- test-gflags
+|   `-- test-glog
+|-- build (中间文件 .o)
+...
+|-- lib
+|   `-- 3rdparty
+|       |-- boost
+|       |   |-- program_options.a
+|       |   |-- system.a
+|       |   `-- thread.a
+|       |-- gflags.a
+|       `-- glog.a
+...
+```
+
 这里选取了三个很典型的项目：
 
 * boost, 自带的 bjam 构建
@@ -87,6 +148,9 @@ compiling ...
 3rdparty/boost/libs/system/src/error_code.cpp
 linking ...
 a - error_code.o
+
+$ ls -l lib/3rdparty/boost
+-rw-r--r--  1 kasicass  kasicass  10514636 Nov  7 07:46 program_options.a
 ```
 
 因为 OpenBSD 中，gcc 版本太老了，不支持 -std=c++11，这里通过 --ini 配置成 clang 编译。Debian 下不需要这样设置。
