@@ -26,6 +26,40 @@ Debian 9.5
 
 OpenBSD 6.4 自带 ncurses 库，不需要安装。
 
+### 1.2 man page
+
+ncurses 的 man page 在 debian 下没找到。OpenBSD 下直接：
+
+```
+$ man ncurses
+...
+   Routine Name Index
+       The following table lists each curses routine and the name of the
+       manual page on which it is described.  Routines flagged with `*' are
+       ncurses-specific, not described by XPG4 or present in SVr4.
+
+                     curses Routine Name     Manual Page Name
+                     ===========================================
+                     chgat                   curs_attr(3)
+                     clear                   curs_clear(3)
+                     clearok                 curs_outopts(3)
+...
+```
+
+函数 initscr, clear 等等的 man page，需要加上 curs_ 前缀：
+
+```
+$ man curs_clear
+...
+DESCRIPTION
+       The erase and werase routines copy blanks to every position in the
+       window, clearing the screen.
+
+       The clear and wclear routines are like erase and werase, but they also
+       call clearok, so that the screen is cleared completely on the next call
+       to wrefresh for that window and repainted from scratch.
+...
+```
 ### 1.2 示例代码
 
 原文代码
@@ -58,6 +92,7 @@ ncurses
    |----> COPYING        -- copyright notice
 ```
 
+
 ## 2. Hello World
 
  * initscr() / endwin()，初始化/释放
@@ -71,7 +106,7 @@ ncurses
 //! int: obj
 //! flag: -Wall
 //! link: ncurses
-//! src: 01-hello.c
+//! src: hello_world.c
 int main(void)
 {
 	initscr();                // Start curses mode
@@ -87,6 +122,7 @@ int main(void)
 ## 3. The Gory Details
 
 nothing~
+
 
 ## 4. Initialization
 
@@ -116,7 +152,7 @@ halfdelay()
 //! int: obj
 //! flag: -Wall
 //! link: ncurses
-//! src: 02-init.c
+//! src: init_func_example.c
 int main(void)
 {
 	int ch;
@@ -229,7 +265,7 @@ waddch() / mvwaddch() 则是针对 window 的操作。
 //! int: obj
 //! flag: -Wall
 //! link: ncurses
-//! src: 03-printw.c
+//! src: printw_example.c
 int main(void)
 {
 	char mesg[] = "Just a string";
@@ -263,7 +299,56 @@ getmaxyx() 中 row, col 并没有传入指针，如何获得数据的？看 curs
  * waddstr() / mvwaddstr()，对 window 操作
 
 
+## 7. Input functions
 
+* getch()，等待输入 a character
+* scanw() / mvscanw()，和 scanf() 类似
+* wscanw() / mvwscanw()，针对 windows 的 scanw()
+* vwscanw()，和 vscanf() 类似
+* getstr()，等待输入 a line of string
+
+看代码，一目了然：
+
+```C
+#include <ncurses.h>
+#include <string.h>
+
+//! mode: exe
+//! int: obj
+//! flag: -Wall
+//! link: ncurses
+//! src: scanw_example.c
+int main()
+{
+    char mesg[]  = "Enter a string: ";
+    char mesg1[] = "Enter a int: ";
+    char str[80];
+    int row, col;
+    int v;
+
+    initscr();
+
+    // getstr()
+    getmaxyx(stdscr, row, col);
+    mvprintw(row/2, (col-strlen(mesg))/2, "%s", mesg);
+
+    getstr(str);
+    mvprintw(LINES-2, 0, "You Entered: %s", str);
+    getch();
+
+    // sacnw()
+    clear();
+    getmaxyx(stdscr, row, col);
+    mvprintw(row/2, (col-strlen(mesg))/2, "%s", mesg1);
+
+    scanw("%d", &v);
+    mvprintw(LINES-2, 0, "You Entered: %d", v); 
+    getch();
+
+    endwin();
+    return 0;
+}
+```
 
 [1]:http://www.tldp.org/HOWTO/NCURSES-Programming-HOWTO/index.html
 [2]:https://github.com/kasicass/kasicass/tree/master/ncurses
