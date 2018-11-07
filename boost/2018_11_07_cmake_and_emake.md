@@ -115,7 +115,7 @@ $ GLOG_logtostderr=1 ./bin/test-glog
 * glog，使用传统的 autoconf & automake (./configure & ./make)
 * gflags，使用 cmake
 
-不管怎么构建，最关键的是生成需要的 .h / .cpp 文件，以 ./configure 为例，最喜欢生成的就是 config.h。那么我们只需要将生成的文件(.h / .cpp)准备好。就可以用 emake 将他们 build 出来了。
+不管怎么构建，最关键的是生成需要的 .h / .cpp 文件，以 ./configure 为例，最喜欢生成的就是 config.h。那么，只需要将生成的文件(.h / .cpp)准备好。就可以用 emake 将它们 build 出来了。
 
 这里最关键的是 boost，其 ./bootstrap.sh 会生成一堆 .cpp，放在 boost/libs/* 下。
 
@@ -210,6 +210,7 @@ emake
 * win32 平台通过 mingw 来编译
 * 中小型C++项目
 * 轻巧灵活，修改 flags/link 的时候很方便
+* 小众，所有第三方库都需要自己写 .mak
 
 
 [1]:https://github.com/skywind3000/emake
