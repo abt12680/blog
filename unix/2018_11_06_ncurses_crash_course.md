@@ -350,6 +350,176 @@ int main()
 }
 ```
 
+
+## 8. Attributes
+
+ * attron() / attroff(), 开/关某个显示属性
+ * attrset(), 设置显示属性（覆盖之前的）
+ * attr_ 开头系列函数，通过 attr_t 来操作属性。
+
+```
+int attr_get(attr_t *attrs, short *pair, void *opts);
+int attr_off(attr_t attrs, void *opts);
+...
+```
+
+属性列表
+
+```
+    A_NORMAL        Normal display (no highlight)
+    A_STANDOUT      Best highlighting mode of the terminal.
+    A_UNDERLINE     Underlining
+    A_REVERSE       Reverse video
+    A_BLINK         Blinking
+    A_DIM           Half bright
+    A_BOLD          Extra bright or bold
+    A_PROTECT       Protected mode
+    A_INVIS         Invisible or blank mode
+    A_ALTCHARSET    Alternate character set
+    A_CHARTEXT      Bit-mask to extract a character
+    COLOR_PAIR(n)   Color-pair number n 
+```
+
+设置方式
+
+```C
+	attron(A_REVERSE | A_BLINK);
+```
+
+### 8.1 attron() / attroff() 例子
+
+将"/* */"之间的内容加粗。
+
+```C
+/* http://www.tldp.org/HOWTO/NCURSES-Programming-HOWTO/attrib.html */
+#include <ncurses.h>
+#include <stdlib.h>
+
+//! mode: exe
+//! int: obj
+//! flag: -Wall, -Wno-unused-but-set-variable
+//! link: ncurses
+//! src: simple_attr.c
+int main(int argc, char* argv[])
+{
+    int ch, prev, row, col;
+    FILE *fp;
+    int y, x;
+
+    if (argc != 2)
+    {
+        printf("Usage: %s <a c file name>\n", argv[0]);
+        exit(1);
+    }
+
+    fp = fopen(argv[1], "r");
+    if (fp == NULL)
+    {
+        perror("Can't open input file");
+        exit(1);
+    }
+
+    prev = EOF;
+    initscr();
+    getmaxyx(stdscr, row, col);
+
+    while ((ch = fgetc(fp)) != EOF)
+    {
+        getyx(stdscr, y, x);          // get the current cursor position
+        if (y == (row - 1))           // are we at the end of the screen
+        {
+            printw("<-Press Any Key->");
+            getch();
+            clear();
+            move(0, 0);
+        }
+
+        if (prev == '/' && ch == '*') // If it is /* then only switch bold on
+        {
+            attron(A_BOLD);
+            getyx(stdscr, y, x);
+            move(y, x - 1);           // back up one space
+            printw("%c%c", '/', ch);
+        }
+        else
+        {
+            printw("%c", ch);
+        }
+
+        refresh();
+
+        if (prev == '*' && ch == '/')
+        {
+            attroff(A_BOLD);         // bold off
+        }
+
+        prev = ch;
+    }
+    endwin();
+    fclose(fp);
+
+    return 0;
+}
+```
+
+SecureCRT 中，需要设置 ANSI Color off，才能看到 bold 效果。
+
+![](2018_11_06_ncurses_crash_course_image_02.png)
+
+看看效果。
+
+```
+$ emake simple_attr.c
+$ ./simple_attr simple_attr.c
+```
+
+![](2018_11_06_ncurses_crash_course_image_01.png)
+
+### 8.2 chgat() functions
+
+chgat() 用于单独设置几个 characters 的属性。
+
+第一个参数 -1，表示从当前位置到本行结束。
+
+```C
+chgat(-1, A_REVERSE, 0, NULL);
+```
+
+看看具体例子：
+
+```C
+#include <ncurses.h>
+
+//! mode: exe
+//! int: obj
+//! flag: -Wall
+//! link: ncurses
+//! src: with_chgat.c
+int main(void)
+{
+    initscr();
+    start_color();     // start color functionality
+
+    init_pair(1, COLOR_CYAN, COLOR_BLACK);
+    printw("A Big string which i didn't care to type fully");
+    mvchgat(0, 0, -1, A_BLINK, 1, NULL);
+    // First two parameters specify the position at which to start
+    // Third parameter number of characters to update. -1 means till
+    //   end of line
+    // Forth parameter is the normal attribute you wanted to give
+    //   to the character
+    // Fifth is the color index. It is the index given during init_pair()
+    //   use 0 if you didn't want color
+    // Sixth one is always NULL
+
+    refresh();
+    getch();
+    endwin();
+
+    return 0;
+}
+```
+
 [1]:http://www.tldp.org/HOWTO/NCURSES-Programming-HOWTO/index.html
 [2]:https://github.com/kasicass/kasicass/tree/master/ncurses
 [3]:https://github.com/skywind3000/emake
