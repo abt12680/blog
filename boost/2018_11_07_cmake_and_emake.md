@@ -12,11 +12,11 @@
 
 * [https://cmake.org/][2]
 
-cmake 对于 C++ 项目起步，确实很方便，几行 CMakeLists.txt，就把 boost 跑起来了。不过前提是，有人帮你把编译 boost 的 cmake file 写好了：
+cmake 对于 C++ 项目，确实很方便，几行 CMakeLists.txt，就把 boost 跑起来了。不过前提是，有人帮你把编译 boost 的 cmake file 写好了：
 
 * [https://github.com/Orphis/boost-cmake][5]
 
-目前 cmake 在C++项目中属于事实上的构建标准。大部分开源库都有 CMakeLists.txt，很容易整合到自己的项目中。
+目前 cmake 在 C++ 项目中属于事实上的构建标准。大部分开源库都有 CMakeLists.txt，很容易整合到自己的项目中。
 
 自己做了一个 project template，方便使用：
 
@@ -29,7 +29,7 @@ $ cmake ..
 
 $ make
 
-$ GLOG_logtostderr ./bin/test-glog
+$ GLOG_logtostderr=1 ./bin/test-glog
 ```
 
 
@@ -77,11 +77,16 @@ emake 其实是 gnu make 加强版，简单、易用。
 下载 & 构建 3rdparty
 
 ```
-$ sh 3rdparty/download.sh         # 下载 source
+$ sh 3rdparty/download.sh         # 下载 3rdparty source
 $ sh 3rdparty/prepare.sh          # 生成 .h / .cpp
 $ sh build_3rdparty.sh            # emake 编译 .a
 
-$ sh build_all.sh                 # 编译自己的项目 test-glog 等
+$ sh build_all.sh                 # 编译所有项目
+
+# 编译单个项目
+$ emake --ini=clang.ini src/test-glog/test-glog.mak
+
+$ GLOG_logtostderr=1 ./bin/test-glog
 ```
 
 构建后会多出 bin, lib, build 三个目录
@@ -125,7 +130,8 @@ $ sh build_all.sh                 # 编译自己的项目 test-glog 等
 以 boost-system 的 build 为例：
 
 ```
-; 3rdparty/boost-emake/system.mak                                                                                                                                   
+; 3rdparty/boost-emake/system.mak
+
 mode: lib
 
 out: ../../lib/3rdparty/boost/system.a
@@ -140,7 +146,7 @@ inc: ../../3rdparty/boost
 src: ../../3rdparty/boost/libs/system/src/error_code.cpp
 ```
 
-只需要
+跑完 prepare.sh，只需要
 
 ```
 $ emake --ini=clang.ini 3rdparty/boost-emake/system.mak
@@ -154,6 +160,39 @@ $ ls -l lib/3rdparty/boost
 ```
 
 因为 OpenBSD 中，gcc 版本太老了，不支持 -std=c++11，这里通过 --ini 配置成 clang 编译。Debian 下不需要这样设置。
+
+使用编译出来的 .a 也很简单，看一下 test-glog.mak
+
+```
+; src/test-glog/test-glog.mak
+
+mode: exe
+
+out: ../../bin/test-glog
+int: ../../build/emake-obj-test-glog
+
+link: stdc++
+link: pthread
+
+flag: -Wall
+flag: -O3, -std=c++11
+flag: -g
+
+link: ../../lib/3rdparty/glog.a
+
+inc: ../../3rdparty/glog/src
+
+src: main.cpp
+```
+
+run~ see glog run~
+
+```
+$ emake --ini=clang.ini src/test-glog/test-glog.mak
+
+$ GLOG_logtostderr=1 ./bin/test-glog                
+I1107 07:59:49.518374 4294006680 main.cpp:9] Hello glog!
+```
 
 
 ## CMAKE vs EMAKE
