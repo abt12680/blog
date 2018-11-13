@@ -1,7 +1,5 @@
 ==== TODO ====
  * game-dev, http://kasicass.blog.163.com/blog/#m=0&t=1&c=fks_087065087083082075080087086095087095084069085095
- * game-dev/2009_12_17_books_for_game_coder.md, 还没整理完
- 
  * zeromq, http://kasicass.blog.163.com/blog/static/39561920101118112913724/
  * svn, http://kasicass.blog.163.com/blog/static/3956192012688920408/
  * git, context needs update, http://kasicass.blog.163.com/blog/static/39561920133494116606/
@@ -15,6 +13,9 @@
  * html-gen, a crontab, auto run html-gen
 
 ==== DONE ====
+
+2018.11.13
+ * [svn] is moved.
 
 2018.11.03
  * drop all [net_ACE]
