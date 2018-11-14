@@ -135,6 +135,69 @@ debian9开始，mysql使用系统的认证。让某个 user 可以通过 mysql c
 * 参考，[https://wiki.debian.org/MySql][5]
 * 重置密码，[https://www.vultr.com/docs/reset-mysql-root-password-on-debian-ubuntu][6]
 
+## 启用 vsftpd
+
+[handbook][7] 推荐使用 vsftpd。
+
+```
+# aptitude install vsftpd
+```
+
+安装之后，系统会自动新建名为 ftp 的 user。并且 vsftpd 已经启动。
+
+默认 ftp root 在 /srv/ftp。
+
+修改 /etc/vsftpd.conf，允许 anonymous 登陆/上传。
+
+```
+# vim /etc/vsftpd.conf
+anonymous_enable=YES
+local_enable=NO
+write_enable=YES
+anon_upload_enable=YES
+anon_mkdir_write_enable=YES
+
+# systemctl restart vsftpd
+
+# echo "test" > /srv/ftp/test.txt
+# chown ftp:ftp /srv/ftp/test.txt
+```
+
+此时，用 windows 的 ftp client，已经可以下载文件了。
+
+注意，需要启用 binary 模式。ascii 模式的下载，默认关闭的（参考 vsftpd.conf）
+
+```
+> ftp ip_addr
+... 用 anonymous 登陆
+
+ftp> binary
+ftp> get test.txt
+```
+
+但上传还是失败。
+
+```
+ftp> put somefile.txt
+553 Could not create file.
+```
+
+如果之前没打开 anon_upload_enable=YES，会提示：
+
+```
+ftp> put somefile.txt
+550 Permission denied.
+```
+
+本来以为是 [SELinux][8] 的设置问题，但 debian 默认安装，并没有开启 SELinux：
+
+```
+# id -Z
+id: --context (-Z) works only on an SELinux-enabled kernel
+```
+
+
+
 ## vim & tmux 的基本配置
 
 ```
@@ -164,3 +227,5 @@ bind r source ~/.tmux.conf\; display "/.tmux.conf sourced!"
 [4]:https://docs.mongodb.com/manual/reference/ulimit/#linux-distributions-using-systemd
 [5]:https://wiki.debian.org/MySql
 [6]:https://www.vultr.com/docs/reset-mysql-root-password-on-debian-ubuntu
+[7]:https://debian-handbook.info/browse/stable/sect.ftp-file-server.html
+[8]:https://debian-handbook.info/browse/stable/sect.selinux.html
