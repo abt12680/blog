@@ -22,7 +22,7 @@ $ python -m pyftpdlib -w
 开启账号密码验证
 
 ```
-$ python -m pyftpdlib -w -u xxx
+$ python -m pyftpdlib -w -u name -p pass
 ```
 
 在 windows cmd 下使用 ftp client
