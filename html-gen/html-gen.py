@@ -11,7 +11,7 @@ import markdown
 FROM_PATH = path.abspath('../')
 TO_PATH   = path.abspath('../../kasicass.github.io')
 SKIP_DIRS = ('poem', 'html-gen',)
-TIMELINE_COUNT = 5 # show recent 5 articles
+TIMELINE_COUNT = 10 # show recent 10 articles
 
 def getFiles(pattern):
 	fromPath = path.join(FROM_PATH, pattern)
