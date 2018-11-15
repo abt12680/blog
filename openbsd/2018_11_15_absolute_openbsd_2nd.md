@@ -1,4 +1,4 @@
-# Absolute OpenBSD 2nd
+# [BookReading] Absolute OpenBSD 2nd
 
 ## 05 - The Boot Process
 
@@ -24,6 +24,18 @@ single-user mode 默认只挂载了 /
 ```
 # sh /etc/netstart
 ```
+
+### serial console
+
+* https://www.tldp.org/HOWTO/Remote-Serial-Console-HOWTO/index.html
+* https://www.computerhope.com/jargon/s/serial-console.htm
+
+串口连接线（a null modem cable）
+
+* null modem
+* https://en.wikipedia.org/wiki/Null_modem
+
+![](2018_11_15_absolute_openbsd_2nd_image_01.png)
 
 ----------------------------
 
