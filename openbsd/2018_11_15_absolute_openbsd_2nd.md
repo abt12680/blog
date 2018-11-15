@@ -79,6 +79,8 @@ sector / track / cylinder 是老的硬盘制作工艺上有的概念，但新的
 * fstype，文件系统类型
 * fsize/bsize/cpg，fragmentation behavior of the filesystem on this partition. 参考 newfs(8)
 
+One interesting thing is that the disklabel can be considered a configuration file for formatting a disk. You could save this disklabel to a file, get an identical hard drive, write this label to that new disk, and perfectly duplicate the partitioning of the old disk on the new.
+
 ## 05 - The Boot Process
 
 ### single-user mode
