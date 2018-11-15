@@ -1,6 +1,6 @@
 # [BookReading] Absolute OpenBSD 2nd
 
-## 02 - Installation Preparations
+## 02 - INSTALLATION PREPARATIONS
 
 ### Partitioning
 
@@ -81,7 +81,33 @@ sector / track / cylinder 是老的硬盘制作工艺上有的概念，但新的
 
 One interesting thing is that the disklabel can be considered a configuration file for formatting a disk. You could save this disklabel to a file, get an identical hard drive, write this label to that new disk, and perfectly duplicate the partitioning of the old disk on the new.
 
-## 05 - The Boot Process
+## 04 - POST-INSTALL SETUP
+
+### Installing Ports and Source Code
+
+下载 ports.tar.gz，解压
+
+```
+# cd /usr
+# tar zxf $HOME/ports.tar.gz
+```
+
+下载 sys.tar.gz、src.tar.gz、xenocara.tar.gz，解压
+
+```
+# cd /usr/src
+# tar zxf ...
+```
+
+### Booting to a Graphic Console
+
+修改 /etc/rc.conf.local，默认启动 xdm(1) 即可。
+
+```
+xdm_flags=""
+```
+
+## 05 - THE BOOT PROCESS
 
 ### single-user mode
 
