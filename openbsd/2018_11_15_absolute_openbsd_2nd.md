@@ -144,9 +144,15 @@ single-user mode 默认只挂载了 /
 
 ![](2018_11_15_absolute_openbsd_2nd_image_01.png)
 
-----------------------------
+* man cu
+* man remote
 
-启动时，运行自己的脚本，修改 rc.local
-xxx_cmd && echo -n ' xxx'         # 运行 xxx_cmd 并在屏幕上输出 xxx，配合 starting local daemons: xxx
-sudo -u myname xxx_cmd            # 权限降级为 myname 来运行 xxx_cmd
+
+## 06 - USER MANAGEMENT
+
+* adduser(8)
+* passwd(1)
+* vipw(8)
+
+
 
