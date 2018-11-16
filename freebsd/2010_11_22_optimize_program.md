@@ -16,7 +16,6 @@ $ ./a.out
 $ gprof a.out a.out.gmon > outfile
 ```
 
-
 ## 卡io
 
 卡的时候，top看到cpu占用很少，STATE为这几个状态 flswai, biord, biowr, genblk，基本都是卡io了。
