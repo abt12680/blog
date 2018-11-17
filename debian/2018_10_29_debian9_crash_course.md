@@ -4,7 +4,8 @@
 
 下载 netinst.iso，一路安装即可。
 
-* [http://mirrors.163.com/debian-cd/9.5.0/amd64/iso-cd/][1]
+* [http://mirrors.163.com/debian-cd/9.6.0/amd64/iso-cd/][1]
+* 版本升级后，上面的链接可能失效，去这下面找找：[http://mirrors.163.com/debian-cd/][9]
 
 源选择163，速度有保障。
 
@@ -221,7 +222,7 @@ bind l select-pan -R
 bind r source ~/.tmux.conf\; display "/.tmux.conf sourced!"
 ```
 
-[1]:http://mirrors.163.com/debian-cd/9.5.0/amd64/iso-cd/
+[1]:http://mirrors.163.com/debian-cd/9.6.0/amd64/iso-cd/
 [2]:http://mirrors.163.com/debian/
 [3]:http://www.freedesktop.org/wiki/Software/systemd/
 [4]:https://docs.mongodb.com/manual/reference/ulimit/#linux-distributions-using-systemd
@@ -229,3 +230,4 @@ bind r source ~/.tmux.conf\; display "/.tmux.conf sourced!"
 [6]:https://www.vultr.com/docs/reset-mysql-root-password-on-debian-ubuntu
 [7]:https://debian-handbook.info/browse/stable/sect.ftp-file-server.html
 [8]:https://debian-handbook.info/browse/stable/sect.selinux.html
+[9]:http://mirrors.163.com/debian-cd/
