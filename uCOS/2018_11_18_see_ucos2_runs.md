@@ -1,4 +1,4 @@
-# [uC/OS-II] see uC/OS-II runs again~
+# [uC/OS-II] See uC/OS-II runs again~
 
 ## Run~ Run~
 

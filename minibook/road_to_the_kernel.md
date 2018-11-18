@@ -38,7 +38,7 @@ RxDOS on loongson
 
 ## uC/OS-II
 
-TODO
+ * [See uC/OS-II runs again~][14]
 
 ## DONE
 
@@ -87,3 +87,4 @@ RxDOS搞完了，再开始回归 [4.4BSD][11]，读[《The Design of UNIX Operat
 [11]:https://github.com/sergev/4.4BSD-Lite2
 [12]:https://book.douban.com/subject/3996146/
 [13]:https://github.com/BearZPY/STM32-uCOSIII
+[14]:https://github.com/kasicass/blog/blob/master/uCOS/2018_11_18_see_ucos2_runs.md
