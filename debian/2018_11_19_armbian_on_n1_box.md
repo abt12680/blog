@@ -1,5 +1,6 @@
 # 斐讯N1刷armbian最简操作
 
+
 ## 前言
 
 最近买了台 [SolidRun CuBox i4p][1]，被顾QQ批评为"太贵了"。他最近正好在刷 N1盒子，[闲鱼][2]上75块包邮，性价比超高。听罢，我也在[闲鱼][2]上弄了台N1。
@@ -8,12 +9,14 @@
 
 斐讯这公司已经倒闭了。
 
+
 ## 准备工具
 
  * N1 一台
  * USB 双公口线一条
  * 4G 以上 U 盘一个，新 U 盘可能有兼容性问题（最好是USB2.0设备或SD卡加读卡器）
  * 可以运行安卓adb工具的电脑一台，win/mac/linux都行
+
 
 ## 降级 bootloader（fastboot）
 
@@ -36,7 +39,9 @@ adb shell reboot fastboot
 
 此时应该可以看到N1重启黑屏，接下来在电脑上执行
 
+```
 fastboot devices
+```
 
 如果能够显示出一行设备信息，说明 USB 连接正常，将最开始下载的文件包中 boot.img bootloader.img recovery.img 三个文件放在当前目录下，并执行
 
@@ -70,6 +75,7 @@ fastboot reboot
 
 这个文件到 dtb 目录下， 用文本编辑器编辑根目录下面的 uEnv.ini ，将里面 dtb 一行替换成这个文件的名字并保存，Armbian 启动 U 盘就做好了
 
+
 ## 刷入Armbian系统
 
 N1的两个 USB 口，离HDMI口远的接 U 盘，另一个接 USB 键盘。HDMI 线接显示器，加电启动。屏幕会先出现启动画面，之后会进入U盘armbian启动界面。
@@ -87,6 +93,29 @@ N1的两个 USB 口，离HDMI口远的接 U 盘，另一个接 USB 键盘。HDMI
 ![](2018_11_19_armbian_on_n1_box_image_03.png)
 
 
+## 硬件参数
+
+ * CPU: Amlogic S905D
+ * RAM: 2G DDR3
+ * 8G eMMC
+ * Ethernet: RTL8211F Gigabit Ethernet
+ * WIFI/Bluetooth: ? CYW43455 ( same as Raspberry Pi 3B+ ) 5G WiFi IEEE 802.11n/ac with Integrated Bluetooth 4.1 [Datasheet]
+
+对比了下，和 [CuBox i4p][1] 差不多。75块这个价格，真是便宜。其中，[eMMC][11] 就是硬盘。
+
+
+## 耗电计算
+
+ * 电压/电流：12V 2A
+ * 功耗：12*2 = 24W
+ * 1度电：1000W/小时
+ * 每月耗电：(24*30) / (1000/24) = 17.3 度
+ * 电费单价：南方电网，第一档 0.59/度；第二档，0.64/度
+ * 每月电费：0.64*17.3 = 11.07 元
+
+夏天24小时开机，一个月11块，还能接受。
+
+
 ## 参考资料
 
  * [https://www.right.com.cn/forum/thread-340279-1-1.html][8]
@@ -102,3 +131,5 @@ N1的两个 USB 口，离HDMI口远的接 U 盘，另一个接 USB 键盘。HDMI
 [7]:https://github.com/yangxuan8282/phicomm-n1/releases/download/dtb/meson-gxl-s905d-phicomm-n1.dtb
 [8]:https://www.right.com.cn/forum/thread-340279-1-1.html
 [9]:https://www.right.com.cn/forum/thread-322223-1-1.html
+[10]:http://www.cypress.com/documentation/datasheets/cyw43455-single-chip-5g-wifi-ieee-80211nac-macbaseband-radio-integrated
+[11]:https://www.kingston.com/en/embedded/eMMC
