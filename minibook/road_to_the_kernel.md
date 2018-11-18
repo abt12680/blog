@@ -65,7 +65,7 @@ TODO
 
 等 uC/OS 折腾完之后，回归情怀，准备玩一遍 DOS。正好之前淘到一本书[《Dissecting DOS》][8]，作者实现了一套 DOS 系统 -- [RxDOS][7]。
 
-RxDOS 是全汇编写成的，争取改写为 C + asm 的方式，增强可移植性。然后移植到 loongson(mips64el) 上。谁让我买了台[龙芯 All-in-one PC][9]，OpenBSD 系统一直没安装成功呢。
+RxDOS 是全汇编写成的，争取改写为 C + asm 的方式，增强可移植性。然后移植到 loongson(mips64el) 上。谁让我买了台 [龙芯 All-in-one PC][9]，OpenBSD 系统一直没安装成功呢。
 
 RxDOS搞完了，再开始回归 [4.4BSD][11]，读[《The Design of UNIX Operating System》][10]。再把 [4.4BSD][11] 移植到 loongson 上。
 
