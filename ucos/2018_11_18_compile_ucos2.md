@@ -14,7 +14,7 @@
 * [NASM for DOS][8]
 * [Open Watcom Compiler for DOS][9]
 
-把 NASM 和 Open Watcom 整合到我的 [uC/OS-II sandbox][] 中：
+把 NASM 和 Open Watcom 整合到我的 [uC/OS-II sandbox][10] 中：
 
  * C: 放 NASM / Open Watcom 等工具。
  * D: 放 uC/OS-II 光盘内容
