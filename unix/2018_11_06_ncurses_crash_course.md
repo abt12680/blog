@@ -882,6 +882,12 @@ init_color(COLOR_RED, 700, 0, 0);
  * param 2, 3, 4 : rgb content min = 0, max = 1000 */
 ```
 
+
+## 11. Interfacing with the key board
+
+
+
+
 ## 附录1 - ncurses for win32
 
 PDCurses(Public Domain Curses)，直接使用 windows console。
