@@ -69,6 +69,8 @@ int main()
 }
 ```
 
+运行结果：
+
 ```
 $ ./a.out 
 thr #1 data1 = 0x804c3f0
