@@ -6,6 +6,7 @@
 
 * [http://mirrors.163.com/debian-cd/9.6.0/amd64/iso-cd/][1]
 * 版本升级后，上面的链接可能失效，去这下面找找：[http://mirrors.163.com/debian-cd/][9]
+* 使用 netinst版 安装过程中，如果没有找到网络，参考 附录1。
 
 源选择163，速度有保障。
 
@@ -222,6 +223,54 @@ bind l select-pan -R
 bind r source ~/.tmux.conf\; display "/.tmux.conf sourced!"
 ```
 
+## 附录1 - 手工配置网络
+
+安装过程中，没找到网络，无法 apt 安装各种 packages。万恶的是，ifconfig 这种工具，都不在 basic system 中。
+
+* virtualbox 的 debian9 上，肯定安装了 net-tools
+* 通过 U盘，将 nettools 的 .deb 复制到目标机器上
+* /var/cache/apt/archives/net-tools_1.60+git20161116.90da8a0-1_amd64.deb
+
+```
+# mkdir /mnt/usb
+# mount -t msdos /dev/sdb /mnt/usb
+# dpkg -i /mnt/usb/net-tools_1.60+git20161116.90da8a0-1_amd64.deb
+```
+
+有了 ifconfig。
+
+## 附录2 - USB Wifi Adapter
+
+在京东买了个 [TP-Link 的 USB Wifi Adapter][10]。插入机器上，提示
+
+```
+firmware: failed to load mt7601u.bin
+```
+
+/etc/apt/sources.list 中配置好 non-free
+
+```
+deb http://mirrors.163.com/debian/ stretch main contrib non-free
+deb-src http://mirrors.163.com/debian/ stretch main contrib non-free
+```
+
+安装 firmware-misc-nonfree。
+
+```
+# aptitude install firmware-misc-nonfree
+```
+
+重插一下 USB Wifi，然后看看是否 work 了：
+
+```
+$ lsusb -t
+
+```
+
+安装驱动。
+
+[https://wiki.debian.org/WiFi][11]
+
 [1]:http://mirrors.163.com/debian-cd/9.6.0/amd64/iso-cd/
 [2]:http://mirrors.163.com/debian/
 [3]:http://www.freedesktop.org/wiki/Software/systemd/
@@ -231,3 +280,5 @@ bind r source ~/.tmux.conf\; display "/.tmux.conf sourced!"
 [7]:https://debian-handbook.info/browse/stable/sect.ftp-file-server.html
 [8]:https://debian-handbook.info/browse/stable/sect.selinux.html
 [9]:http://mirrors.163.com/debian-cd/
+[10]:https://item.jd.com/618066.html
+[11]:https://wiki.debian.org/WiFi
