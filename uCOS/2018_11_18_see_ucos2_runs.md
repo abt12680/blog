@@ -1,8 +1,9 @@
 # [uC/OS-II] See uC/OS-II runs again~
 
+
 ## Run~ Run~
 
-[《嵌入式实时操作系统uC/OS-II(第二版)》][1] 中文版翻译得很不错，就没必要读英文版了。
+[《嵌入式实时操作系统uC/OS-II(第二版)》][1] 翻译得很不错，就没必要读英文版了。
 
 在 win10 上，把附属光盘中的内容拿来一跑，WTF，居然提示此程序不支持 64-bit系统。
 
@@ -13,7 +14,7 @@
 
 突然想到了 [DOSBox][2]。使用版本 DOSBox-0.74-2。
 
-修改配置文件 dosbox.conf，在最后加上
+修改配置文件 dosbox.conf，在最后加上如下内容，让 DOSBox 可以读到光盘的内容。
 
 ```
 [autoexec]
@@ -21,7 +22,7 @@ MOUNT D: .\ucos2
 D:
 ```
 
-让 DOSBox 可以读到光盘的内容。启动 DOSBox，试试
+启动 DOSBox，试试
 
 ```
 > cd \SOFTWARE\uCOS-II\EX1_x86L\BC45\TEST
@@ -32,7 +33,8 @@ Woo! See uC/OS-II runs again~
 
 ![](2018_11_18_see_ucos2_runs_image_01.png)
 
-把光盘内容和 DOSBox conf 都打包，[放在 github 上][3]。
+把光盘内容和 dosbox.conf 打包放在 [github 上][3]。备查。
+
 
 ## 为何要选用 uC/OS-II？
 
