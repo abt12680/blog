@@ -2,22 +2,22 @@
 
 ## TODO
 
-uCOS-II
+uC/OS-II
 
 * 读书[《嵌入式实时操作系统uC/OS-II(第二版)》][1]
-* 重读 uCOS-II 代码
+* 重读 uC/OS-II 代码
 
-uCOS-III
+uC/OS-III
 
 * 读书[《uC/OS-III, The Real-Time Kernel》][12]
-* 读 uCOS-III 代码，和 uCOS-II 做个对比
+* 读 uC/OS-III 代码，和 uC/OS-II 做个对比
 
-uCOS-III on STM32
+uC/OS-III on STM32
 
 * 读书[《STM32库开发实战指南(第二版)》][3]
 * 做完[这里][13]的例子
 
-uCOS-III on loongson
+uC/OS-III on loongson
 
 * ???
 
@@ -36,7 +36,7 @@ RxDOS on loongson
 * ???
 
 
-## ucOS-II
+## uC/OS-II
 
 TODO
 
@@ -55,11 +55,11 @@ TODO
 
 整个流程做下来，对 kernel、process、thread scheduling、context switch 都有了基本的认识，算是操作系统开发，入门了。
 
-重新学习操作系统，打算还是从复习 uC/OS-II 入手，现在 win32(x86) 上把玩一下 uC/OS-II。之后升级到 uC/OS-III，看看新版本有啥改进。
+重新学习操作系统，打算还是从复习 uC/OS-II 入手，先在 win32(x86) 上把玩一下 uC/OS-II。之后升级到 uC/OS-III，看看新版本有啥改进。
 
 再进入 STM32F103 板子，去玩一下 arm，试试真真的嵌入式开发。对比下 x86 和 arm 的指令集区别。
 
-为何会选用[意法半导体][4]的 STM32 呢？因为 uC/OS-III 的原版书改用 STM32 作为介绍了，而且国内 STM32 的书籍也很多，说明这个板子市场接受度很高嘛。STM32F103 用 32-bit cpu 是 [ARM Cortex-M3][6]。
+为何会选用[意法半导体][4]的 STM32 呢？因为 uC/OS-III 的原版书改用 STM32 作为介绍了，而且国内 STM32 的书籍也很多，说明这个板子市场接受度很高嘛。STM32F103 用的 32-bit CPU 是 [ARM Cortex-M3][6]。
 
 还记得小学刚刚开始接触 386/486 电脑时，MS-DOS 6.22 是个永远刻在脑子里面的名词。cd、dir 这些指令，用了一辈子。
 
