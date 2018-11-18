@@ -89,6 +89,6 @@ RxDOS搞完了，再开始回归 [4.4BSD][11]，读[《The Design of UNIX Operat
 [11]:https://github.com/sergev/4.4BSD-Lite2
 [12]:https://book.douban.com/subject/3996146/
 [13]:https://github.com/BearZPY/STM32-uCOSIII
-[14]:https://github.com/kasicass/blog/blob/master/uCOS/2018_11_18_see_ucos2_runs.md
-[15]:https://github.com/kasicass/blog/blob/master/uCOS/2018_11_18_compile_ucos2.md
-[16]:https://github.com/kasicass/blog/blob/master/uCOS/2018_11_19_ucos2_examples.md
+[14]:https://github.com/kasicass/blog/blob/master/ucos/2018_11_18_see_ucos2_runs.md
+[15]:https://github.com/kasicass/blog/blob/master/ucos/2018_11_18_compile_ucos2.md
+[16]:https://github.com/kasicass/blog/blob/master/ucos/2018_11_19_ucos2_examples.md
