@@ -12,7 +12,7 @@
  * OSXxx 的函数，属于 uC/OS-II 的
  * PC_xxx 函数，属于 x86 平台相关
  * OSTaskCreate() 的时候，需要自己指定 stack pointer，因为是 x86，需要指向高位地址（&TaskStartStk[TASK_STK_SIZE-1]）
- * PC_VectSet(uCOS, OSCtxSw)，指定 uC/OS-II 中的任务切换处理函数。任务级的任务切换通过调用 80x86 的 INT 指令引发中断，通过其向量地址调用指定的处理函数。这里使用了 0x80 的向量，因为 DOS 和 BIOS 都没有使用这个向量。
+ * PC_VectSet(uCOS, OSCtxSw)，指定 uC/OS-II 中的任务切换处理函数。任务级的任务切换通过调用 80x86 的 INT 指令引发中断，通过其向量地址调用指定的处理函数。这里使用了 0x80 的向量，因为 DOS 和 BIOS 都没有使用这个向量。（OS_CPU.H 中定义 #define uCOS 0x80）
  * OSStart()，控制权交给 uC/OS-II，开始任务调度。
 
 ```C
