@@ -150,9 +150,13 @@ single-user mode 默认只挂载了 /
 
 ## 06 - USER MANAGEMENT
 
-* adduser(8)
-* passwd(1)
-* vipw(8)
+用户管理
 
+ * adduser(8)，增加 user
+ * vipw(8)
+ * 修改 /etc/group，将 user 加入 wheel group，就可以 su 了。
 
+密码管理
 
+ * passwd(1)，修改 user 密码
+ * /etc/master.passwd
