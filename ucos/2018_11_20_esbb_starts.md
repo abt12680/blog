@@ -7,4 +7,68 @@
 ![](2018_11_20_esbb_starts_image_02.png)
 
 
+## Real-Time System Concepts
+
+### Foreground/background system
+
+整个系统只有一个程序，你的 App 和 Kernel link 到一起，成为一个程序。
+
+执行流程只会被中断（ISR）打断。
+
+![](2018_11_20_esbb_starts_image_03.png)
+
+
+### Multi-tasking
+
+uC/OS-II Kernel 设计为 multi-tasking 的模式。
+
+ * 任务可以模块化拆分
+ * 抢占式优先级
+
+![](2018_11_20_esbb_starts_image_04.png)
+
+
+### Task states
+
+Task 的状态机
+
+![](2018_11_20_esbb_starts_image_05.png)
+
+
+### 可重入
+
+可重入函数（Reentrant function）
+
+ * 数据都在 stack 上，context switch 没问题
+
+```C
+void strcpy(char *dest, char *src)
+{
+    while (*dest+= = *src++) {
+      ;
+    }
+    *dest = NULL;
+}
+```
+
+
+不可重入函数（Non-reentrant function）
+
+```C
+int Temp;
+
+
+void swap(int *x, int y)
+{
+    Temp = *x;
+    *x   = *y;
+    *y   = Temp;
+}
+```
+
+访问了全局的数据，context swtich 有可能会有问题
+
+![](2018_11_20_esbb_starts_image_06.png)
+
+
 [1]:https://book.douban.com/subject/1840113/
