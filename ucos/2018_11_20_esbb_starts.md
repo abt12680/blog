@@ -70,5 +70,19 @@ void swap(int *x, int y)
 
 ![](2018_11_20_esbb_starts_image_06.png)
 
+### 优先级反转问题（Priority Inversion）
+
+ * Task 3(L) 拿了一个 Semaphore
+ * Task 1(H) 需要 此Semaphore
+ * 导致一段时间内，获得了比 Task 1(H) 更高的优先级
+
+![](2018_11_20_esbb_starts_image_07.png)
+
+一些 Kernel 支持 priority inheritance，可以缩短 priority inversion 的时间
+
+ * Task 3(L) 拿了 semaphore 之后，短暂的优先级提高到与 Task 1(H) 一样
+
+![](2018_11_20_esbb_starts_image_07.png)
+
 
 [1]:https://book.douban.com/subject/1840113/
