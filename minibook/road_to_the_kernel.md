@@ -7,6 +7,11 @@ uC/OS-II
 * 读书[《嵌入式实时操作系统uC/OS-II(第二版)》][1]
 * 重读 uC/OS-II 代码
 
+ESBB
+
+* 读书[《Embedded Systems Building Blocks - 2nd》][17]
+* 读 ESBB 代码
+
 uC/OS-III
 
 * 读书[《uC/OS-III, The Real-Time Kernel》][12]
@@ -92,3 +97,4 @@ RxDOS搞完了，再开始回归 [4.4BSD][11]，读[《The Design of UNIX Operat
 [14]:https://github.com/kasicass/blog/blob/master/ucos/2018_11_18_see_ucos2_runs.md
 [15]:https://github.com/kasicass/blog/blob/master/ucos/2018_11_18_compile_ucos2.md
 [16]:https://github.com/kasicass/blog/blob/master/ucos/2018_11_19_ucos2_examples.md
+[17]:https://book.douban.com/subject/1840113/
