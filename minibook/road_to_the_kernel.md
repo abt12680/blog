@@ -12,6 +12,16 @@ ESBB
 * 读书[《Embedded Systems Building Blocks - 2nd》][17]
 * 读 ESBB 代码
 
+Compiler/Linker
+
+* 读书[《自动动手写编译器、连接器》][18]
+* 支持 x86、amd64、armv7、mips64el
+
+Hardware
+
+* 读书[《自己动手写CPU》][19]
+* 搞懂基本的CPU运作原理
+
 uC/OS-III
 
 * 读书[《uC/OS-III, The Real-Time Kernel》][12]
@@ -52,6 +62,15 @@ RxDOS on loongson
 TODO
 
 ## NOTE
+
+
+**2018.11.21**
+
+想在 DOSBox 上编译 uC/OS-II，已经找不到 Borland C++ 4.5 了。想想，索性不如把 Compiler & Linker 都做了。
+
+[《自动动手写编译器、连接器》][18]有现成的 C Compiler 的实现，能在 x86 上跑。只要支持下 armv7、mips64el，就可以把 uC/OS-II 移植到对应到平台了。不用再每个平台找编译器，帅。
+
+[《自己动手写CPU》][19]实现了 OpenMIPS 标准的一个 CPU，同时还有 uC/OS-II 的移植范例，正好作为写 Compiler & Linker 的参考资料。
 
 
 **2018.11.18**
@@ -98,3 +117,5 @@ RxDOS搞完了，再开始回归 [4.4BSD][11]，读[《The Design of UNIX Operat
 [15]:https://github.com/kasicass/blog/blob/master/ucos/2018_11_18_compile_ucos2.md
 [16]:https://github.com/kasicass/blog/blob/master/ucos/2018_11_19_ucos2_examples.md
 [17]:https://book.douban.com/subject/1840113/
+[18]:https://book.douban.com/subject/26339438/
+[19]:https://book.douban.com/subject/25960657/

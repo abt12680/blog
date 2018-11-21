@@ -81,6 +81,7 @@ void swap(int *x, int y)
 一些 Kernel 支持 priority inheritance，可以缩短 priority inversion 的时间
 
  * Task 3(L) 拿了 semaphore 之后，短暂的优先级提高到与 Task 1(H) 一样
+ * uC/OS-II 不支持 priority inheritance
 
 ![](2018_11_20_esbb_starts_image_07.png)
 
