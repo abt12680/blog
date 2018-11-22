@@ -114,6 +114,8 @@ int main()
 }
 ```
 
+运行结果
+
 ```C
 $ ./a.out 
 mythr_nocancel before sleep, 1262092394
