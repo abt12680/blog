@@ -95,7 +95,7 @@ N1的两个 USB 口，离HDMI口远的接 U 盘，另一个接 USB 键盘。HDMI
 
 ## 硬件参数
 
- * CPU: Amlogic S905D
+ * CPU: [Amlogic S905D][13] ([ARM Cortex-A53][12])
  * RAM: 2G DDR3
  * 8G eMMC
  * Ethernet: RTL8211F Gigabit Ethernet
@@ -133,3 +133,5 @@ N1的两个 USB 口，离HDMI口远的接 U 盘，另一个接 USB 键盘。HDMI
 [9]:https://www.right.com.cn/forum/thread-322223-1-1.html
 [10]:http://www.cypress.com/documentation/datasheets/cyw43455-single-chip-5g-wifi-ieee-80211nac-macbaseband-radio-integrated
 [11]:https://www.kingston.com/en/embedded/eMMC
+[12]:https://developer.arm.com/products/processors/cortex-a/cortex-a53
+[13]:http://mxqproject.com/amlogic-s912-vs-s905/
