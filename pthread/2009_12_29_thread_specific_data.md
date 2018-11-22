@@ -7,7 +7,7 @@
 啥时候会用此种 thread-specific data 呢？
 
   1. 用来实现 errno
-  2. 用来模拟 macos 上的 __thread (tls), 看 [这里][1] (链接失效了)
+  2. 用来模拟 macos 上的 __thread (tls), 看 [这里][1]
 
 ```C
 #include <unistd.h>
@@ -81,4 +81,4 @@ thr #1 data2 = 0x804c3f0
 dtor = 0x804c3f0
 ```
 
-[1]:http://alex.tapmania.org/2011/03/simple-thread-local-storage-with-pthreads.html
+[1]:https://github.com/kasicass/blog/blob/master/pthread/2012_03_15_tls_on_mac.md
