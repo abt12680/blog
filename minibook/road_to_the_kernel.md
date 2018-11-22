@@ -50,6 +50,13 @@ RxDOS on loongson
 
 * ???
 
+OpenBSD on loongson
+
+* ???
+
+OpenBSD on N1 box (arm64)
+
+* ???
 
 ## uC/OS-II
 

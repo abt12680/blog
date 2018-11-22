@@ -18,7 +18,7 @@
  * 可以运行安卓adb工具的电脑一台，win/mac/linux都行
 
 
-## 降级 bootloader（fastboot）
+## 降级 bootloader 方法一（fastboot）
 
 首先下载文件 
 
@@ -55,7 +55,7 @@ fastboot reboot
 如此便完成了bootloader 降级。
 
 
-## 降级 bootloader（adb）
+## 降级 bootloader 方法二（adb）
 
 1. 盒子插网线接入和电脑同一局域网，记下盒子获得的内网IP地址；
 2. N1在主界面使用鼠标点击四次固件版本号打开adb
@@ -121,6 +121,19 @@ N1的两个 USB 口，离HDMI口远的接 U 盘，另一个接 USB 键盘。HDMI
  * [https://www.right.com.cn/forum/thread-340279-1-1.html][8]
  * [https://www.right.com.cn/forum/thread-322223-1-1.html][9]
 
+----------------------------
+
+**Updated 2018.11.23**
+
+我的 N1 盒子终于到货了。
+
+按方法二，很简单就可以"降级bootloader"成功。
+
+* 以后对 N1 的研究，可以好好参考这里：[https://github.com/yangxuan8282/phicomm-n1/][15]
+* [自己制作 N1 的 Linux 镜像][16]
+
+但做好的 armbian U盘，一直启动不成功。只能等顾QQ给我邮寄那个刷机专用U盘了。:-)
+
 
 [1]:https://www.solid-run.com/product/SRMX6QDWT1D02GE008X00CE/
 [2]:https://2.taobao.com/
@@ -135,3 +148,6 @@ N1的两个 USB 口，离HDMI口远的接 U 盘，另一个接 USB 键盘。HDMI
 [11]:https://www.kingston.com/en/embedded/eMMC
 [12]:https://developer.arm.com/products/processors/cortex-a/cortex-a53
 [13]:http://mxqproject.com/amlogic-s912-vs-s905/
+[14]:https://developer.android.com/studio/#downloads
+[15]:https://github.com/yangxuan8282/phicomm-n1/
+[16]:https://github.com/yangxuan8282/phicomm-n1/wiki/%E8%87%AA%E5%B7%B1%E5%88%B6%E4%BD%9C-N1-%E7%9A%84-Linux-%E9%95%9C%E5%83%8F
