@@ -121,7 +121,10 @@ Python                                1974          75768          97044        
 
 C++ 有一个设计原则"提供 C 的所有能力；性能第一，为了性能，宁可让语言使用者去handle一定的复杂度"。这是 Stroustrup 很执着的一点。
 
-C 是一门面向底层的语言，用来写操作系统、写编译器的。C++要保持对其的兼容，就要接受 C 中所有的"不完美"。手动内存管理，就是 C++ 继承来的，最大的问题。
+C 是一门面向底层的语言，用来写操作系统、写编译器的。C++要保持对其的兼容，就要接受 C 中所有的"不完美"。手动内存管理，就是 C++ 继承而来的最大的问题。
+
+手动管理内存没问题，那只能在 C 这样一种简单的语言框架之下。当 C++ 引入了越来越多语法之后，内存管理就像个毒瘤，越来越痛。
+
 
 ### 内存管理之殇
 
@@ -135,7 +138,7 @@ C 是一门面向底层的语言，用来写操作系统、写编译器的。C++
  * ::operator new / ::operator delete
  * ::operator (address) new / ::operator (address) delete
 
-:-) 不知道有多少新生代程序员能完全理解上面这些 keyword。反正作为 C++，这些是基础的基础，《[Effective C++][8]》开场好几篇，都在讲这些东东。
+:-) 不知道有多少新生代程序员能完全理解上面这些 keyword。反正作为 C++ 程序员，这些都是基础，《[Effective C++][8]》开场好几篇，都在讲这些东东。
 
 而基类的虚析构函数，本质上也是要解决内存释放问题。
 
@@ -149,7 +152,7 @@ class Base {
 
 所以，大规模 C++ 项目第一个基础设施，就是发明 smart pointer（智能指针）。于是有了 C++11 中的 std::shared_ptr。
 
-然后，我要把 class instance 的 this，作为 member function 的返回值，返回成 std::shared_ptr。这又成了浩大工程。
+然后，想把 class instance 的 this，作为 member function 的返回值，返回成 std::shared_ptr。这又成了浩大工程。
 
 ```C++
 class MyClass : std::enable_shared_from_this<MyClass> {
@@ -159,7 +162,7 @@ class MyClass : std::enable_shared_from_this<MyClass> {
 };
 ```
 
-然后，C++11 还给你带来了雪上加霜的 lambda。
+再然后，C++11 还给你带来了雪上加霜的 lambda。
 
 ```C++
 void ClassName::MethodName(int a, float b) {
@@ -178,11 +181,11 @@ void ClassName::MethodName(int a, float b) {
 
 C++98 标准化了 template，然后在 template 上实现了 STL。为了这事，C++ 标准晚了五年才面世。不得不说，STL 是一个精巧的设计，template 本身的 meta-programming 能力，相当于在编译期给你造了一套图灵完毕的计算机。各种 C++ 大牛在 template 上玩得不亦乐乎。
 
-继续说内存问题。遵循"性能第一"原则，C++给每个容器声明时，都保留了一个 std::allocator 的入口，你可以插入自己实现的 allocator。但你想精巧统计 STL 每一分内存是如何使用的，很难。
+继续说内存问题。遵循"性能第一"原则，C++ 给每个容器声明时，都保留了一个 std::allocator 的入口，你可以插入自己实现的 allocator。但你想精巧统计 STL 每一分内存是如何使用的，很难。
 
-除非自己实现容器类，完全不用 STL，否则即使是实现了 allocator，也不完美。我尝试过[这个事情][40]，统计并不满意。
+只有自己实现容器类，完全不用 STL（很多游戏引擎是这么干的），再配上自己的内存管理模块，才能做到。而尝试与 STL 共舞[这个事情][40]，总是不完美。
 
-说到 STL，想起来还看过一本书《[Generic Programming and the STL][39]》，也是 jjhou 翻译的。讲解了 STL 设计上的所有 policy。真想理解 STL 的设计原理，可以读读。
+说到 STL，还看过一本书《[Generic Programming and the STL][39]》，也是 jjhou 翻译的。讲解了 STL 设计上的所有 policy。真想理解 STL 的设计原理，可以读读。
 
 
 ### 精巧的天书 -- boost
