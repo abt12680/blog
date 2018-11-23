@@ -15,7 +15,7 @@ jjhou 个人网站（[http://www.jjhou.com][29]）已经无法访问，随着 C+
 
 知乎上找到的[一张图片][30]，每一本我都有 :-)，一份回忆。现在只留着《Win32多线程程序设计》《Word排版艺术》。
 
-![](2018_11_23_anti_cpp_image_06.png)
+![](2018_11_23_farewell_cpp_image_07.png)
 
 网易云课堂上还能看到 [jjou的课程][31]，还在讲 C++。偶尔也能收到技术培训公司的广告邮件，还能看到 jjhou 的身影。:-)
 
@@ -48,7 +48,7 @@ C++ 有了基础之后，在老师推荐下，开始看 Scott Meyers 的《[Effe
 
 当年人邮出版的这一堆 C++ 书籍，都是红色封面，放在书架上，煞是好看。
 
-![](2018_11_23_anti_cpp_image_06.png) ![](2018_11_23_anti_cpp_image_04.png) ![](2018_11_23_anti_cpp_image_05.png) ![](2018_11_23_anti_cpp_image_01.png) ![](2018_11_23_anti_cpp_image_02.png) ![](2018_11_23_anti_cpp_image_03.png)
+![](2018_11_23_farewell_cpp_image_06.png) ![](2018_11_23_farewell_cpp_image_04.png) ![](2018_11_23_farewell_cpp_image_05.png) ![](2018_11_23_farewell_cpp_image_01.png) ![](2018_11_23_farewell_cpp_image_02.png) ![](2018_11_23_farewell_cpp_image_03.png)
 
 上面这些 Effective XXX 太多了，[Herb Sutter][11] 又总结出精华，出了本《[C++ Coding Standards][18]》。我觉得有偏稿费的嫌疑。其实这一大堆 Effective XXX，只需要读最早的两本《[Effective C++][8]》[More Effective C++][9]》就好。
 
