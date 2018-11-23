@@ -24,7 +24,7 @@ jjhou 个人网站（[http://www.jjhou.com][29]）已经无法访问，随着 C+
 
 ## C++学习历程
 
-大学开始学习 C++，直接开始啃 Lippman 的 《[C++ Primer]》[5]（还有本《C++ Primer Plus》，和 Lippman 没毛关系，别看）。不过大部分语法特性，都是边写边用学会的，《[C++ Primer]》[5] 太厚，没认真读完一遍。哈哈。
+大学开始学习 C++，直接开始啃 Lippman 的 《[C++ Primer][5]》（还有本《C++ Primer Plus》，和 Lippman 没毛关系，别看）。不过大部分语法特性，都是边写边用学会的，《[C++ Primer][5]》 太厚，没认真读完一遍。哈哈。
 
 ```C++
 #include <iostream>
@@ -36,9 +36,9 @@ int main(void) {
 
 学习 C++ 的过程中，还去看了 Charles Petzold 的《[Programming Windows 5th][6]》，基本了解了 Win32 API，理解了 Windows 一个窗体消息循环的样貌。
 
-当时市面上流行的 Win32 GUI 制作方式，是 MFC，在还不会 MFC 编程的基础上，开始读 jjhou 的 《[深入浅出MFC]》[4]，里面印象最深的是"勿在浮沙筑高台"那一章，将类、继承、多态等等概念，都讲清楚了。还模拟了 MFC 整个 Message Bump 的实现。
+当时市面上流行的 Win32 GUI 制作方式，是 MFC，在还不会 MFC 编程的基础上，开始读 jjhou 的 《[深入浅出MFC][4]》，里面印象最深的是"勿在浮沙筑高台"那一章，将类、继承、多态等等概念，都讲清楚了。还模拟了 MFC 整个 Message Bump 的实现。
 
-其实，更推荐先看《[Programming MFC][7]》，再读《[深入浅出MFC]》[4]。先学会使用 MFC，再去研究原理。就不会像我，看完整本 《[深入浅出MFC]》[4]，却不会写 MFC 程序。如今，MFC 肯定不要学了，C++ GUI 主流应该是 [Qt][17]。
+其实，更推荐先看《[Programming MFC][7]》，再读《[深入浅出MFC][4]》。先学会使用 MFC，再去研究原理。就不会像我，看完整本 《[深入浅出MFC][4]》，却不会写 MFC 程序。如今，MFC 肯定不要学了，C++ GUI 主流应该是 [Qt][17]。
 
 从现在来看，MFC 这套东西，无非是做了一套反射系统，然后把 Win32 API 全部 class 封装了一遍。当年，第一次见识，心情澎湃、兴奋无比。
 
@@ -50,13 +50,13 @@ C++ 有了基础之后，在老师推荐下，开始看 Scott Meyers 的《[Effe
 
 ![](2018_11_23_farewell_cpp_image_06.png) ![](2018_11_23_farewell_cpp_image_04.png) ![](2018_11_23_farewell_cpp_image_05.png) ![](2018_11_23_farewell_cpp_image_01.png) ![](2018_11_23_farewell_cpp_image_02.png) ![](2018_11_23_farewell_cpp_image_03.png)
 
-上面这些 Effective XXX 太多了，[Herb Sutter][11] 又总结出精华，出了本《[C++ Coding Standards][18]》。我觉得有偏稿费的嫌疑。其实这一大堆 Effective XXX，只需读最早的两本《[Effective C++][8]》[More Effective C++][9]》就好。
+上面这些 Effective XXX 太多了，[Herb Sutter][11] 又总结出精华，出了本《[C++ Coding Standards][18]》。我觉得有偏稿费的嫌疑。其实这一大堆 Effective XXX，只需读最早的两本《[Effective C++][8]》《[More Effective C++][9]》就好。
 
 之后，又买了 Bjarne Stroustrup 的《[The C++ Programming Language][16]》，因为对 C++ 已经很熟悉，基本就没再读这本基础书。
 
-之间，还读过 [Andrew Koenig][34] 的《[C++沉思录]》[32]和《[Accelerated C++]》[33]。其中，《[Accelerated C++]》[33]是本 C++ 入门书籍，可以在看《[C++ Primer]》[5]之前读读，快速地对C++有个初步的了解。而《[C++沉思录]》[32]则是一本思考文集，总结了作者使用C++过程中很多经验。当年读《[C++沉思录]》[32]时，缺乏工程经验，很多书中描述的内容，共鸣不多。后来工作后，却又没时间再次温故一遍此书。其实 [Andrew Koenig][34] 最出名的一本书，应该是 《[C Traps and Pitfalls]》[35]，地位相当于《[Effective C++][8]》。
+之间，还读过 [Andrew Koenig][34] 的《[C++沉思录][32]》和《[Accelerated C++][33]》。其中，《[Accelerated C++][33]》是本 C++ 入门书籍，可以在看《[C++ Primer][5]》之前读读，快速地对C++有个初步的了解。而《[C++沉思录][32]》则是一本思考文集，总结了作者使用C++过程中很多经验。当年读《[C++沉思录][32]》时，缺乏工程经验，很多书中描述的内容，共鸣不多。后来工作后，却又没时间再次温故一遍此书。其实 [Andrew Koenig][34] 最出名的一本书，应该是 《[C Traps and Pitfalls][35]》，地位相当于《[Effective C++][8]》。
 
-大学还看了 Lippman 的 《[Inside the C++ Object Model]》[3]，从编译器的角度，讲解了如何实现 C++ 的语法，特别是 virtual function 的实现 -- vtable。如今面试，所有学生都会准备一下 vtable 的面经，不管是否真的理解。因为提问的这一群面试官，都是从 C++ 鼎盛时代长大的，总会问到 vtable。:-)
+大学还看了 Lippman 的 《[Inside the C++ Object Model][3]》，从编译器的角度，讲解了如何实现 C++ 的语法，特别是 virtual function 的实现 -- vtable。如今面试，所有学生都会准备一下 vtable 的面经，不管是否真的理解。因为提问的这一群面试官，都是从 C++ 鼎盛时代长大的，总会问到 vtable。:-)
 
 读这些 Effective XXX，总觉得没啥实践，感觉不会写 C++ 代码。之后读到《[道法自然][19]》《[C++实践之路][20]》，拍手称好。这两本，才是 C++ 实践的好书，接地气，讲解的都是具体问题。
 
@@ -81,22 +81,6 @@ C++ 有了基础之后，在老师推荐下，开始看 Scott Meyers 的《[Effe
 我试过几个，开始看《[Imperfect C++][24]》和《[C++ Templates: The Complete Guide][25]》，实在看不下去。
 
 不过，经过这么多 C++ 书籍熏陶，有个好处，基本的 C++ 编译器报错，我大约都知道为啥。:-)，什么 template partial specialization 我都懂。嘿嘿。读 [boost][27] 代码也不吃力。
-
-
-## C++的过去和未来
-
-C++98，C++标准第一版。引入 template + STL 绝对是败笔中的败笔。template 开启了"语法糖"高端玩法，
-
-C++11，C++标准第二版。
-
-
-展望。
-
-回到 2002 - 2006 那个岁月，C++98 的标准确立不久，整个国内外都在一种 C++ 的热浪当中。国内引入了很多 C++ 的技术书籍，大家都在实际项目中引入 C++，以及去学习，如何用好 C++。
-
-替代者：C、Java、C#、go、Python、Javascript(node.js)
-
-就和 lisp 一样，终将被替代。
 
 
 ## 我的项目经验
@@ -197,14 +181,67 @@ asio 第一个 example 就是教你[如何写一个 allocator][41]，配合着 a
 如果你碰到 gcc 编译器报错，template 编译出错的内容，简直没法看。需要长期的训练，才能一眼看出问题所在。
 
 
+## C++正确的打开方式
+
+如果你不得不用 C++，下面是建议：
+
+读最基本的书籍
+
+ * 《[C++ Primer][5]》
+ * 《[Effective C++][8]》
+ * 《[道法自然][19]》
+ * 《[C++实践之路][20]》
+
+读优秀的 C++ 开源项目
+
+ * [Doom3 Source][42]
+ * [fastbuild Source][43]
+
+配上语言参考手册
+
+ * [https://en.cppreference.com/w/][44]
+
+不要滥用语言特性。用到多少内容，学习多少内容，把精力留给业务。
+
+
+## C++的过去和未来
+
+这一节，想试着从历史的角度，来看看 C++ 的过去和未来。不一定正确，just for fun~
+
+C++ 正史看 [这里][46]。
+
+早年大家都用 C，随着项目越来越大，越来越多人一起写代码，就发现 C 好像不适合多人协作，封装性不足。于是 Stroustrup 尝试发明了 C++。
+
+最早 C++ 的设计，叫做"C with Class"，这是不错的尝试，很多 C++ 项目，都严格保持在"C with Class"这个层面上。比如：[Doom3 Source][42]。
+
+之后，C++ 被 M$ 发现了，开始用来做 Windows 除了内核之外的一切内容。C++，或者说 OO，最适用的场景，是写 GUI。不小心，Windows 很流行，然后 C++ 也很流行。
+
+从 MFC，到 COM，到 COM+，到 ActiveX。M$ 搞出来了一坨又一坨的 C++ 技术。然后还把 C++ 的两位泰斗（[Lippman][47]、[Herb Sutter][11]）都挖去写编译器（VC++）。[Lippman][47]已经不干了，要是没记错，目前[Herb Sutter][11] 是 C++标准委员会的主席，同时也是 VC++ 编译器的 leader。
+
+之后 google 商业上又很成功，招了很多牛逼程序员，大家都是用 C++，构建了 google 的业务。看看 [gperftools][48]、[gflags][49]、[gtest][50]、[protobuf][51] 就可以知道 google 是如何使用 C++ 的。
+
+最新标准可以看 [https://isocpp.org/std/status][45]
+
+![](2018_11_23_farewell_cpp_image_08.png)
+
+越来越多的模块加入到标准库了，但，对比 Java、go 等语言，标准库还是不够丰富。
+
+做普通的应用开发，在举起 C++ 这种重型武器，已经不适合了。
+
+**展望**
+
+ * C，kernel/嵌入式开发
+ * C++，嵌入式、性能相关的地方（游戏引擎）、已经现存的各种老系统
+ * go，go会慢慢蚕食很多之前 C/C++ 所在的领域
+ * Java/C#/Python/Node.js，web开发、企业应用开发
+
+
 ## 别人的评价
 
-云风很早就开始抵制 C++，新写的代码，只用 C，拒绝 C++。《[看着 C++ 远去][28]》
+ * skywind3000 写过一篇 [什么时候用C而不用C++？][2]，谈到了 C 和 OO 的不同设计思想，解读精辟。
+ * 云风很早就开始抵制 C++，新写的代码，只用 C，拒绝 C++。《[看着 C++ 远去][28]》
+ * pongba 的 [C++11（及现代C++风格）和快速迭代式开发][1]，正确使用 moden C++
 
-
-pongba 的 [C++11（及现代C++风格）和快速迭代式开发][1]
-
-kcp 作者林大哥写过一篇 [什么时候用C而不用C++？][2]
 
 [1]:http://mindhacks.cn/2012/08/27/modern-cpp-practices/
 [2]:http://www.skywind.me/blog/archives/1407
@@ -247,3 +284,13 @@ kcp 作者林大哥写过一篇 [什么时候用C而不用C++？][2]
 [39]:https://book.douban.com/subject/1241423/
 [40]:https://github.com/kasicass/kasicass/tree/master/cpp/MemoryReport
 [41]:https://www.boost.org/doc/libs/1_68_0/doc/html/boost_asio/example/cpp03/allocation/server.cpp
+[42]:https://github.com/TTimo/doom3.gpl
+[43]:https://github.com/fastbuild/fastbuild
+[44]:https://en.cppreference.com/w/
+[45]:https://isocpp.org/std/status
+[46]:http://www.cplusplus.com/info/history/
+[47]:https://en.wikipedia.org/wiki/Stanley_B._Lippman
+[48]:https://github.com/gperftools/gperftools
+[49]:https://github.com/gflags/gflags
+[50]:https://github.com/abseil/googletest
+[51]:https://github.com/protocolbuffers/protobuf
