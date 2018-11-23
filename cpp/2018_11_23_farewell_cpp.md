@@ -24,7 +24,7 @@ jjhou 个人网站（[http://www.jjhou.com][29]）已经无法访问，随着 C+
 
 ## C++学习历程
 
-大学开始学习 C++，直接开始啃 Lippman 的 《[C++ Primer][5]》（还有本《C++ Primer Plus》，和 Lippman 没毛关系，别看）。不过大部分语法特性，都是边写边用学会的，《[C++ Primer][5]》 太厚，没认真读完一遍。哈哈。
+大学开始学习 C++，直接开始啃 [Lippman][47] 的 《[C++ Primer][5]》（还有本《C++ Primer Plus》，和 [Lippman][47] 没毛关系，别看）。不过大部分语法特性，都是边写边用学会的，《[C++ Primer][5]》 太厚，没认真读完一遍。哈哈。
 
 ```C++
 #include <iostream>
@@ -50,13 +50,13 @@ C++ 有了基础之后，在老师推荐下，开始看 Scott Meyers 的《[Effe
 
 ![](2018_11_23_farewell_cpp_image_06.png) ![](2018_11_23_farewell_cpp_image_04.png) ![](2018_11_23_farewell_cpp_image_05.png) ![](2018_11_23_farewell_cpp_image_01.png) ![](2018_11_23_farewell_cpp_image_02.png) ![](2018_11_23_farewell_cpp_image_03.png)
 
-上面这些 Effective XXX 太多了，[Herb Sutter][11] 又总结出精华，出了本《[C++ Coding Standards][18]》。我觉得有偏稿费的嫌疑。其实这一大堆 Effective XXX，只需读最早的两本《[Effective C++][8]》《[More Effective C++][9]》就好。
+上面这些 Effective XXX 太多了，[Herb Sutter][11] 又总结出精华，出了本《[C++ Coding Standards][18]》。我觉得有骗稿费的嫌疑。其实这一大堆 Effective XXX，只需读最早的两本《[Effective C++][8]》《[More Effective C++][9]》就好。
 
 之后，又买了 Bjarne Stroustrup 的《[The C++ Programming Language][16]》，因为对 C++ 已经很熟悉，基本就没再读这本基础书。
 
-之间，还读过 [Andrew Koenig][34] 的《[C++沉思录][32]》和《[Accelerated C++][33]》。其中，《[Accelerated C++][33]》是本 C++ 入门书籍，可以在看《[C++ Primer][5]》之前读读，快速地对C++有个初步的了解。而《[C++沉思录][32]》则是一本思考文集，总结了作者使用C++过程中很多经验。当年读《[C++沉思录][32]》时，缺乏工程经验，很多书中描述的内容，共鸣不多。后来工作后，却又没时间再次温故一遍此书。其实 [Andrew Koenig][34] 最出名的一本书，应该是 《[C Traps and Pitfalls][35]》，地位相当于《[Effective C++][8]》。
+之间，还读过 [Andrew Koenig][34] 的《[C++沉思录][32]》和《[Accelerated C++][33]》。其中，《[Accelerated C++][33]》是本 C++ 入门书籍，可以在看《[C++ Primer][5]》之前读读，快速地对C++有个初步的了解。而《[C++沉思录][32]》则是一本思考文集，总结了作者使用C++过程中很多经验。当年读《[C++沉思录][32]》时，缺乏工程经验，书中描述的内容，共鸣不多。后来工作后，却又没时间再次温故一遍此书。其实 [Andrew Koenig][34] 最出名的一本书，应该是 《[C Traps and Pitfalls][35]》，地位相当于《[Effective C++][8]》。
 
-大学还看了 Lippman 的 《[Inside the C++ Object Model][3]》，从编译器的角度，讲解了如何实现 C++ 的语法，特别是 virtual function 的实现 -- vtable。如今面试，所有学生都会准备一下 vtable 的面经，不管是否真的理解。因为提问的这一群面试官，都是从 C++ 鼎盛时代长大的，总会问到 vtable。:-)
+大学还看了 Lippman 的 《[Inside the C++ Object Model][3]》，从编译器的角度，讲解了如何实现 C++ 的语法，特别是 virtual function 的实现 -- vtable。如今面试，所有学生都会准备一下 vtable 的面经，不管是否真的理解。因为提问的这一群面试官，都是从 C++ 鼎盛时代长大的，总喜欢问 vtable。:-)
 
 读这些 Effective XXX，总觉得没啥实践，感觉不会写 C++ 代码。之后读到《[道法自然][19]》《[C++实践之路][20]》，拍手称好。这两本，才是 C++ 实践的好书，接地气，讲解的都是具体问题。
 
@@ -76,16 +76,16 @@ C++ 有了基础之后，在老师推荐下，开始看 Scott Meyers 的《[Effe
  * 《[C++ Templates: The Complete Guide][25]》
  * 《[C++ Template Metaprogramming][26]》
 
-我看过《[C++设计新思维][23]》，对 Alexandrescu 把 C++ template 玩得如此神乎其神表示惊奇不已。除非是你要去维护 [boost][27] 的代码，否则上面这几本书，还是不要碰了。哈哈。
+我看过《[C++设计新思维][23]》，对 Alexandrescu 把 C++ template 玩得如此神乎其技表示惊叹不已。除非是你要去维护 [boost][27] 的代码，否则上面这几本书，还是不要碰了。哈哈。
 
-我试过几个，开始看《[Imperfect C++][24]》和《[C++ Templates: The Complete Guide][25]》，实在看不下去。
+我试过几次，打算看《[Imperfect C++][24]》和《[C++ Templates: The Complete Guide][25]》，实在看不下去。《[C++ Templates: The Complete Guide][25]》最多能看到第四还是第五章。
 
 不过，经过这么多 C++ 书籍熏陶，有个好处，基本的 C++ 编译器报错，我大约都知道为啥。:-)，什么 template partial specialization 我都懂。嘿嘿。读 [boost][27] 代码也不吃力。
 
 
 ## 我的项目经验
 
-毕业进入公司，写了五年服务端(2006-2011)，主要用 C 、LPC。写了7年客户端(2011-now)，主要用 C++、Python。C++ 用于维护客户端引擎和工具，工具用的 MFC。算是大量写过 C++ 代码了。
+毕业进入公司，写了五年服务端(2006-2011)，主要用 C 、LPC。写了七年客户端(2011-now)，主要用 C++、Python。C++ 用于维护客户端引擎和工具，工具用的 MFC。算是大量写过 C++ 代码了。
 
 引擎的 C/C++ 代码统计（200w，不包括编辑器）
 
