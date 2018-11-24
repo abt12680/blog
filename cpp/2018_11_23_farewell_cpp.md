@@ -228,7 +228,7 @@ XXX* XXX::pyNew() { return new XXX() }
 
 ```
 
-然后 [Boost.Python][60] 进步了一点，通过模板推到，自己写一个 .cpp 文件去注册你的 class 给 Python。缺点就是引入了 [boost][27] 这一大坨难维护的东西。
+然后 [Boost.Python][60] 进步了，通过模板推导来获得信息，只需要写一个 .cpp 文件去注册你的 class 给 Python。缺点就是引入了 [boost][27] 这一大坨难维护的东西。
 
 源文件
 
