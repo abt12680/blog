@@ -174,7 +174,7 @@ C++98 标准化了 template，然后在 template 上实现了 STL。为了这事
 
 ### 精巧的天书 -- boost
 
-boost 被认为是 STL 的试验田，很多内容，都在 boost 中先尝试。
+[boost][27] 被认为是 STL 的试验田，很多内容，都在 [boost][27] 中先尝试。
 
 asio 第一个 example 就是教你[如何写一个 allocator][41]，配合着 asio 一起工作的。是不是很像天书。
 
@@ -204,6 +204,113 @@ asio 第一个 example 就是教你[如何写一个 allocator][41]，配合着 a
 不要滥用语言特性。用到多少内容，学习多少内容，把精力留给业务。
 
 
+## 使用C++，容易过度设计
+
+### 案例一：script binding
+
+做游戏，很多时候要给引擎嵌入一个脚本语言：Python、Lua 等等。那自然要将 C++ 写得一些功能，注册到脚本。如何注册，各路神仙就发明了很多方法。
+
+先看一个反例，我们项目中现存的方法。需要将胶水代码插入到 C++ 各个类中，而且只能绑定 Python。是不是很反人类。哈哈。
+
+```C++
+/*==== .h ====*/
+class XXX : public PyObjectPlus
+{
+     Py_Header(XXX, PyObjectPlus)
+
+public:
+     PY_FACTORY_DECLARE()                // static pyNew(), 交给每个 class 自己实现
+                                         // static _pyNew(), 调用 pyNew()
+                                         // static PyFactoryMethodLink s_link_pyNew
+public:
+     void foo(int a);
+     PY_AUTO_METHOD_DECLARE(foo, ...)    // 定义 PY_METHOD(foo) 所需要的 member func
+
+     int bar() const;
+     void bar(int v);
+     PY_RW_ATTRIBUTE_DECLARE(bar_, bar)  // 定义 PY_ATTRIBUTE(bar) 所需要的 member func
+private:
+     int bar_;
+};
+
+/*==== .cpp ====*/
+PY_TYPEOBJECT( XXX )                     // 定义PyTypeObject
+
+PY_BEGIN_METHODS( XXX )                  // 定义methods, attr, 自动加到 s_attributes_ 中
+  PY_METHOD(foo)
+PY_END_METHODS()
+
+PY_BEGIN_ATTRIBUTES( XXX )
+  PY_ATTRIBUTE(bar)
+PY_END_ATTRIBUTES()
+
+PY_FACTORY(XXX, ModuleName)              // 通过 s_link_pyNew, 将PyTypeObject加入某个module中
+
+XXX* XXX::pyNew() { return new XXX() }
+
+```
+
+然后 [Boost.Python][60] 进步了一点，通过模板推到，自己写一个 .cpp 文件去注册你的 class 给 Python。缺点就是引入了 [boost][27] 这一大坨难维护的东西。
+
+源文件
+
+```C++
+struct World
+{
+    void set(std::string msg) { this->msg = msg; }
+    std::string greet() { return msg; }
+    std::string msg;
+};
+```
+
+注册文件
+
+```C++
+#include <boost/python.hpp>
+using namespace boost::python;
+
+BOOST_PYTHON_MODULE(hello)
+{
+    class_<World>("World")
+        .def("greet", &World::greet)
+        .def("set", &World::set)
+    ;
+}
+```
+
+在 Python 中使用。
+
+>>> import hello
+>>> planet = hello.World()
+>>> planet.set('howdy')
+>>> planet.greet()
+'howdy'
+
+做到 Boost.Python，基本 C++ template 这种玩法，就算做到头了。其实主流还有两种做法：
+
+ * 方法一，以 pure c 的方式，暴露模块接口。比如：Lua 的 [ffi][55]、Python 的 [cffi][54]。
+ * 方法二，写一个 parser，把 C++ 的文件扫描一遍，然后对应生成注册代码。比如：[swig][56]
+
+显然，方法一的可维护性更佳。方法二，为了需求，很多时候需要自己写 parser。
+
+这里还涉及 C++ 对象生命期的问题，云风已经讨论得很清楚，[这里][57]、[这里][58]和[这里][59]。不再赘述。
+
+
+### 案例二：build system
+
+最近在整理项目中一个老的 C++ 代码，想把项目 build 起来。然后发现从 SVN checkout 下来的代码，缺少一堆依赖库。而且 bulidsystem 还是用的 [bjam][53]。无法，自己给重新设计了下，改用 cmake，并且把所有第三方依赖库代码（boost 代码除外，太tm大了），都丢入 SVN 管理。
+
+最后我打算 cmake 都不用，直接改用 emake。
+
+ * [cmake & emake][52]
+
+其实 build system，就是过度设计的典范。使用 cmake 使用前提场景的，C++ 代码行数不到那个规模，就别用。
+
+从一个 build system 切换到另一个 build system，可能还不如搞个 Makefile 来的快。
+
+这一块，Go 做了彻底的改进，可以参考下 Go 如何做构建的。
+
+
 ## C++的过去和未来
 
 C++ 正史看 [这里][46]。
@@ -217,6 +324,8 @@ C++ 正史看 [这里][46]。
 之后，C++ 被 Microsoft 发现了，开始用来做 Windows 除了内核之外的一切内容。C++，或者说 OO，最适用的场景，是写 GUI。不小心，Windows 很流行，然后 C++ 也很流行。
 
 从 MFC，到 COM，到 COM+，到 ActiveX。Microsoft 搞出来了一坨又一坨的 C++ 技术。然后还把 C++ 的两位泰斗（[Lippman][47]、[Herb Sutter][11]）都挖去写编译器（VC++）。[Lippman][47] 已经不干了，要是没记错，目前 [Herb Sutter][11] 是 C++标准委员会的主席，同时也是 VC++ 编译器的 leader。
+
+据说 VC++ compiler team 那些人，每天研究的就是怎么多写点 template，让 compile 时间可以久一点，然后多点时间喝咖啡。:-)
 
 之后 google 商业上又很成功，招了很多牛逼程序员，大家都是用 C++，构建了 google 的业务。看看 [gperftools][48]、[gflags][49]、[gtest][50]、[protobuf][51] 就可以知道 google 是如何使用 C++ 的。
 
@@ -235,12 +344,12 @@ C++ 正史看 [这里][46]。
  * Go，会慢慢蚕食很多之前 C/C++ 所在的领域
  * Java/C#/Python/Node.js，web开发、企业应用开发
 
-C++ 最大的价值，就在于还有一大堆老系统是用 C++ 写的。长期可见的未来，这一大坨 C++ 代码，还需要一大堆懂 C++ 的程序员。
+C++ 程序员最大的存在价值，就是世界上还有一大堆老系统是用 C++ 写的，这坨代码，总要人维护吧。看来我很难失业了。:-)
 
 如果是新项目，可以重新技术选型的，还是尝试下其它语言吧。Go 就是不错的选择。
 
 
-## 别人的看法
+## 别人的观点
 
  * skywind3000 写过一篇 [什么时候用C而不用C++？][2]，谈到了 C 和 OO 的不同设计思想，解读精辟。
  * 云风很早就开始抵制 C++，新写的代码，只用 C，拒绝 C++，《[看着 C++ 远去][28]》。
@@ -300,3 +409,12 @@ C++ 最大的价值，就在于还有一大堆老系统是用 C++ 写的。长�
 [49]:https://github.com/gflags/gflags
 [50]:https://github.com/abseil/googletest
 [51]:https://github.com/protocolbuffers/protobuf
+[52]:https://github.com/kasicass/blog/blob/master/boost/2018_11_07_cmake_and_emake.md
+[53]:https://www.boost.org/doc/libs/1_43_0/doc/html/jam/usage.html
+[54]:https://cffi.readthedocs.io/en/latest/
+[55]:http://luajit.org/ext_ffi.html
+[56]:http://swig.org/
+[57]:https://blog.codingnow.com/2007/10/lua_c_object_reference.html
+[58]:https://blog.codingnow.com/2013/01/binding_c_object_for_lua.html
+[59]:https://blog.codingnow.com/2016/01/reference_count.html
+[60]:https://www.boost.org/doc/libs/1_61_0/libs/python/doc/html/index.html
