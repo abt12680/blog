@@ -214,9 +214,9 @@ C++ 正史看 [这里][46]。
 
 最早 C++ 的设计，叫做"C with Class"，这是不错的尝试，很多 C++ 项目，都严格保持在"C with Class"这个层面上。比如：[Doom3 Source][42]。
 
-之后，C++ 被 M$ 发现了，开始用来做 Windows 除了内核之外的一切内容。C++，或者说 OO，最适用的场景，是写 GUI。不小心，Windows 很流行，然后 C++ 也很流行。
+之后，C++ 被 Microsoft 发现了，开始用来做 Windows 除了内核之外的一切内容。C++，或者说 OO，最适用的场景，是写 GUI。不小心，Windows 很流行，然后 C++ 也很流行。
 
-从 MFC，到 COM，到 COM+，到 ActiveX。M$ 搞出来了一坨又一坨的 C++ 技术。然后还把 C++ 的两位泰斗（[Lippman][47]、[Herb Sutter][11]）都挖去写编译器（VC++）。[Lippman][47] 已经不干了，要是没记错，目前 [Herb Sutter][11] 是 C++标准委员会的主席，同时也是 VC++ 编译器的 leader。
+从 MFC，到 COM，到 COM+，到 ActiveX。Microsoft 搞出来了一坨又一坨的 C++ 技术。然后还把 C++ 的两位泰斗（[Lippman][47]、[Herb Sutter][11]）都挖去写编译器（VC++）。[Lippman][47] 已经不干了，要是没记错，目前 [Herb Sutter][11] 是 C++标准委员会的主席，同时也是 VC++ 编译器的 leader。
 
 之后 google 商业上又很成功，招了很多牛逼程序员，大家都是用 C++，构建了 google 的业务。看看 [gperftools][48]、[gflags][49]、[gtest][50]、[protobuf][51] 就可以知道 google 是如何使用 C++ 的。
 
@@ -246,7 +246,7 @@ C++ 最大的价值，就在于还有一大堆老系统是用 C++ 写的。长�
  * 云风很早就开始抵制 C++，新写的代码，只用 C，拒绝 C++，《[看着 C++ 远去][28]》。
  * pongba 的 [C++11（及现代C++风格）和快速迭代式开发][1]，正确使用 modern C++。
 
-从我现在的角度来看，pongba 文章中谈到的很多问题，还是 C++ 语言本身带来的。当然，pongba 身在 M$，是没法离开 C++ 的，要不就只能去写 C#。:-)
+从我现在的角度来看，pongba 文章中谈到的很多问题，还是 C++ 语言本身带来的。当然，pongba 身在 Microsoft，是没法离开 C++ 的，要不就只能去写 C#。:-)
 
 
 [1]:http://mindhacks.cn/2012/08/27/modern-cpp-practices/
