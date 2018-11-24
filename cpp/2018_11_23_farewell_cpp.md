@@ -182,7 +182,7 @@ asio 第一个 example 就是教你[如何写一个 allocator][41]，配合着 a
 如果你碰到 gcc 编译器 template 相关的报错，简直没法看。需要长期的训练，才能一眼看出问题所在。
 
 
-## 使用C++，容易过度设计
+## C++不容易用好
 
 ### 案例一：script binding
 
@@ -284,7 +284,7 @@ BOOST_PYTHON_MODULE(hello)
 
  * [C/C++项目构建 (CMAKE & EMAKE)][52]
 
-其实 build system，就是过度设计的典范。使用 cmake 的前提，是 C++ 代码非常非常多，比如：[GNOME][61]，项目不到那个规模，就别用。
+使用 cmake 的前提，是 C++ 代码非常非常多，比如：[GNOME][61]，项目不到那个规模，就别用。
 
 其实项目真到了一定规模，自己写个专属 build system，也许比只用 cmake，维护性更佳。参考 [Qt][17]。
 
