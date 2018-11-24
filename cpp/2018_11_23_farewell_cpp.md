@@ -306,7 +306,7 @@ BOOST_PYTHON_MODULE(hello)
 
 其实 build system，就是过度设计的典范。使用 cmake 使用前提场景的，C++ 代码行数不到那个规模，就别用。
 
-从一个 build system 切换到另一个 build system，可能还不如搞个 Makefile 来的快。
+Simple is better，根据项目需求做选择。经常从一个 build system 切换到另一个 build system，可能还不如搞个 Makefile 来的快。
 
 这一块，Go 做了彻底的改进，可以参考下 Go 如何做构建的。
 
