@@ -258,18 +258,20 @@ BOOST_PYTHON_MODULE(hello)
 
 在 Python 中使用。
 
+```Python
 >>> import hello
 >>> planet = hello.World()
 >>> planet.set('howdy')
 >>> planet.greet()
 'howdy'
+```
 
 做到 Boost.Python，基本 C++ template 这种玩法，就算做到头了。其实主流还有两种做法：
 
  * 方法一，以 pure c 的方式，暴露模块接口。比如：Lua 的 [ffi][55]、Python 的 [cffi][54]。
  * 方法二，写一个 parser，把 C++ 的文件扫描一遍，然后对应生成注册代码。比如：[swig][56]
 
-显然，方法一的可维护性更佳。方法二，为了需求，很多时候需要自己写 parser。
+显然，方法一的可维护性更佳。方法二，为了某些需求，很多时候需要自己写 parser。
 
 这里还涉及 C++ 对象生命期的问题，云风已经讨论得很清楚，[这里][57]、[这里][58]和[这里][59]。不再赘述。
 
@@ -280,13 +282,15 @@ BOOST_PYTHON_MODULE(hello)
 
 最后我打算 cmake 都不用，直接改用 emake。
 
- * [cmake & emake][52]
+ * [C/C++项目构建 (CMAKE & EMAKE)][52]
 
-其实 build system，就是过度设计的典范。使用 cmake 使用前提场景的，C++ 代码行数不到那个规模，就别用。
+其实 build system，就是过度设计的典范。使用 cmake 的前提，是 C++ 代码非常非常多，比如：[GNOME][61]，项目不到那个规模，就别用。
+
+其实项目真到了一定规模，自己写个专属 build system，也许比只用 cmake，维护性更佳。参考 [Qt][17]。
 
 Simple is better，根据项目需求做选择。经常从一个 build system 切换到另一个 build system，可能还不如搞个 Makefile 来的快。
 
-这一块，Go 做了彻底的改进，可以参考下 Go 如何做构建的。
+构建这一块，Go 做了彻底的改进，可以参考下。
 
 
 ## C++正确的打开方式
@@ -419,3 +423,4 @@ C++ 程序员最大的存在价值，就是世界上还有一大堆老系统是�
 [58]:https://blog.codingnow.com/2013/01/binding_c_object_for_lua.html
 [59]:https://blog.codingnow.com/2016/01/reference_count.html
 [60]:https://www.boost.org/doc/libs/1_61_0/libs/python/doc/html/index.html
+[61]:https://www.gnome.org/
