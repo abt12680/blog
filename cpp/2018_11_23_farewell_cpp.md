@@ -409,7 +409,7 @@ C++ 程序员最大的存在价值，就是世界上还有一大堆老系统是�
 [49]:https://github.com/gflags/gflags
 [50]:https://github.com/abseil/googletest
 [51]:https://github.com/protocolbuffers/protobuf
-[52]:https://github.com/kasicass/blog/blob/master/boost/2018_11_07_cmake_and_emake.md
+[52]:https://github.com/kasicass/blog/blob/master/cpp/2018_11_07_cmake_and_emake.md
 [53]:https://www.boost.org/doc/libs/1_43_0/doc/html/jam/usage.html
 [54]:https://cffi.readthedocs.io/en/latest/
 [55]:http://luajit.org/ext_ffi.html
