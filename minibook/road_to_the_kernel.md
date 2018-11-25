@@ -70,7 +70,7 @@ OpenBSD on N1 box (arm64)
 
 ## STM32
 
- * [Hello~, STM32]
+ * [初识STM32][21]
 
 ## DONE
 
@@ -135,3 +135,4 @@ RxDOS搞完了，再开始回归 [4.4BSD][11]，读[《The Design of UNIX Operat
 [18]:https://book.douban.com/subject/26339438/
 [19]:https://book.douban.com/subject/25960657/
 [20]:https://github.com/kasicass/blog/blob/master/ucos/2018_11_23_esbb_keyboards.md
+[21]:https://github.com/kasicass/blog/blob/master/stm32/2018_11_25_hello_stm32.md
