@@ -87,6 +87,8 @@ TODO
 
 [《自己动手写CPU》][19]实现了 OpenMIPS 标准的一个 CPU，同时还有 uC/OS-II 的移植范例，正好作为写 Compiler & Linker 的参考资料。
 
+![](road_to_the_kernel_image_01.png)
+
 
 **2018.11.18**
 
