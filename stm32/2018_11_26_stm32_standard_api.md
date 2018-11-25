@@ -1,6 +1,8 @@
 # STM32标准库函数
 
-直接用寄存器来操作硬件，太繁琐。这就出现了软件世界的第一层封装，硬件的标准库函数。就是将寄存器操作，编程一堆 C API。
+直接用寄存器来操作硬件，太繁琐。
+
+这就出现了软件世界的第一层封装：将寄存器操作，变成一堆 C API。
 
 ```C
 /* stm32f10x.h */
@@ -13,7 +15,7 @@
 typddef unsigned int    uint32_t;
 typedef unsigned short  uint16_t;
 
-typedef struct {             //                        offset
+typedef struct {             //                       offset
     __IO uint32_t CRL;       // 端口配置低寄存器        0x00
     __IO uint32_t CRH;       // 端口配置高寄存器        0x04
     __IO uint32_t IDR;       // 端口数据输入寄存器      0x08
@@ -59,9 +61,6 @@ typedef struct {             //                        offset
 #define GPIOE                 ((GPIO_TypeDef *) GPIOE_BASE)
 #define GPIOG                 ((GPIO_TypeDef *) GPIOF_BASE)
 #define GPIOG                 ((GPIO_TypeDef *) GPIOG_BASE)
-
-/* RCC 外设声明 */
-#define RCC                   ((RCC_TypeDef *) RCC_BASE)
 
 /* RCC 的 AHB1 时钟使能寄存器地址 */
 #define RCC_APB2ENR           *(unsigned int*)(RCC_BASE + 0x18)
@@ -140,3 +139,20 @@ int main(void)
     }
 }
 ```
+
+
+## CMSIS 标准
+
+基于 Cortex 系列芯片采用的内核都是相同的，区别主要为核外的片上外设的差异，而这些差异却导致软件在同内核、不同外设的芯片上移植困难。
+
+为了解决不同的芯片厂商生产的 Cortex 微控制器软件的兼容性问题，ARM 与芯片厂商建立了 CMSIS 标准（Cortex MicroController Software Interface Standard）。
+
+其中，CMSIS-CORE、CMSIS-SVD、CMSIS-DAP 提供了统一的硬件 API。而 STM32 的库就是按 CMSIS 标准建立的。
+
+![](2018_11_26_stm32_standard_api_image_01.png)
+
+
+##
+
+ * 位于："A盘（资料盘）\3-程序源码\【固件库】STM32F10x_StdPeriph_Lib_V3.5.0.zip"
+
