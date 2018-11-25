@@ -70,7 +70,7 @@ OpenBSD on N1 box (arm64)
 
 ## STM32
 
- * [初识STM32][21]
+ * [初识 STM32][21]
 
 ## DONE
 
