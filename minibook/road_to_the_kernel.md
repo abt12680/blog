@@ -1,4 +1,13 @@
-# Road to The Kernel
+# ROAD TO THE KERNEL
+
+
+## OBJECTIVE
+
+ * 理解 x86、arm、mips 几个主流的硬件体系
+ * 对嵌入式开发有个大体的理解
+ * 能给 OpenBSD、Linux 写写 driver
+ * 成为 OpenBSD Kernel Developer
+
 
 ## TODO
 
@@ -73,9 +82,6 @@ OpenBSD on N1 box (arm64)
  * [初识 STM32][21]
  * [STM32 标准库函数][22]
 
-## DONE
-
-TODO
 
 ## NOTE
 
