@@ -79,9 +79,9 @@
 
 顾QQ不屑："你丫是个理想主义者。"
 
-就理想一次吧。:-) 索性把这次个人技术体系 refactoring 的战线扩大。
+就理想一次吧。:-) 索性把"个人技术体系refactoring"的战线扩大。
 
-《The Big Computer System》，我的计算机 hack 之路。Just for fun~
+《The Big Computer System》，我的计算机系统 hack 之路。Just for fun~
 
 
 [1]:https://github.com/kasicass/blog/blob/master/minibook/road_to_the_kernel.md
