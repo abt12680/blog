@@ -36,6 +36,8 @@
 ## Network and Game Server (L5/L8)
 
  * TCP/IP Stack
+ * libuv
+ * zmq
  * Handmade Game Server
 
 ## Uncharted Waters - Big Data
