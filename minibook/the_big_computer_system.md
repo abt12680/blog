@@ -75,7 +75,7 @@
 
 重剑无锋，大巧不工。
 
- * [SAP01 - Entity-Component System][2]
+ * [SAP01 - Actor Model][2]
 
 
 ## NOTE
@@ -101,4 +101,4 @@
 
 
 [1]:https://github.com/kasicass/blog/blob/master/minibook/road_to_the_kernel.md
-[2]:https://github.com/kasicass/blog/blob/master/design-principle/2018_11_27_ecs.md
+[2]:https://github.com/kasicass/blog/blob/master/design-principle/2018_11_28_actor_model.md
