@@ -197,9 +197,21 @@ sys     0m0.004s
 
 What's the fucking slow of IronPython. 和我之前在 win32 上测试结果一样。
 
+## 后记
+
+用 locate 很方便知道 NuGet 把包放在哪里了。
+
+```
+$ locate IronPython.dll
+/home/kasicass/.nuget/packages/ironpython.interpreter/2.7.4/tools/IronPython.dll
+...
+```
+
+将 IronPython.dll、Microsoft.Scripting.dll 用 [ILSpy][6] 打开，可以直接读代码。
 
 [1]:https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial
 [2]:https://www.nuget.org/packages/IronPython/
 [3]:https://docs.microsoft.com/zh-cn/nuget/what-is-nuget
 [4]:https://www.nuget.org/
 [5]:https://github.com/IronLanguages/ironpython2/blob/master/Documentation/building.md
+[6]:https://github.com/icsharpcode/ILSpy
