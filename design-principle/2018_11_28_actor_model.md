@@ -171,11 +171,16 @@ Task + Scheduler，本质上也是一种 Actor Model。
 
 ## 实例六：分布式系统
 
-基本任何一个分布式系统，构建到最后，都是一个 [Actor Model][1] 模型。
+基本任何一个分布式系统，构建到最后，都是一个 [Actor Model][1] 模型。参考 Twitter 对于业务的改造《[How Twitter Is Scaling][13]》。
+
+值得研究的分布式系统：
 
  * [erlang][2]
  * [Orleans][14]
- * 《[How Twitter Is Scaling][13]》
+
+分布式游戏服务器框架
+
+TODO
 
 
 [1]:https://en.wikipedia.org/wiki/Actor_model
