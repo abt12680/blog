@@ -205,6 +205,10 @@ touch /boot/dtb.img
 
 但做好的 armbian U盘，一直启动不成功。只能等顾QQ给我邮寄那个刷机专用U盘了。:-)
 
+**Updated 2018.11.27**
+
+刷机成功，顾QQ邮寄给我的U盘没用。我用自己的，刷成功了。=_=!
+
 
 [1]:https://www.solid-run.com/product/SRMX6QDWT1D02GE008X00CE/
 [2]:https://2.taobao.com/
