@@ -178,10 +178,6 @@ Task + Scheduler，本质上也是一种 Actor Model。
  * [erlang][2]
  * [Orleans][14]
 
-分布式游戏服务器框架
-
-TODO
-
 
 [1]:https://en.wikipedia.org/wiki/Actor_model
 [2]:http://www.erlang.org/
