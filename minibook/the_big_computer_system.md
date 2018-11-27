@@ -3,14 +3,18 @@
 游戏程序员眼中的计算机体系
 
 ```
++------------------------------------------------------------------------------+
+|                     Software Architecture Principle(L9)                      |
++------------------------------------------------------------------------------+
+
 +------------------------------------------------------+        +--------------+
-|                Game / Game Engine(L8)                |        |              |
-+------------+------------------------+----------------+        |              |
+|                Game / Game Engine(L7)                |        |              |
++------------+------------------------+----------------+ <====> |              |
 |   GUI(L4)  |      Network/DB(L5)    |   2D/3D (L6)   |        | Programming  |
-+------------+------------------------+----------------+ <===>  |   Languages  |
-|       系统API(L2)         |     compiler&linker(L3)  |        |     (L7)     |
-+------------------------------------------------------+        |              |
-|                    硬件/操作系统(L1)                  |        |              |
++------------+------------------------+----------------+ <====> |   Languages  |
+|      System API(L2)       |   Compiler & Linker(L3)  |        |     (L8)     |
++------------------------------------------------------+ <====> |              |
+|               Hardware/Operating System(L1)          |        |              |
 +------------------------------------------------------+        +--------------+
 ```
 
@@ -33,7 +37,7 @@
  * mysql
  * mongodb
 
-## Network and Game Server (L5/L8)
+## Network and Game Server (L5/L7)
 
  * TCP/IP Stack
  * libuv
@@ -46,19 +50,24 @@
  * hadoop
  * spark
 
-## About Client - 2D/3D Game Engine (L4/L8)
+## About Client - 2D/3D Game Engine (L4/L7)
 
  * 2d game engine
  * 3d game engine
  * UE4
  * asset producting pipeline (model editor / particle editor / world editor)
 
-## Language Zoo 
+## Language Zoo (L8)
 
  * C
  * Go
  * Python
 
+## Software Architecture Principle (L9)
+
+重剑无锋，大巧不工。
+
+ * 01 - Actor Model
 
 ## NOTE
 
