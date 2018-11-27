@@ -98,7 +98,104 @@ $ pwsh
 blab... blab...
 ```
 
-还是各种出错。放弃。
+还是各种出错。放弃。再换个方向。
+
+
+## using IronPython.dll
+
+既然 add package 已经成功，那直接写个程序，运行 python 脚本吧。
+
+```
+$ dotnet new console -o myhello
+$ cd myhello
+$ dotnet add package IronPython --version 2.7.9
+```
+
+修改 Program.cs
+
+```C#
+using System;
+using Microsoft.Scripting;         // SourceCodeKind
+using Microsoft.Scripting.Hosting; // ScriptEngine
+using IronPython.Hosting;
+
+namespace myhello
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ScriptEngine engine = Python.CreateEngine();
+
+            ScriptSource source;
+            source = engine.CreateScriptSourceFromString("print 'Hello! IronPython!'", SourceCodeKind.Statements);
+            ScriptScope scope = engine.CreateScope();
+            source.Execute(scope);
+        }
+    }
+}
+```
+
+运行结果
+
+```
+$ dotnet build
+$ dotnet run
+Hello! IronPython!
+```
+
+再改改 Program.cs，让其读取一个 .py 文件，并运行。
+
+```C#
+using System;
+using Microsoft.Scripting;
+using Microsoft.Scripting.Hosting;
+using IronPython.Hosting;
+
+namespace myhello
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ScriptEngine engine = Python.CreateEngine();
+
+            ScriptSource source;
+            source = engine.CreateScriptSourceFromFile(args[0]);
+            ScriptScope scope = engine.CreateScope();
+            source.Execute(scope);
+        }
+    }
+}
+```
+
+这下可以跑 pystone.py 了
+
+```
+$ dotnet build
+$ dotnet run pystone.py
+```
+
+## IronPython vs pypy vs python2.7
+
+```
+$ time dotnet run pystone.py 
+real    0m2.969s
+user    0m3.396s
+sys     0m0.420s
+
+$ time pypy pystone.py
+real    0m0.083s
+user    0m0.056s
+sys     0m0.024s
+
+$ time python pystone.py
+real    0m0.332s
+user    0m0.320s
+sys     0m0.004s
+```
+
+What's the fucking slow of IronPython. 和我之前在 win32 上测试结果一样。
 
 
 [1]:https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial
