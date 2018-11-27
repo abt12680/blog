@@ -7,8 +7,6 @@
 
 这篇是顾QQ刷N1盒子的记录。等我的N1盒子到货，准备刷个 OpenBSD 玩玩。
 
-斐讯这公司已经倒闭了。
-
 
 ## 准备工具
 
@@ -73,24 +71,97 @@ fastboot reboot
 
  * [https://github.com/yangxuan8282/phicomm-n1/releases/download/dtb/meson-gxl-s905d-phicomm-n1.dtb][7]
 
-这个文件到 dtb 目录下， 用文本编辑器编辑根目录下面的 uEnv.ini ，将里面 dtb 一行替换成这个文件的名字并保存，Armbian 启动 U 盘就做好了
+该dtb用于替换meson-gxl-s905d-p230.dtb，可解决传输大文件掉线、系统负载始终2.0的bug。
+
+把该文件放到 dtb 目录下， 用文本编辑器编辑根目录下面的 uEnv.ini ，将里面 dtb 一行替换成这个文件的名字并保存，Armbian 启动 U 盘就做好了（从5.55的20180922版本开始已经无需将meson-gxl-s905d-phicomm-n1.dtb复制为根目录下的dtb.img）。
+
+
+## U盘启动Armbian
+
+N1的两个 USB 口，离HDMI口远的接 U 盘，另一个接 USB 键盘。HDMI 线接显示器，加电冷启动。屏幕会先出现启动画面，之后会进入U盘armbian启动界面。如果没法启动到U盘armbian，启动后执行：
+
+```
+adb connect <your ip address>
+adb shell reboot update
+```
+
+此时N1会黑屏两次，然后进入U盘armbian系统。
+
+这里如果多次重复，还是只能进入Android的recovery模式，那么请换个 U 盘再试，基本这里不成功都是因为 U 盘兼容性问题导致的。最好是 USB 2.0 的 U 盘。
+
+进入 Armbian 以后用 root:1234 登录，会被要求修改密码和创建普通用户，不想创建用户可以Ctrl+C跳过，完成以后会留在一个 shell 里面。
+
+我是Ctrl+C调过了，没有启动到桌面，不知道是否和这个有关，回去再试一下。
+
+
+## 备份盒子系统和数据
+
+如果需要保留原eMMC内的电视盒子/Linux系统数据，输入"ddbr"后根据提示操作备份。
 
 
 ## 刷入Armbian系统
 
-N1的两个 USB 口，离HDMI口远的接 U 盘，另一个接 USB 键盘。HDMI 线接显示器，加电启动。屏幕会先出现启动画面，之后会进入U盘armbian启动界面。
-
-这里如果多次重复，还是无法进入Linux系统，那么请换个 U 盘再试，基本这里不成功都是因为 U 盘兼容性问题导致的。最好是 USB 2.0 的 U 盘。
-
-进入 Armbian 以后用 root:1234 登录，会被要求修改密码和创建普通用户。完成以后会留在一个 root shell 里面。下面执行
+在U盘系统/root文件系统中执行
 
 ```
 ./install.sh
 ```
 
+完成以后，拔电源或者命令行输入shutdown，拔掉 U 盘，重新上电启动，应该就可以看到 Armbian 系统启动了。另 USB Burning Tool，没有试过。
+
 完成以后，断电，拔掉 U 盘重启，应该就可以看到 Armbian 系统启动了。
 
 ![](2018_11_19_armbian_on_n1_box_image_03.png)
+
+
+## deb方式升级内核
+
+deb升级文件使用方法（免去重装系统烦恼）：下载目录180829/deb下的文件，解压（用winscp或scp）导入armbian后，在相应目录执行：
+
+```
+apt remove -y armbian-firmware
+dpkg -i *.deb
+```
+
+## Armbian配置无线网卡
+
+ * 4.x.x内核armbian-config
+ * 3.x.x内核modprobe dhd
+
+## Troubleshooting
+
+### error: device not found
+
+执行adb devices等命令的时候报错，试试执行 adb kill-server，如果还不行，建议杀死 adb 进程。
+
+### 刷机出现权限问题
+
+驱动到U盘或者写入eMMC后，执行 ls –ll / 命令发现，有些文件系统的权限不是root:root，因为有些错误的教程让大家在Android里就插入U盘，但是这样会导致主分区被污染，所以会导致权限紊乱。我们需要做到新做U盘的ext4主分区不能被暴露。
+
+ * 解决办法一：写入eMMC前，执行 adb shell reboot update 等系统黑屏后再插入U盘
+ * 解决方法二：写入eMMC后，重新制作U盘系统，然后插入优盘重新引导，重装系统
+
+### 安装成功后无法进入eMMC盘系统
+
+该问题只存在于5.44及之前版本系统，复制dtb.img文件的时候，产生了东八区的时间戳，而镜像系统默认是格林威治时间。于是就造成了系统不识别"来自未来的8个小时之后的"文件，所以引导失败。
+
+解决方法：操作写入eMMC之前，执行以下命令修复时间
+
+```
+touch /boot/dtb.img
+```
+
+### 关于断流问题
+
+经过调研发现，不是某一系统或某一设备的单独现象，网上的案例非常非常多。nml写了一个脚本，可以无人值守维持有线网络。
+
+
+## 软件列表
+
+ * [USB Image Tool][17]
+ * [Win32 Disk Imager][6]
+ * [SD CardFormatter][18]	
+ * [USB Burning Tool][19]
 
 
 ## 硬件参数
@@ -151,3 +222,6 @@ N1的两个 USB 口，离HDMI口远的接 U 盘，另一个接 USB 键盘。HDMI
 [14]:https://developer.android.com/studio/#downloads
 [15]:https://github.com/yangxuan8282/phicomm-n1/
 [16]:https://github.com/yangxuan8282/phicomm-n1/wiki/%E8%87%AA%E5%B7%B1%E5%88%B6%E4%BD%9C-N1-%E7%9A%84-Linux-%E9%95%9C%E5%83%8F
+[17]:https://www.alexpage.de/
+[18]:https://www.sdcard.org/
+[19]:https://www.atvxperience.com/download/amlogic-usb-burning-tool/

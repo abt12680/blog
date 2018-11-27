@@ -1,4 +1,4 @@
-# armbian
+# Armbian on My N1 Box
 
 按[顾QQ的教程][1]，成功刷上 armbian。他文章中内容比较多，总结一下我的刷机过程。
 
@@ -13,7 +13,7 @@
 
 1. 没有网线，打开手机热点，点击右下角图标，配置 wifi（看下图）
 2. N1在主界面使用鼠标点击四次固件版本号打开adb
-3. 下载一键降级包：[https://share.weiyun.com/5klmuxd][4]，密码：yaefa9
+3. 下载一键降级包：[https://share.weiyun.com/5klmuxd][2]，密码：yaefa9
 4. 根据提示操作
 
 ![](2018_11_27_armbian_on_my_n1_box_image_03.png)
@@ -65,3 +65,4 @@ adb shell reboot update
 TODO
 
 [1]:https://github.com/kasicass/blog/blob/master/debian/2018_11_19_armbian_on_n1_box.md
+[2]:https://share.weiyun.com/5klmuxd
