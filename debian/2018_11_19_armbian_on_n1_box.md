@@ -191,6 +191,10 @@ touch /boot/dtb.img
 
  * [https://www.right.com.cn/forum/thread-340279-1-1.html][8]
  * [https://www.right.com.cn/forum/thread-322223-1-1.html][9]
+ * [https://www.right.com.cn/forum/thread-335609-1-1.html][20]
+ * [https://forum.armbian.com/topic/7930-armbian-for-amlogic-s9xxx-kernel-41x-ver-555/][21]
+ * [https://forum.armbian.com/topic/2419-armbian-for-amlogic-s905-and-s905x-ver-544/][22]
+
 
 ----------------------------
 
@@ -229,3 +233,6 @@ touch /boot/dtb.img
 [17]:https://www.alexpage.de/
 [18]:https://www.sdcard.org/
 [19]:https://www.atvxperience.com/download/amlogic-usb-burning-tool/
+[20]:https://www.right.com.cn/forum/thread-335609-1-1.html
+[21]:https://forum.armbian.com/topic/7930-armbian-for-amlogic-s9xxx-kernel-41x-ver-555/
+[22]:https://forum.armbian.com/topic/2419-armbian-for-amlogic-s905-and-s905x-ver-544/
