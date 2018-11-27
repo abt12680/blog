@@ -76,6 +76,7 @@ OpenBSD on N1 box (arm64)
 ## ESBB
 
  * [Keyboards][20]
+ * [LED][23]
 
 ## STM32
 
@@ -146,3 +147,4 @@ RxDOS搞完了，再开始回归 [4.4BSD][11]，读[《The Design of UNIX Operat
 [20]:https://github.com/kasicass/blog/blob/master/ucos/2018_11_23_esbb_keyboards.md
 [21]:https://github.com/kasicass/blog/blob/master/stm32/2018_11_25_hello_stm32.md
 [22]:https://github.com/kasicass/blog/blob/master/stm32/2018_11_26_stm32_standard_api.md
+[23]:https://github.com/kasicass/blog/blob/master/ucos/2018_11_25_esbb_led.md
