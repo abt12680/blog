@@ -18,16 +18,19 @@
 +------------------------------------------------------+        +--------------+
 ```
 
+
 ## Road To the Kernel (L1/L2)
 
  * CPU Architecture
  * Embedded System Development
  * Kernel Developer
 
+
 ## Compiler & Linker & Debugger (L3)
 
  * My C Compiler
  * clang / llvm
+
 
 ## Database Demystify (L5)
 
@@ -37,6 +40,7 @@
  * mysql
  * mongodb
 
+
 ## Network and Game Server (L5/L7)
 
  * TCP/IP Stack
@@ -44,11 +48,13 @@
  * zmq
  * Handmade Game Server
 
+
 ## Uncharted Waters - Big Data
 
  * zookeeper
  * hadoop
  * spark
+
 
 ## About Client - 2D/3D Game Engine (L4/L7)
 
@@ -57,17 +63,20 @@
  * UE4
  * asset producting pipeline (model editor / particle editor / world editor)
 
+
 ## Language Zoo (L8)
 
  * C
  * Go
  * Python
 
+
 ## Software Architecture Principle (L9)
 
 重剑无锋，大巧不工。
 
- * 01 - Actor Model
+ * [SAP01 - Entity-Component System][2]
+
 
 ## NOTE
 
@@ -92,3 +101,4 @@
 
 
 [1]:https://github.com/kasicass/blog/blob/master/minibook/road_to_the_kernel.md
+[2]:https://github.com/kasicass/blog/blob/master/design-principle/2018_11_27_ecs.md
