@@ -83,7 +83,7 @@ $ dotnet run
 }
 ```
 
-# IronPython build from source
+## IronPython build from source
 
 好像研究错方向了，改研究 IronPython 的[文档][5]。
 
@@ -101,7 +101,7 @@ blab... blab...
 还是各种出错。放弃。再换个方向。
 
 
-## using IronPython.dll
+## Using IronPython.dll
 
 既然 add package 已经成功，那直接写个程序，运行 python 脚本吧。
 
