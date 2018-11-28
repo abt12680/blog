@@ -129,4 +129,7 @@ InnerException:
 The assembly for default symbol writer cannot be loaded
 ```
 
+突然想起来，可以 [nuget 安装][2]。放弃折腾 build from source。
+
 [1]:https://stackoverflow.com/questions/10872000/could-not-load-type-from-assembly-in-mono
+[2]:https://www.nuget.org/packages/Akka/
