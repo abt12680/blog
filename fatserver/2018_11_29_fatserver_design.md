@@ -43,14 +43,15 @@ fatserver 的第一个目标，对 Akka.NET 做一次全面 clone，看看有多
 
 ![](2018_11_29_fatserver_design_image_01.png)
 
+
 ### 2018.10.20
 
- * 开始研究 libuv，读通代码
- * 通过 cffi 将 libuv 注册给 python
- * 用 C 实现 uvloop 的所有测试用例，作为 benchmark 的测试基准
- * cffi/libuv 实现 uvloop 的所有测试用例，然后做 benchmark
- * 测试一下 pyuv 的性能
- * 参考 AsyncNet，思考如何将 libuv 封装给 python
+ * 开始研究 [libuv][12]
+ * 通过 [cffi][13] 将 [libuv][12] 注册给 python
+ * 用 C 实现 [uvloop][9] 的所有测试用例，作为 benchmark 的测试基准
+ * [cffi][13]/[libuv][12] 实现 [uvloop][9] 的所有测试用例，然后做 benchmark
+ * 对比测试下 [pyuv][10] 的性能
+ * 参考 [AsyncNet][11]，思考如何将 [libuv][12] 封装给 python
 
 《英三》中的分布式设计
 
@@ -110,3 +111,8 @@ python 虽然有 GIL，但利用 libuv，可以做到 python main thread 处理�
 [6]:https://github.com/kasicass/blog/blob/master/fatserver/2018_11_28_akka_net.md
 [7]:https://github.com/kasicass/fatuv
 [8]:https://github.com/jodal/pykka
+[9]:https://github.com/MagicStack/uvloop
+[10]:https://github.com/saghul/pyuv
+[11]:https://github.com/skywind3000/AsyncNet
+[12]:http://libuv.org/
+[13]:https://cffi.readthedocs.io/en/latest/
