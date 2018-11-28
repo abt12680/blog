@@ -59,6 +59,21 @@ adb shell reboot update
 
 会影响 apt。重做U盘，再装一次系统。
 
+再次装系统时，碰到了个小问题。
+
+之前用 [Win32 Disk Imager][6] 做好的系统U盘，会有两个分区。
+
+![](2018_11_27_armbian_on_my_n1_box_image_06.png)
+
+这时，要
+
+ 1. 对 F:, E: 格式化
+ 2. 用 [HDDLowLevelFormatTool][3] 给U盘做低格
+ 3. 这样得到只有一个 F:，对 F: 格式化
+ 4. 最后再用 [Win32 Disk Imager][6] 去写入 armbian image
+
+我不按这个步骤去做，写入 armbian image 就会失败。
+
 
 ## wifi配置
 
@@ -66,3 +81,4 @@ TODO
 
 [1]:https://github.com/kasicass/blog/blob/master/debian/2018_11_19_armbian_on_n1_box.md
 [2]:https://share.weiyun.com/5klmuxd
+[3]:http://hddguru.com/software/HDD-LLF-Low-Level-Format-Tool/
