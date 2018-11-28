@@ -1,39 +1,5 @@
-# 初识 Akka.NET
+# Building Akka.NET from Source
 
-早就知道 JVM 下的 [Akka][20] 和 .NET 下的 [Akka.NET][2]，但一直没深入了解。
-
-今天花了点时间瞄了一眼 [Akka.NET][2]([github][21])，有意思，基本把 erlang 的基本概念都实现完毕了，而且社区也不错。
-
-[Akka.NET][2] 的发展历程（2014 - now），也就短短四年时间。早期名字叫 Pigeon。
-
-正好找到创始者之一的 blog，详细记录了 [Akka.NET][2] 的设计历程。有空要全部读一遍，学习下。
-
- * 2017.05.19 - [Do not do in code what can be done in infrastructure][6]
- * 2016.08.16 - [Wire – Writing one of the fastest .NET serializers][5]
- * 2016.03.13 - [Random things learned building Akka.NET – Part 1][3]
- * 2015.07.26 - [Building a framework – The early Akka.NET history][2]
- * 2015.04.13 - [Akka.NET + Azure: Azure ServiceBus integration][19]
- * 2014.11.15 - [Actor based distributed transactions][16]
- * 2014.11.10 - [Akka.NET – Concurrency control][4]
- * 2014.03.09 - [Deploying actors with Akka.NET][15]
- * 2014.03.05 - [Introducing Akka.NET][14]
- * 2014.02.21 - [Massive improvements to Pigeon – Akka Actors for .NET][13]
- * 2014.02.08 - [Actor lifecycle management and routers – Akka Actors for .NET][12]
- * 2014.02.01 - [Configuring Pigeon – Akka Actors for .NET][11]
- * 2014.01.26 - [Configuration and Remote support for Pigeon – Akka Actors for .NET][10]
- * 2014.01.16 - [Throughput of Pigeon – Akka Actors for .NET][9]
- * 2014.01.03 - [Hotswap and Supervision – Pigeon – Akka Actors for .NET][8]
- * 2014.01.01 - [Pigeon – Akka Actors for .NET][7]
-
-作者中途去看了眼 Azure 的 ServiceBus
-
- * 2014.12.18 - [Learning Azure, Day 2 | Servicebus][18]
- * 2014.12.17 - [Learning Azure, Day 1 | Servicebus][17]
-
-Java 有个很好的网络库 [netty]，微软给抄了一个 [dot-netty][23]。[Akka.NET][2] 最新版本似乎用的是 [dot-netty][23]。
-
-
-## Echo Server
 
 ````
 $ wget https://github.com/akkadotnet/akka.net/archive/v1.3.10.tar.gz
@@ -153,28 +119,14 @@ $ cp /usr/share/dotnet/sdk/2.1.500/Microsoft/Microsoft.NET.Build.Extensions/net4
 $ cp /usr/share/dotnet/sdk/2.1.500/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Threading.dll ./
 ```
 
+最后跑到：
 
-[1]:http://getakka.net/
-[2]:https://rogerjohansson.blog/2015/07/26/building-a-framework-the-early-akka-net-history/
-[3]:https://rogerjohansson.blog/2016/03/13/random-things-learned-building-akka-net-part-1/
-[4]:https://rogerjohansson.blog/2014/11/10/akka-net-concurrency-control/
-[5]:https://rogerjohansson.blog/2016/08/16/wire-writing-one-of-the-fastest-net-serializers/
-[6]:https://rogerjohansson.blog/2017/05/19/do-not-do-in-code-what-can-be-done-in-infrastructure/
-[7]:https://rogerjohansson.blog/2014/01/01/pigeon-akka-actors-for-net/
-[8]:https://rogerjohansson.blog/2014/01/03/hotswap-and-supervision-pigeon-akka-actors-for-net/
-[9]:https://rogerjohansson.blog/2014/01/16/throughput-of-pigeon-akka-actors-for-net/
-[10]:https://rogerjohansson.blog/2014/01/26/3294/
-[11]:https://rogerjohansson.blog/2014/02/01/configuring-pigeon-akka-actors-for-net/
-[12]:https://rogerjohansson.blog/2014/02/08/actor-lifecycle-management-and-routers-akka-actors-for-net/
-[13]:https://rogerjohansson.blog/2014/02/21/massive-improvements-to-pigeon-akka-actors-for-net/
-[14]:https://rogerjohansson.blog/2014/03/05/introducing-akka-net/
-[15]:https://rogerjohansson.blog/2014/03/09/deploying-actors-with-akka-net/
-[16]:https://rogerjohansson.blog/2014/11/15/actor-based-distributed-transactions/
-[17]:https://rogerjohansson.blog/2014/12/17/learning-azure-day-1-servicebus/
-[18]:https://rogerjohansson.blog/2014/12/18/learning-azure-day-2-servicebus/
-[19]:https://rogerjohansson.blog/2015/04/13/akka-net-azure-azure-servicebus-integration/
-[20]:https://akka.io/
-[21]:https://github.com/akkadotnet/akka.net
-[22]:https://netty.io/
-[23]:https://github.com/Azure/DotNetty
-[24]:https://stackoverflow.com/questions/10872000/could-not-load-type-from-assembly-in-mono
+```
+$ ./build.sh
+
+Build failed.
+Error:
+Error while creating a fsi session.
+InnerException:
+The assembly for default symbol writer cannot be loaded
+```
