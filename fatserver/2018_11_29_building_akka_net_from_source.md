@@ -71,7 +71,7 @@ System.TypeLoadException: Could not load type 'NuGet.CommandLine.ConsoleProjectC
 
 ```
 
-不死心，看[这里][24]，查一下 .exe 所有 reference 的加载策略。
+不死心，看[这里][1]，查一下 .exe 所有 reference 的加载策略。
 
 ```
 $ export MONO_LOG_LEVEL=debug
@@ -130,3 +130,5 @@ Error while creating a fsi session.
 InnerException:
 The assembly for default symbol writer cannot be loaded
 ```
+
+[1]:https://stackoverflow.com/questions/10872000/could-not-load-type-from-assembly-in-mono
