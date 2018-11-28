@@ -1,7 +1,6 @@
 # Building Akka.NET from Source
 
-
-````
+```
 $ wget https://github.com/akkadotnet/akka.net/archive/v1.3.10.tar.gz
 $ tar zxf v1.3.10.tar.gz
 $ cd akka.net-1.3.10
@@ -13,7 +12,6 @@ $ ./build.sh
 ```
 
 提示找不到 System.Core.dll，System.ComponentModel.Composition.dll：
-
 
 ```
 Unhandled Exception:
