@@ -235,6 +235,7 @@ zlib.cpp:const int sync_flush           = Z_SYNC_FLUSH;
 
 只说明一个问题，那就是 boost::iostreams 的 *.cpp 并没有 link 成功。
 
+最后，龙爷发现是 bjam 在编译中，出了个 link error，但没有打断，还是继续跑编译。最后就出了上面的问题。（缺少了 -fPIC 导致的 link error）
 
 [1]:https://github.com/skywind3000/emake
 [2]:https://cmake.org/
