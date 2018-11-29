@@ -15,7 +15,7 @@
 
 core
 
- * [fatuv][7]，最底层的网络库，cffi + python/pypy
+ * [fatuv][7]，最底层的网络库，[cffi][13] + python/pypy
  * fatkernel，一个 single process/multi threading 的轻量级 game server
  * fatskynet，一个 distributed multi-process game servers
  * kernel & skynet，对于业务来说，都是 entity-based，统一行为。
