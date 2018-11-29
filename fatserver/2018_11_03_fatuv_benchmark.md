@@ -5,10 +5,10 @@
 
 ## 结果汇总
 
-TODO
+![](2018_11_03_fatuv_benchmark_image_01.png)
 
 
-## 单项数据分析
+## 单项分析
 
 ### No.1 - c + libuv
 
@@ -114,6 +114,29 @@ Transfer/sec: 27.77MiB
 Latency: min 0.04ms; max 8.84ms; mean 0.115ms; std: 0.062ms (53.45%)
 Requests/sec: 24419.27
 Transfer/sec: 23.29MiB
+```
+
+## gnuplot 脚本
+
+plot.txt
+
+```
+set key inside top right
+set xlabel ''
+set ylabel 'Requests/sec'
+set title 'Benchmark'
+set xrange [-0.7:0.7]
+set yrange [0:70000]
+set style histogram
+set style fill solid border -1
+plot "plot_data1.txt" using 1 title columnheader(1) with histogram, "plot_data1.txt" using 2 title columnheader(2) with histogram, "plot_data1.txt" using 3 title columnheader(3) with histogram, "plot_data1.txt" using 4 title columnheader(4) with histogram, "plot_data1.txt" using 5 title columnheader(5) with histogram, "plot_data1.txt" using 6 title columnheader(6) with histogram, "plot_data1.txt" using 7 title columnheader(7) with histogram, "plot_data1.txt" using 8 title columnheader(8) with histogram
+```
+
+data.txt
+
+```
+c-libuv    c-libco    py2-pyuv    pypy-fatuv    py2-fatuv    go        Akka.NET    py3-uvloop
+67901      67732      65767       64941         60241        55816     29122       24419
 ```
 
 
