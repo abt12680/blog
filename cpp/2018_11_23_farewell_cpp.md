@@ -1,5 +1,13 @@
 # C++, Farewell~
 
+```C++
+#include <iostream>
+
+int main(void) {
+    std::cout << "Farewell, C++!" << std::endl;
+}
+```
+
 年纪大了，就开始返璞归真。聚焦业务，不再把精力投入那些花哨的"语法糖"。
 
 最近在 refactoring 自己的书架，把最喜欢的几本 C++ 书，也送出去了。:-)
@@ -25,14 +33,6 @@ jjhou 个人网站（[http://www.jjhou.com][29]）已经无法访问，随着 C+
 ## C++学习历程
 
 大学开始学习 C++，直接开始啃 [Lippman][47] 的 《[C++ Primer][5]》（还有本《C++ Primer Plus》，和 [Lippman][47] 没毛关系，别看）。不过大部分语法特性，都是边写边用学会的，《[C++ Primer][5]》 太厚，没认真读完一遍。哈哈。
-
-```C++
-#include <iostream>
-
-int main(void) {
-    std::cout << "Hello, C++!" << std::endl;
-}
-```
 
 学习 C++ 的过程中，还去看了 Charles Petzold 的《[Programming Windows 5th][6]》，基本了解了 Win32 API，理解了 Windows 一个窗体消息循环的样貌。
 
