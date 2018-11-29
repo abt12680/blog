@@ -213,6 +213,29 @@ emake
 * 小众，所有第三方库都需要自己写 .mak
 
 
+## C++ 构建问题汇总
+
+### undefined symbol: _ZN5boost9iostreams4zlib10sync_flushE
+
+龙爷某天给我发了个截图，发现编译好的 .so，import 的时候，会提示：
+
+![](2018_11_07_cmake_and_emake_image_01.png)
+
+```
+/boost/boost/iostreams$ find . -name "*.hpp" | xargs grep sync_flush
+./filter/zlib.hpp:BOOST_IOSTREAMS_DECL extern const int sync_flush;
+```
+
+extern const int，说明定义一定在 .cpp 中。
+
+```
+/boost/libs/iostreams/src$ grep sync_flush *.cpp
+zlib.cpp:const int sync_flush           = Z_SYNC_FLUSH;
+```
+
+只说明一个问题，那就是 boost::iostreams 的 *.cpp 并没有 link 成功。
+
+
 [1]:https://github.com/skywind3000/emake
 [2]:https://cmake.org/
 [3]:https://github.com/kasicass/bootstrap-cmake
