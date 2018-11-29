@@ -3,9 +3,20 @@
 [fatuv][1] 还处于早期开发阶段，把 tcp, timer 封装完了，对比其它库做了下 echo server 的 benchmark。性能还不错，满意 :-)。
 
 
+## 测试环境
+
+Intel Core Processor (Broadwell)，2G MHz，4 核
+
+```
+$ uname -a
+Linux 4.9.0-4-amd64 #1 SMP Debian 4.9.51-1 (2017-09-28) x86_64 GNU/Linux
+```
+
+
 ## 结果汇总
 
 ![](2018_11_03_fatuv_benchmark_image_01.png)
+
 
 
 ## 单项分析
