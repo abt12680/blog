@@ -5,7 +5,7 @@
 
 ## 测试环境
 
-Intel Core Processor (Broadwell)，2G MHz，4 核
+CPU: Intel Core Processor (Broadwell)，2G MHz，4 核
 
 ```
 $ uname -a
