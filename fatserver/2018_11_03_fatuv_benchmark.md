@@ -1,4 +1,4 @@
-# [fatserver] fatuv benchmark
+# fatuv benchmark
 
 [fatuv][1] 还处于早期开发阶段，把 tcp, timer 封装完了，对比其它库做了下 echo server 的 benchmark。性能还不错，满意 :-)。
 
