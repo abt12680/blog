@@ -2,7 +2,19 @@
 
 ## 课程内容
 
-由撕纸游戏（一张A4纸，要求撕出一个圈，能保证一个人能钻过去），引发"没有不可能，寻求改变"的思考。然后介绍敏捷历史：agile 和 XP/Kanban/Lean/Scrum/Crystal/FDD 等的关系。
+### 个人介绍
+
+每个同学
+
+ * 一张纸划分为16个格子，写入自己的特点
+ * 最后针对这些特点，来介绍自己
+
+
+### 纸游戏
+
+ * 一张A4纸，要求撕出一个圈，能保证一个人能钻过去
+ * 引发"没有不可能，寻求改变"的思考
+ * 然后介绍敏捷历史：agile 和 XP/Kanban/Lean/Scrum/Crystal/FDD 等的关系。
 
 ![](2018_04_13_scrum_master_day_1_image_01.png)
 
@@ -10,7 +22,10 @@
 
 ![](2018_04_13_scrum_master_day_1_image_02.png)
 
-什么是 scrum？scrum 框架的由来。
+
+### 什么是 scrum？
+
+scrum 框架的由来。
 
 Jeff & Ken 看了《New New Product Development Game》的论文，然后在自己项目中实践敏捷方法论。名曰 Scrum。
 
@@ -52,6 +67,7 @@ Scrum 下不同角色的定位。
 story point 这个很有意思，相当于一个基本的度量单位。
 
 ![](2018_04_13_scrum_master_day_1_image_07.png)
+
 
 ## 总结
 
