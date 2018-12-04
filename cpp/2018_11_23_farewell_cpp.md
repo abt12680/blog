@@ -23,7 +23,7 @@ jjhou 个人网站（[http://www.jjhou.com][29]）已经无法访问，随着 C+
 
 知乎上找到的[一张图片][30]，每一本我都有 :-)。满满的回忆，现在只留着《Win32多线程程序设计》《Word排版艺术》。
 
-侯捷还有本《左手程序右手诗》，可惜最终没能出版。
+侯捷还有本《左手程序右手诗》，可惜没能出版。
 
 ![](2018_11_23_farewell_cpp_image_07.png)
 
@@ -38,11 +38,12 @@ jjhou 个人网站（[http://www.jjhou.com][29]）已经无法访问，随着 C+
 
 学习 C++ 的过程中，还去看了 Charles Petzold 的《[Programming Windows 5th][6]》，基本了解了 Win32 API，理解了 Windows 一个窗体消息循环的样貌。
 
-当时市面上流行的 Win32 GUI 制作方式，是 MFC，在还不会 MFC 编程的基础上，开始读 jjhou 的 《[深入浅出MFC][4]》，里面印象最深的是"勿在浮沙筑高台"那一章，将类、继承、多态等等概念，都讲清楚了。还模拟了 MFC 整个 Message Bump 的实现。
+当时市面上流行的 Win32 GUI 制作方式，是 [MFC][62]，在还不会 [MFC][62] 编程的基础上，开始读 jjhou 的 《[深入浅出MFC][4]》，里面印象最深的是"勿在浮沙筑高台"那一章，将类、继承、多态等等概念，都讲清楚了。还模拟了 [MFC][62] 整个 Message Bump 的实现。
 
-其实，更推荐先看《[Programming MFC][7]》，再读《[深入浅出MFC][4]》。先学会使用 MFC，再去研究原理。就不会像我，看完整本 《[深入浅出MFC][4]》，却不会写 MFC 程序。如今，MFC 肯定不要学了，C++ GUI 主流应该是 [Qt][17]。
+其实，更推荐先看《[Programming MFC][7]》，再读《[深入浅出MFC][4]》。先学会使用 [MFC][62]，再去研究原理。就不会像我，看完整本 《[深入浅出MFC][4]》，却不会写 [MFC][62] 程序。如今，[MFC][62] 肯定不要学了，当前 C++ GUI 主流是 [Qt][17]。
 
-从现在来看，MFC 这套东西，无非是做了一套反射系统，然后把 Win32 API 全部 class 封装了一遍。当年，第一次见识，心情澎湃、兴奋无比。
+从现在来看，[MFC][62] 这套东西，无非是做了一套反射系统，然后把 Win32 API 全部 class 封装了一遍。当年，第一次见识，心情澎湃、兴奋无比。从 Win32 API 到 [MFC][62]，从 [WinForm][63] 到 [WPF][64]，每一次进化，都是设计思想的飞跃。
+
 
 C++ 有了基础之后，在老师推荐下，开始看 Scott Meyers 的《[Effective C++][8]》，然后顺道把《[More Effective C++][9]》和 [Herb Sutter][11] 的《[Exceptional C++][12]》《[More Exceptional C++][13]》《[More Exceptional C++ Style][14]》，都看了一遍。
 
@@ -426,3 +427,6 @@ C++ 程序员最大的存在价值，就是世界上还有一大堆老系统是�
 [59]:https://blog.codingnow.com/2016/01/reference_count.html
 [60]:https://www.boost.org/doc/libs/1_61_0/libs/python/doc/html/index.html
 [61]:https://www.gnome.org/
+[62]:https://en.wikipedia.org/wiki/MFC
+[63]:https://en.wikipedia.org/wiki/Windows_Forms
+[64]:https://en.wikipedia.org/wiki/Windows_Presentation_Foundation
