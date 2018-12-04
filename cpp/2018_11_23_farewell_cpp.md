@@ -335,7 +335,9 @@ C++ 正史看 [这里][46]。
 
 据说 VC++ compiler team 那些人，每天研究的就是怎么多写点 template，让 compile 时间可以久一点，然后多点时间喝咖啡。:-)
 
-之后 google 商业上又很成功，招了很多牛逼程序员，大家都是用 C++，构建了 google 的业务。看看 [gperftools][48]、[gflags][49]、[gtest][50]、[protobuf][51] 就可以知道 google 是如何使用 C++ 的。
+之后 Google 商业上又很成功，招了很多牛逼程序员，大家都是用 C++，构建了 Google 的业务。看看 [gperftools][48]、[gflags][49]、[gtest][50]、[protobuf][51] 就可以知道 Google 是如何使用 C++ 的。
+
+Microsoft、Google 为啥要招牛人？因为**写 C++ 比较耗脑力，一般人写不动**。:-)
 
 最新标准可以看 [https://isocpp.org/std/status][45]
 
