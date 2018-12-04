@@ -18,7 +18,7 @@ cmake 对于 C++ 项目，确实很方便，几行 CMakeLists.txt，就把 boost
 
 目前 cmake 在 C++ 项目中属于事实上的构建标准。大部分开源库都有 CMakeLists.txt，很容易整合到自己的项目中。
 
-自己做了一个 project template，方便使用：
+做了一个 project template，方便使用：
 
 * [https://github.com/kasicass/bootstrap-cmake][3]
 
@@ -39,7 +39,7 @@ $ GLOG_logtostderr=1 ./bin/test-glog
 
 emake 其实是 gnu make 加强版，简单、易用。
 
-自己做了一个 project template，方便使用：
+做了一个 project template，方便使用：
 
 * [https://github.com/kasicass/bootstrap-emake][4]
 
@@ -127,7 +127,7 @@ $ GLOG_logtostderr=1 ./bin/test-glog
 (cd 3rdparty/gflags && cmake .)
 ```
 
-以 boost-system 的 build 为例：
+以 boost::system 的 build 为例：
 
 ```
 ; 3rdparty/boost-emake/system.mak
@@ -185,7 +185,7 @@ inc: ../../3rdparty/glog/src
 src: main.cpp
 ```
 
-run~ see glog run~
+run, see glog run~
 
 ```
 $ emake --ini=clang.ini src/test-glog/test-glog.mak
