@@ -83,7 +83,7 @@ C++ 有了基础之后，在老师推荐下，开始看 Scott Meyers 的《[Effe
 
 我试过几次，打算看《[Imperfect C++][24]》和《[C++ Templates: The Complete Guide][25]》，实在看不下去。《[C++ Templates: The Complete Guide][25]》最多能看到第四还是第五章。
 
-不过，经过这么多 C++ 书籍熏陶，有个好处，基本的 C++ 编译器报错，我大约都知道为啥。:-)，什么 template partial specialization 我都懂。嘿嘿。读 [boost][27] 代码也不吃力。
+不过，经过这么多 C++ 书籍熏陶，有个好处，基本的 C++ 编译器报错，我大约都知道为啥。:-)，什么 template partial specialization 我都懂，读 [boost][27] 代码也不吃力。嘿嘿。
 
 
 ## 我的项目经验
@@ -167,7 +167,7 @@ void ClassName::MethodName(int a, float b) {
 
 ### STL -- 在一个错误的道路上奔袭
 
-C++98 标准化了 template，然后在 template 上实现了 STL。为了这事，C++ 标准晚了五年才面世。不得不说，STL 是一个精巧的设计，template 本身的 meta-programming 能力，相当于在编译期给你造了一套图灵完毕的计算机。各种 C++ 大牛在 template 上玩得不亦乐乎。
+C++98 标准化了 template，然后在 template 上实现了 STL。为了这事，C++ 标准晚了五年才面世。不得不说，STL 是一个精巧的设计，template 本身的 meta-programming 能力，相当于在编译期给你造了一套图灵完备的计算机。各种 C++ 大牛在 template 上玩得不亦乐乎。
 
 继续说内存问题。遵循"性能第一"原则，C++ 给每个容器声明时，都保留了一个 std::allocator 的入口，你可以插入自己实现的 allocator。但你想精巧统计 STL 每一分内存是如何使用的，很难。
 
