@@ -281,7 +281,7 @@ BOOST_PYTHON_MODULE(hello)
 
 ### 案例二：build system
 
-最近在整理项目中一个老的 C++ 代码，想把项目 build 起来。然后发现从 SVN checkout 下来的代码，缺少一堆依赖库。而且 bulidsystem 还是用的 [bjam][53]。无法，自己给重新设计了下，改用 cmake，并且把所有第三方依赖库代码（boost 代码除外，太tm大了），都丢入 SVN 管理。
+最近在整理项目中一个老的 C++ 代码，想把项目 build 起来。然后发现从 SVN checkout 下来的代码，缺少一堆依赖库。而且 bulidsystem 还是用的 [bjam][53]，有点脱离时代。无法，自己给重新设计了下，改用 cmake，并且把所有第三方依赖库代码（boost 代码除外，太tm大了），都丢入 SVN 管理。
 
 最后我打算 cmake 都不用，直接改用 emake。
 
