@@ -2,8 +2,8 @@
 
 unity3d 中的 shader editor，和 UE4 blueprint 类似。
 
- * Amplify Shader Editor
- * [http://wiki.amplify.pt/index.php?title=Main_Page][1]
+ * [Amplify Shader Editor][1]
+
 
 节点
 
