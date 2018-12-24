@@ -8,7 +8,7 @@ unity3d 中的 shader editor，和 UE4 blueprint 类似。
 节点
 
  * [Remap][2]
- * [Component_Mask][3]
+ * [Component Mask][3]
  * [Clamp][4]
 
 
