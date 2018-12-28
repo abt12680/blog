@@ -1,4 +1,6 @@
 # -*- encoding: utf8 -*-
+# platform: python3
+# 
 # python -m pip install Markdown
 # python html-gen.py
 
@@ -30,7 +32,7 @@ def getFiles(pattern):
 
 # link to github's repo .md
 def genIndexFile(markdownFiles):
-	print 'generating index.html'
+	print('generating index.html')
 
 	# prepare .md file
 	#
@@ -78,7 +80,7 @@ def genIndexFile(markdownFiles):
 	# timeline - recent 5 articles
 	timeline_tag_files = copy.copy(tag_files)
 	timeline_tag_files = [(t, f) for t, f in timeline_tag_files if t != 'minibook']
-	timeline_tag_files.sort(lambda a, b: cmp(a[1], b[1]), reverse=True)
+	timeline_tag_files.sort(key=lambda a: a[1], reverse=True)
 	timeline_tag_files = timeline_tag_files[:TIMELINE_COUNT]
 
 	tag = 'timeline'
@@ -109,7 +111,7 @@ def genIndexFile(markdownFiles):
 
 	# .md => .html
 	html = '# kasicass\' blog\n' + '\n'.join(result)
-	html = markdown.markdown(html.decode('utf-8'))
+	html = markdown.markdown(html)
 	html = '''
 <html>
 <head>
@@ -122,7 +124,7 @@ def genIndexFile(markdownFiles):
 
 	indexFile = path.join(TO_PATH, 'index.html')
 	with open(indexFile, 'w') as f:
-		f.write(html.encode('utf-8'))
+		f.write(html)
 
 def main():
 	# only generate index.html
