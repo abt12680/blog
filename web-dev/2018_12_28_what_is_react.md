@@ -80,6 +80,7 @@ marker.setMap(map);
 ### declare programming 小结
 
 从代码书写的角度看声明式编程就像是告诉了标签，我要一个什么样的UI你给我变出来。命令式就是你这么变这么变，好了是我要的样子了。 
+> 采用declare方式，代码看上去更短，其本质是在命令式代码之上添加了添加了rendering的过程，其本质还是html，只是React把自定义的标签转化成标准Html的过程
 
 ## 组件化 (Component-Based)
 
