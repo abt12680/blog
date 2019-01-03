@@ -115,8 +115,8 @@ class AppContainer extends Component {
 		return isLoading || devTest.testStartLoading ? (
 			this.renderLoading()
 		) : (
-			<Provider store={this.state.store}>
-				<App />
+			<Provider store={this.state.store}>//热更新检测完成加载业务功能首页
+				<Home />
 			</Provider>
 		);
 	}
@@ -171,7 +171,7 @@ YellowBox.ignoreWarnings([
 	'RCTBridge required',
 ]);
 
-console.log('---------loading app----------');//开始加载app，并调用代码推送检测
+console.log('---------loading app----------');//开始加载app，注册codePush进行版本检测以及热更新代码
 AppRegistry.registerComponent('pad', () =>
 	codePush({
 		deploymentKey: codePushKey.pro,
@@ -217,3 +217,4 @@ setNativeExceptionHandler(exception => {
 	addReport({ type: 'NativeException', exception });
 });
 ```
+整个App启动过程中，先检测代码版本，若需要更新则完成热更新后重启生效，若不需要更新则加载App控件。
