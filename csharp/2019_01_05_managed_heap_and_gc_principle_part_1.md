@@ -1,4 +1,4 @@
-# Managed Heap＆CSharp GC Principle (待完善)
+# Managed Heap＆CSharp GC Principle(上篇)
 
 本文主要是对《CLR via C#》一书中GC的总结，分上下两篇．
 
@@ -8,6 +8,7 @@
 - [GCPrinciple](#GCPrinciple)
 - [Generation的设计](#Generation的设计)
 - [GCCondition](#GCCondition)
+- [GCNotifications](#GCNotifications)
 - [Finalize和IDisposable](#Finalize和IDisposable)
 - [参考资料](#参考资料)
 
@@ -46,7 +47,7 @@ GC(Garbage Collection)， 主要作用是 __帮助开发者自动管理应用程
 4．摧毁资源的状态以进行清理(可选，目前未找到实例验证)；  
 5．释放内存．
 
-![分配内存](2019_01_05_newobj.png)
+![分配内存](2019_01_05_managed_heap_and_gc_principle_images/2019_01_05_newobj.png)
 
 从IL上看，分配内存和初始化是一条语句，因此下面将这两个操作合并．
 简化之后的流程可以概述为：__分配 & 初始化->使用->释放__
@@ -57,7 +58,7 @@ GC(Garbage Collection)， 主要作用是 __帮助开发者自动管理应用程
 3．CLR检查Managed Heap中是否有足够的空间容纳实例对象所需要的字节数，若有，则分配，反之，则触发GC进行回收．  
 
 如下图：我们可以发现fs对象中的字占用了228个字节．
-![分配内存](2019_01_05_fs.png)
+![](2019_01_05_managed_heap_and_gc_principle_images/2019_01_05_fs.png)
 
 如果仔细验证分配规则，如下：
 ``` csharp
@@ -81,7 +82,7 @@ GC(Garbage Collection)， 主要作用是 __帮助开发者自动管理应用程
         }
     }
 ```
-![分配内存](2019_01_05_testa.png)
+![](2019_01_05_managed_heap_and_gc_principle_images/2019_01_05_testa.png)
 
 如上，*.cs使用的是unicode编码，所以在这里一个字母是2个字节，所以CLR为对象a分配了总共8个字节的内存空间，加上同步块索引和类型对象指针，正好16字节．
 因此，验证了书中在Managed Heap中内存分配的规则．
@@ -104,17 +105,37 @@ GC的效率．
 在GC中 Generation 包含三个，Gen0、Gen1、Gen2，可以理解为这是逻辑上对Managed Heap的划分，每个Generation都有自己的预算，当超过这个预算时，即会触发GC.
 如下：  
 
-![](2019_01_05_gc.png)
+![](2019_01_05_managed_heap_and_gc_principle_images/2019_01_05_gc.png)
 
 CLR在初始化的时候，会为每一个Generation都设定一个预算大小，然而这个大小可以通过GC自己来调节．预算大小是根据每次GC之后幸存的对象的数目来确定的．
 每次幸存者数目多，则扩大预算，反之，则缩小Generation的预算．
-
 
 ## GCCondition
 - 代码显示调用System.GC的静态Collect方法
 - Window 报告低内存的情况
 - CLR 正在卸载Appdomain
 - CLR 正在关闭
+
+## GCNotifications
+当CLR 执行Full GC(指对Gen2回收)，可能对系统产生一些性能影响.比如GC发生时,当前服务器Stop The World,但是此时，有大量的客户端请求进来,这些请求就将会延迟处理.
+针对这种在特殊时期发生GC,你可以将请求重定向到另外一个服务器实例，在本服务器实例上释放一些不需要再处理的请求，以便在即将发生的GC中回收这些请求.  
+示例代码:[GC Notifications Code Demo](2019_01_05_managed_heap_and_gc_principle_code/BlogExercisesGCNotification.cs)  
+执行这个Demo时,请关闭GC的并发模式,若是Console,修改App.config如下:
+```csharp 
+  <runtime>
+    <gcConcurrent enabled ="false" />
+  </runtime>
+```
+
+![](2019_01_05_managed_heap_and_gc_principle_images/2019_01_19_gc_notification.png)
+
+代码分析:  
+此程序主要是监控 __Full GC__,每当发生一次__Full GC__之前，就去释放load，以便在真正GC的时候进行内存释放.  
+日志如上,第一次__Full GC__的时候监控到了,之后由于线程未及时切换,没有释放load,所以load占用的内存达到进程上限(Window7 64系统中分给一个进程最大的可用内存时4G).  
+内存大小 = 3509153/(1024*1024) = 3.347G,最后抛出Out of Memory异常  
+
+![](2019_01_05_managed_heap_and_gc_principle_images/2019_01_19_gc_notification_1.png)
+![](2019_01_05_managed_heap_and_gc_principle_images/2019_01_19_gc_notification_2.png)
 
 ## Finalize和IDisposable
 这个问题是额外添加的。发生在与劲哥讨论时抛出来的，当时我确实未留意GC是如何处理这两个方法的.特此记录一下.    
@@ -123,15 +144,15 @@ CLR在初始化的时候，会为每一个Generation都设定一个预算大小�
 __缘由:__ 包含本机资源的内容被GC时，GC会回收对象在Managed Heap中使用的内存.但是这样会造成本机资源的泄漏，由此，引入Finalize来解决此问题  
 __调用时机:__ 当GC判定一个对象不可达时，首先会调用Finalize，释放本机资源，然后再释放Managed Heap中的内存.  
 __语法:__ System.Object定义了虚方法的Finalize  
-![](2019_01_12_object_finalize.png)  
+![](2019_01_05_managed_heap_and_gc_principle_images/2019_01_12_object_finalize.png)  
 如上，这是System.Object的源码，并没有直接发现Finalize方法，这或许是微软在编译mscolib.dll是处理这个的，有以下两种方式可以验证:  
 __Ａ．通过dnspy反编译mscorlib.dll__  
-![](2019_01_12_object_finalize_1.png)
+![](2019_01_05_managed_heap_and_gc_principle_images\2019_01_12_object_finalize_1.png)
 
 如上，反解出来可以发现~Object方法没有了，取而代之的是Finalize方法  
 
 __Ｂ．查看Dll的元数据表__  
-![](2019_01_12_object_finalize_2.png)  
+![](2019_01_05_managed_heap_and_gc_principle_images/2019_01_12_object_finalize_2.png)  
 
 如上，我们在类型引用表中可以发现Object.Finalize.因此，我们确定了Object中确实存在一个虚方法的Finalize  
 
@@ -146,18 +167,18 @@ __Ｂ．查看Dll的元数据表__
     }
 ```
 IL指令如下:  
-![](2019_01_12_object_finalize_3.png)  
+![](2019_01_05_managed_heap_and_gc_principle_images/2019_01_12_object_finalize_3.png)  
 
 如上，我们发现 __类__ 类型若写了终结器，会去调用基类System.Object的终结器
 
 ### CLR是如何处理终结器的(内部工作原理)?
 Ａ．如果一个类型显示定义了Finalize方法，当调用该类型的实例构造器之前，会将指向该对象的指针放到一个终结列表中  
-![](2019_01_12_object_finalize_principle_1.png)  
+![](2019_01_05_managed_heap_and_gc_principle_images/2019_01_12_object_finalize_principle_1.png)  
 Ｂ．当第一次GC发生时，当一个对象被标记为垃圾之后并且不再终结列表中，则会被直接回收.反之，则会在终结列表中删除该指针，并把它附加到foreachable队列中  
-![](2019_01_12_object_finalize_principle_2.png)  
-![](2019_01_12_object_finalize_principle_3.png)  
+![](2019_01_05_managed_heap_and_gc_principle_images/2019_01_12_object_finalize_principle_2.png)  
+![](2019_01_05_managed_heap_and_gc_principle_images/2019_01_12_object_finalize_principle_3.png)  
 Ｃ．CLR会创建一个特殊的高优先级的线程将foreachable队列中的元素依次移除，并调用其Finalize方法.最后，在下一次GC的时候，已终结的对象才会被GC真正的回收  
-![](2019_01_12_object_finalize_principle_4.png)  
+![](2019_01_05_managed_heap_and_gc_principle_images/2019_01_12_object_finalize_principle_4.png)  
 
 综上，可以发现用Finalize来处理本机资源是由CLR自动完成的.Managed Heap中的包装对象被回收时至少是2次才能完成，但是很多时候，第一次GC之后，包装对象就被提升了一代，
 可能需要更多次数的GC才能被完全回收.  

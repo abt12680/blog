@@ -98,7 +98,7 @@ router.get('/HelloWorld', function(req, res, next){//添加/HelloWorld方法
 
 module.exports = router;
 ```
-请求“http://localhost:port/HelloWorld”,正常返回Hello World！
+请求“http://localhost:port/HelloWorld” ,正常返回Hello World！
 
 ## /json  返回json数据
 ```
@@ -109,7 +109,7 @@ router.get('/json', function(req, res, next) {
   }))
 });
 ```
-请求“http://localhost:port/json",返回{key：key，value:value}
+请求“http://localhost:port/json" ,返回{key：key，value:value}
 
 ## 获取参数
 express获取url参数有四种方法
