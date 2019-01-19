@@ -117,9 +117,15 @@ CLR在初始化的时候，会为每一个Generation都设定一个预算大小�
 - CLR 正在关闭
 
 ## GCNotifications
-当CLR 执行Full GC(指对Gen1回收)，可能对系统产生一些性能影响.比如GC发生时,当前服务器Stop The World,但是此时，有大量的客户端请求进来,这些请求就将会延迟处理.
+当CLR 执行Full GC(指对Gen2回收)，可能对系统产生一些性能影响.比如GC发生时,当前服务器Stop The World,但是此时，有大量的客户端请求进来,这些请求就将会延迟处理.
 针对这种在特殊时期发生GC,你可以将请求重定向到另外一个服务器实例，在本服务器实例上释放一些不需要再处理的请求，以便在即将发生的GC中回收这些请求.  
 示例代码:[GC Notifications Code Demo](2019_01_05_managed_heap_and_gc_principle_code/BlogExercisesGCNotification.cs)  
+执行这个Demo时,请关闭GC的并发模式,若是Console,修改App.config如下:
+```csharp 
+  <runtime>
+    <gcConcurrent enabled ="false" />
+  </runtime>
+```
 
 ![](2019_01_05_managed_heap_and_gc_principle_images/2019_01_19_gc_notification.png)
 
