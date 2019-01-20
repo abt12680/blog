@@ -13,33 +13,37 @@
 - [参考资料](#参考资料)
 
 ## 介绍
-GC(Garbage Collection)， 主要作用是 __帮助开发者自动管理应用程序内存__. GC试图去回收在程序中不再需要使用的对象占用的内存.最初是由John McCarthy在1959年在Lisp语言中提出的.
-了解GC，好处诸多，其中之一就是代码规范，避免出现写出类似下面这种代码：  
+
+GC(Garbage Collection)，主要作用是 __帮助开发者自动管理应用程序内存__. GC试图去回收在程序中不再需要使用的对象占用的内存。最初是由John McCarthy在1959年在Lisp语言中提出的。
+
+了解GC，好处诸多，其中之一就是代码规范，避免出现写出类似下面这种代码：
+
 ``` csharp
-            FileStream fs = null;
-            StreamWriter sw = null;
+    FileStream fs = null;
+    StreamWriter sw = null;
 
-            try
-            {
-                fs = new FileStream(Environment.CurrentDirectory + "/Test.txt"， FileMode.OpenOrCreate);
-                sw = new StreamWriter(fs);
-				//TODO
-				//....
-            }
-            catch (Exception ex)
-            {
-
-            }
-            finally
-            {
-                if (sw != null)
-                    sw.Dispose();
-                if (fs != null)
-                    fs.Dispose();
-            }
+    try
+    {
+        fs = new FileStream(Environment.CurrentDirectory + "/Test.txt"， FileMode.OpenOrCreate);
+        sw = new StreamWriter(fs);
+        //TODO
+        //....
+    }
+    catch (Exception ex)
+    {
+    }
+    finally
+    {
+        if (sw != null)
+            sw.Dispose();
+        if (fs != null)
+            fs.Dispose();
+    }
 ```
 
+
 ## ManagedHeap内存分配
+
 通常在C#中，我们使用资源需要经过以下流程:  
 1．调用IL指令newobj，为代表资源的类型分配内存;  
 2．设置资源的初始化状态(通过调用类型的实例构造器来完成)；  
