@@ -23,7 +23,7 @@ spotify 公司应用 scrum 后的不断改进，相当震撼。
 
 最终构建结果 :-)
 
-![](2018_04_13_scrum_master_day_2_image_01.png)
+![](2018_04_13_scrum_master_day_2/image_01.png)
 
 培训同学分为3个team（5-6人），每个team认领一个 scrum event，去写出 event 的一些属性。然后轮转，由其它 team 来找出有没有补充和疑问；再轮转，由最后的 team 来解答疑问。（这是一个很好的沟通方法，在多人会议上，把人切分成小组，分内容进行讨论，并交换意见。
 让每一个人更好的参与）
@@ -44,7 +44,7 @@ spotify 公司应用 scrum 后的不断改进，相当震撼。
    <2> 一些无法一致的意见。找上一级专家拍板。
 ```
 
-![](2018_04_13_scrum_master_day_2_image_02.png)
+![](2018_04_13_scrum_master_day_2/image_02.png)
 
 **Daily Meeting**
 
@@ -63,7 +63,7 @@ spotify 公司应用 scrum 后的不断改进，相当震撼。
    <3> 如何量化大颗粒任务。
 ```
 
-![](2018_04_13_scrum_master_day_2_image_03.png)
+![](2018_04_13_scrum_master_day_2/image_03.png)
 
 **Sprint Retro**
 
@@ -78,11 +78,11 @@ spotify 公司应用 scrum 后的不断改进，相当震撼。
  * How Long：1-3 hour
 ```
 
-![](2018_04_13_scrum_master_day_2_image_04.png)
+![](2018_04_13_scrum_master_day_2/image_04.png)
 
 **Scrum的客户沟通模型**
 
-![](2018_04_13_scrum_master_day_2_image_05.png)
+![](2018_04_13_scrum_master_day_2/image_05.png)
 
 
 ### Scrum 扩容 -- LeSS
@@ -98,7 +98,7 @@ LeSS 多团队 Scrum：[https://less.works/][2]
 
 自己暂时还用不上，以后有需要再研究。
 
-![](2018_04_13_scrum_master_day_2_image_06.png)
+![](2018_04_13_scrum_master_day_2/image_06.png)
 
 
 ### System Thinking
@@ -111,7 +111,7 @@ LeSS 多团队 Scrum：[https://less.works/][2]
  * 上面：System Thinking 的一个例子
  * 下面：Scrum 是一个理想状态，团队持续改进，追求这个理想状态
 
-![](2018_04_13_scrum_master_day_2_image_07.png)
+![](2018_04_13_scrum_master_day_2/image_07.png)
 
 
 ### 讲师的经验
