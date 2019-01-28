@@ -1,4 +1,4 @@
-# Hello World, ZeroMQ~
+# [ZeroMQ] Hello World
 
 本来是在看 RabbitMQ 的，然后看到 OpenAMQ，简单看了看 AMQP 协议结构，还是有点重。然后发现了 ZeroMQ。
 
