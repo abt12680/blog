@@ -48,7 +48,7 @@ while (1)
 //                          //              (no 'activate_reader' to pull.mailbox)
 //
 // thread 2 (first loop):
-//   select(fd for read);      // block here, as no 'activate_reader' message
+//   select(fd for read);   // block here, as no 'activate_reader' message
 //   ...
 ```
 
