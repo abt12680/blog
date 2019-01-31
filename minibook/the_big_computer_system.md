@@ -66,9 +66,10 @@
 
 ## Language Zoo (L8)
 
- * C
- * Go
- * Python
+ * Assembly
+ * C / C++
+ * C# / Go
+ * Python / Typescript
 
 
 ## Software Architecture Principle (L9)
