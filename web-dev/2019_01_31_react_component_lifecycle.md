@@ -6,7 +6,7 @@ React Component可以用class和function来定义，而通过extends React.Compo
 * [Stateless Component](#StatelessComponent)
 
 ## Component生命周期示意
-![完整生命周期](http://mayun.itc.cmbchina.cn/uploads/images/2019/0131/165848_1717e0b9_2213.jpeg "ReactComponentLifecycleFull.Jpg")
+![完整生命周期](2019_01_31_react_component_lifecycle/image1.png)
 
 ### Mounting（创建时）
 在Component创建时进行调用的生命周期方法，其中包含了Component第一次出现，以及被插入DOM中时，会按顺序触发一下方法
