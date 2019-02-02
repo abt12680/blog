@@ -6,27 +6,57 @@ C++ 已经[学腻了][4]，总得找点新乐子。:-)
 
 列一些书单，C# 学习之旅，杨帆启航。
 
+Anders Hejlsberg
 
-## 基础篇
+## 入门篇
 
 刷一下语言基础，刷一下 IL 基础。
 
+ * 《[The C# Programming Language][27]》
  * 《[C# 7.0 in a Nutshell][1]》
  * 《[Inside Microsoft .Net Il Assembler][7]》
+ * 《[Essential .NET, Volume I: The Common Language Runtime][14]》
+
+Anders Hejlsberg 很少写书，《[The C# Programming Language][27]》大约是他认真写过的一本。我很喜欢看语言作者的书，比如K&R的《The C Programming Language》。只有语言作者，才是最了解这门语言的人。
+
+Don Box 的这本《[Essential .NET][14]》写得一般，远没有他的《[Essential COM][17]》出名。和《[Essential COM][17]》对标的书，是《[CLR via C#, 4th][3]》。
 
 
 ## 提高篇
 
- * 《[Depth in C#, 4th][2]》，马上出 第四版 了。估计是为 C# 7.0 做更新。坐等 z.cn 给我送货。
- * 《[CLR via C#, 4th][3]》，
+ * 《[Depth in C#][2]》，马上出 第四版 了。更新到 C# 7.0。坐等 z.cn 给我送货。
+ * 《[CLR via C#][3]》
+ * 《[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries][13]》
+ * 《[Customizing the Microsoft .NET Framework Common Language Runtime][15]》
+ * 《[Concurrent Programming on Windows][16]》
+
+《[Depth in C#][2]》作者 Jon Skeet 也是个奇葩。明明是在 [Google 工作][19]，吃着火锅写着 Java，但业余时间喜欢玩 C#，一不小心，写了本最流行的 C# 书，成为了 Stack Overstack 上的 C# 最佳答主。Orz~
+
+Jeffrey Richter 是个大骗子，最近几年写的书，每次序言都说"这是最后一次"，我很高兴，以为这是最后一次掏钱了。然后没过几年，就给你出本新的。《[CLR via C#][3]》书名和《[Windows via C/C++][21]》一样，很具有欺骗性，如果你以为这两本书很容易，那就上当了。Jeffrey Richter 早年写书，同一本书，不同版本，名字还tm不一样，我下回再细细批判这事。
+
+《[Customizing the Microsoft .NET Framework Common Language Runtime][15]》，按[赵姐夫][22]的说法，这本书比《[CLR via C#][3]》还艰深一些。在没有 dotnet core 的时代，我猜，这本书就相当于《[Windows Internals][20]》，给你说了很多内部原理，就tm不给你看代码。让你云里雾里，隔空爽。嘿嘿~
+
+《[Concurrent Programming on Windows][16]》书名也很唬人，它不教你API的。而是从 kernel 的线程模型，一路披荆斩棘，解读到 managed code 的线程模型。相当艰深的一本书，还没读完 =_=!。
 
 
 ## 理论篇
 
  * 《[The Garbage Collection Handbook][6]》
 
+据说没看过这本书，不能说你懂 GC。嗯，我还没看过。
+
 
 ## 实践篇
+
+### .NET Core
+
+ * [.NET Core 文档][23]
+ * [CoreCLR][24]，CLR 实现
+ * [CoreFX][25]，.NET 标准库
+ * [Roslyn][26]，C# compiler
+
+
+### Shared Source CLI
 
 Linus Torvalds 说过 "别BB，show me the code"。看完代码实现，才是真的懂了。
 
@@ -44,6 +74,14 @@ Linus Torvalds 说过 "别BB，show me the code"。看完代码实现，才是�
  * 《[Shared Source CLI Essentials][11]》
  * 《[Shared Source CLI 2.0 Internals][12]》
 
+### ILRuntime
+
+
+ ## BLOGS
+
+  * Jon Skeet，[https://codeblog.jonskeet.uk/][18]
+  * 
+
 
 [1]:https://book.douban.com/subject/27177382/
 [2]:https://www.amazon.com/CLR-via-4th-Developer-Reference/dp/0735667454
@@ -57,3 +95,18 @@ Linus Torvalds 说过 "别BB，show me the code"。看完代码实现，才是�
 [10]:https://www.c-sharpcorner.com/article/a-beginners-guide-to-microsoft-shared-source-cli-rotor/
 [11]:https://www.amazon.com/Shared-Source-Essentials-David-Stutz/dp/059600351X/
 [12]:http://www.newardassociates.com/files/SSCLI2.pdf
+[13]:https://www.amazon.com/Framework-Design-Guidelines-Conventions-Libraries/dp/0321545613
+[14]:https://www.amazon.com/gp/product/0201734117/
+[15]:https://www.amazon.com/Customizing-Microsoft®-Framework-Developer-Reference/dp/0735619883/
+[16]:https://www.amazon.com/Concurrent-Programming-Windows-Joe-Duffy/dp/032143482X/
+[17]:https://www.amazon.com/Essential-COM-Don-Box/dp/0201634465/
+[18]:https://codeblog.jonskeet.uk/
+[19]:http://askjonskeet.com/about
+[20]:https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189/
+[21]:https://www.amazon.com/Windows-via-Jeffrey-M-Richter/dp/0735624240/
+[22]:http://blog.zhaojie.me/
+[23]:https://docs.microsoft.com/zh-cn/dotnet/core/
+[24]:https://github.com/dotnet/coreclr
+[25]:https://github.com/dotnet/corefx
+[26]:https://github.com/dotnet/roslyn
+[27]:https://www.amazon.com/Programming-Language-Covering-Microsoft-Development/dp/0321741765/
