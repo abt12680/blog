@@ -1,12 +1,38 @@
 # C#, set sail~
 
-一直没有系统地学习过 Java or C#，最近认识了好多 C# 大佬。抱紧大腿，好好学习，补充下这部分知识。
+一直没有系统地学习过 Java or C#，最近认识了好多 C# 大佬。抱紧大腿，好好学习，refactoring 这部分知识。
 
 C++ 已经[学腻了][4]，总得找点新乐子。:-)
 
 列一些书单，C# 学习之旅，杨帆启航。
 
-Anders Hejlsberg
+
+## Father of C#
+
+我学习一门新语言，喜欢先看看语言作者。没有啥成就的作者，设计的语言，基本可以忽略。
+
+[Anders Hejlsberg][28]，Father of C#，为写编译器、设计编程语言而生的男人。一辈子都在写编译器，好像也挺无聊的 =_=!。
+
+ * 早年在 Borland 写 Turbo Pascal、Delphi
+ * 去了 Microsoft，为对抗 Java，设计了 C#
+ * 最后设计了 TypeScript，给 JavaScript 这货，打个 C# patch
+
+从 DOS 时代迁徙过来的程序员，一定知道 Borland 的 Turbo Pascal 和 Turbo C++。我记得，高中奥赛用的就是 Turbo Pascal。
+
+进入 Windows 时代，Delphi 如雷贯耳。Visual C++、MFC，易用性上，其实都是渣渣。用过 Delphi(Pascal) 的人，才知道写 Win32 程序可以托托拽拽点一下就可以的。然后 Microsoft 出个 Visual Basic，总算扳回一局。
+
+Basic 是以简单见长的语言，到了 VB.NET，那就不叫 Basic 了，那是硬插上 OO 翅膀的怪胎。哎呀，歪楼了。
+
+对当年 Microsoft 和 Borland 的编译器圣战感兴趣的同学，可以去读读《[Borland创奇][30]》。对 Delphi 设计上感兴趣，可以读读《[VCL构架剖析][31]》。如今传奇已不再，而 [Anders Hejlsberg][28] 还在。:-)
+
+1990年代后期，Java 横空出世，Microsoft 鸭梨山大，C++ 明显已显疲态，为了圈住开发者，不流失到 Sun 的土地上，Microsoft 重金挖了 [Anders Hejlsberg][28]，为 .NET Framework 插上翅膀。
+
+为数不多的 Microsoft Technical Fellow 之中，[Anders Hejlsberg][28] 的名字赫然在列。想知道 Microsoft 有哪些 TF-Boys，看 [这里][29]。
+
+如何挖牛人？"double，来不来？"，哈哈。
+
+    Microsoft offered Anders Hejlsberg a signing bonus of US$500,000 and stock options. Microsoft doubled the bonus to US$1,000,000 after Borland made a counter-offer. Hejlsberg left Borland in October 1996.
+
 
 ## 入门篇
 
@@ -77,7 +103,7 @@ Linus Torvalds 说过 "别BB，show me the code"。看完代码实现，才是�
 ### ILRuntime
 
 
- ## BLOGS
+## BLOGS
 
   * Jon Skeet，[https://codeblog.jonskeet.uk/][18]
   * 
@@ -110,3 +136,7 @@ Linus Torvalds 说过 "别BB，show me the code"。看完代码实现，才是�
 [25]:https://github.com/dotnet/corefx
 [26]:https://github.com/dotnet/roslyn
 [27]:https://www.amazon.com/Programming-Language-Covering-Microsoft-Development/dp/0321741765/
+[28]:https://en.wikipedia.org/wiki/Anders_Hejlsberg
+[29]:https://en.wikipedia.org/wiki/Category:Microsoft_technical_fellows
+[30]:https://book.douban.com/subject/1106304/
+[31]:https://book.douban.com/subject/1146437/
