@@ -1,5 +1,7 @@
 # 2D像素风格游戏 & 技术汇总
 
+![](2019_02_02_pixel_games/soul_knight.png)
+
 好多好多年没上过 GameRes 了。看到一篇《[像素游戏盘点][2]》，好赞。
 
 玩过《[VA-11 Hall-A][3]》，很喜欢这种有独特风格的独立游戏。
@@ -11,6 +13,10 @@
  * [https://itch.io/jam/cyberpunk-jam][1]
  * 《[VA-11 Hall-A][3]》
  * 《[The Last Night][6]》
+
+TapTap上热门的像素游戏
+
+ * [元气骑士][9]
 
 收集像素风格游戏的制作技术
 
@@ -27,3 +33,4 @@
 [6]:https://store.steampowered.com/app/612400/The_Last_Night/
 [7]:https://www.kickstarter.com/projects/2dee/sprite-dlight-instant-normal-maps-for-2d-graphics
 [8]:http://www.2deegameart.com/
+[9]:https://www.taptap.com/app/34751
