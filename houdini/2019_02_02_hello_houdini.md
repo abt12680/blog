@@ -41,6 +41,8 @@ Houdini
 
 [下载 Houdini][3]，一路安装，选择 apprentice license(免费版)。
 
+![](2019_02_02_hello_houdini/houdini_basic_ui.png)
+
 
 [1]:https://mp.weixin.qq.com/s?__biz=MzAxNzAxMDgyNw==&mid=2649769601&idx=1&sn=974c5aebb3f7c62a129d5494a6959769&chksm=83e8ff65b49f7673468e462a7ccfc2c575aeb5d6b0709116aa6c65d63a529447bc52c437e214&mpshare=1&scene=1&srcid=0202EJClClR5mAULCjroDphp#rd
 [2]:https://www.sidefx.com/
