@@ -19,7 +19,7 @@ C++ 已经[学腻了][4]，总得找点新乐子。:-)
 
 从 DOS 时代迁徙过来的程序员，一定知道 Borland 的 Turbo Pascal 和 Turbo C++。我记得，高中奥赛用的就是 Turbo Pascal。
 
-进入 Windows 时代，Delphi 如雷贯耳。Visual C++、MFC，易用性上，其实都是渣渣。用过 Delphi(Pascal) 的人，才知道写 Win32 程序可以托托拽拽点一下就可以的。然后 Microsoft 出个 Visual Basic，总算扳回一局。
+进入 Windows 时代，Delphi 如雷贯耳。写 Win32 应用程序，Visual C++、MFC，易用性上，就是渣渣。用过 Delphi(Pascal) 的人，才知道写 Win32 程序可以托托拽拽点一下就可以的。然后 Microsoft 出个 Visual Basic，总算扳回一局。
 
 Basic 是以简单见长的语言，到了 VB.NET，那就不叫 Basic 了，那是硬插上 OO 翅膀的怪胎。哎呀，歪楼了。
 
