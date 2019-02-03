@@ -112,7 +112,7 @@ Miguel de Icaza 和 Mono，也是创奇故事。有空单独写一篇。
 
 ### ILRuntime
 
-[蓝色幻想(蓝大)][34] 的 ILRuntime
+[蓝色幻想(蓝大)][34] 的 ILRuntime。ps. 程序死宅都喜欢卡通妹子头像 :-)
 
  * [https://github.com/Ourpalm/ILRuntime][33]
 
