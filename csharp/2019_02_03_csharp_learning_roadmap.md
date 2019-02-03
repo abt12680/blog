@@ -4,7 +4,7 @@
 
 C++ 已经[学腻了][4]，总得找点新乐子。:-)
 
-列一些书单，C# 学习之旅，[扬帆启航(Set Sail)][5]。
+列一些书单，C# 学习之旅，[扬帆启航][5]。
 
 
 ## Father of C#
@@ -31,7 +31,9 @@ Basic 是以简单见长的语言，到了 VB.NET，那就不叫 Basic 了，那
 
 如何挖牛人？"double，来不来？"，哈哈。
 
-    Microsoft offered Anders Hejlsberg a signing bonus of US$500,000 and stock options. Microsoft doubled the bonus to US$1,000,000 after Borland made a counter-offer. Hejlsberg left Borland in October 1996.
+    Microsoft offered Anders Hejlsberg a signing bonus of US$500,000 and stock options. 
+    Microsoft doubled the bonus to US$1,000,000 after Borland made a counter-offer. 
+    Hejlsberg left Borland in October 1996.
 
 
 ## 入门篇
