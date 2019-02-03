@@ -27,13 +27,13 @@ Basic 是以简单见长的语言，到了 VB.NET，那就不叫 Basic 了，那
 
 1990年代后期，Java 横空出世，Microsoft 鸭梨山大，C++ 明显已显疲态，为了圈住开发者，不流失到 Sun 的土地上，Microsoft 重金挖了 [Anders Hejlsberg][28]，为 .NET Framework 插上翅膀。
 
-为数不多的 Microsoft Technical Fellow 之中，[Anders Hejlsberg][28] 的名字赫然在列。想知道 Microsoft 有哪些 TF-Boys，看 [这里][29]。
-
 如何挖牛人？"double，来不来？"，哈哈。
 
     Microsoft offered Anders Hejlsberg a signing bonus of US$500,000 and stock options. 
     Microsoft doubled the bonus to US$1,000,000 after Borland made a counter-offer. 
     Hejlsberg left Borland in October 1996.
+
+为数不多的 Microsoft Technical Fellow 之中，[Anders Hejlsberg][28] 的名字赫然在列。想知道 Microsoft 有哪些 TF-Boys，看 [这里][29]。
 
 
 ## 入门篇
