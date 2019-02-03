@@ -72,19 +72,24 @@ def genIndexFile(markdownFiles):
 		mds[tag].append(f)
 		hrefs[tag].append(pre + path.join(tag, f).replace('\\', '/'))
 
-	# 'minibook' to first
+	# 'minibook' to 3rd
 	n = tags.index('minibook')
 	tags.pop(n)
 	tags.insert(0, 'minibook')
 
-	# timeline - recent 5 articles
+	# 'books' to 2nd
+	n = tags.index('books')
+	tags.pop(n)
+	tags.insert(0, 'books')
+
+	# 'timeline' to 1st, recent 10 articles
 	timeline_tag_files = copy.copy(tag_files)
 	timeline_tag_files = [(t, f) for t, f in timeline_tag_files if t != 'minibook']
 	timeline_tag_files.sort(key=lambda a: a[1], reverse=True)
 	timeline_tag_files = timeline_tag_files[:TIMELINE_COUNT]
 
 	tag = 'timeline'
-	tags.insert(1, tag)
+	tags.insert(0, tag)
 	mds[tag]   = []
 	hrefs[tag] = []
 	for t, f in timeline_tag_files:
