@@ -20,7 +20,7 @@ Algorithm & Implementation of manual-memory allocator (no gc stuff)
 ```
 
 
-## 缘灭
+## 缘聚
 
 心血来潮，和 [辉哥][3] 吹水，突然发现GC相关的两本书，都是 [Richard Jones][37] 写的。想起自己的太监之作《[Memory Management In Action - Vol.1][1]》，要不，还是把坑填了吧。也刷一波出书成就。
 
@@ -37,6 +37,11 @@ CLR：Generation 算法（.net core & mono 两套实现）
 Python：refcount GC（相当简陋）
 Lua：Mark-and-Swap
 ```
+
+
+## 缘灭
+
+TODO，等我写完书，来填这一段。
 
 
 [1]:https://github.com/kasicass/kasicass/tree/master/books/article/Memory_Management_In_Action_Vol1
