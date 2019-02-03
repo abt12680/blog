@@ -100,13 +100,25 @@ Linus Torvalds 说过 "别BB，show me the code"。看完代码实现，才是�
  * 《[Shared Source CLI Essentials][11]》
  * 《[Shared Source CLI 2.0 Internals][12]》
 
+
+### Mono
+
+Miguel de Icaza 和 Mono，也是创奇故事。有空单独写一篇。
+
+ * [https://github.com/mono/mono][35]
+
+
 ### ILRuntime
+
+[蓝色幻想(蓝大)][34] 的 ILRuntime
+
+ * [https://github.com/Ourpalm/ILRuntime][33]
 
 
 ## BLOGS
 
   * Jon Skeet，[https://codeblog.jonskeet.uk/][18]
-  * 
+  * Miguel de Icaza，[https://tirania.org/blog/][32]
 
 
 [1]:https://book.douban.com/subject/27177382/
@@ -140,3 +152,7 @@ Linus Torvalds 说过 "别BB，show me the code"。看完代码实现，才是�
 [29]:https://en.wikipedia.org/wiki/Category:Microsoft_technical_fellows
 [30]:https://book.douban.com/subject/1106304/
 [31]:https://book.douban.com/subject/1146437/
+[32]:https://tirania.org/blog/
+[33]:https://github.com/Ourpalm/ILRuntime
+[34]:https://github.com/liiir1985
+[35]:https://github.com/mono/mono
