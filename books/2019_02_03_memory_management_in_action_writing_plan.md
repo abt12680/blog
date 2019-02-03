@@ -22,7 +22,7 @@ Algorithm & Implementation of manual-memory allocator (no gc stuff)
 
 ## 缘聚
 
-心血来潮，和 [辉哥][3] 吹水，突然发现GC相关的两本书，都是 [Richard Jones][37] 写的。想起自己的太监之作《[Memory Management In Action - Vol.1][1]》，要不，还是把坑填了吧。也刷一波出书成就。
+心血来潮，和 [辉哥][3] 吹水，突然发现GC相关的两本书，都是 [Richard Jones][4] 写的。想起自己的太监之作《[Memory Management In Action - Vol.1][1]》，要不，还是把坑填了吧。也刷一波出书成就。
 
 卷1、卷2 考虑合并，内容改为分析所有实际项目中的算法。我可是实战派。:-)
 
