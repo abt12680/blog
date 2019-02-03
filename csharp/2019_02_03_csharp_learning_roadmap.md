@@ -47,7 +47,7 @@ Basic 是以简单见长的语言，到了 VB.NET，那就不叫 Basic 了，那
 
 Anders Hejlsberg 很少写书，《[The C# Programming Language][27]》大约是他认真写过的一本。我很喜欢看语言作者的书，比如K&R的《The C Programming Language》。只有语言作者，才是最了解这门语言的人。
 
-Don Box 的这本《[Essential .NET][14]》写得一般，远没有他的《[Essential COM][17]》出名。和《[Essential COM][17]》对标的书，是《[CLR via C#, 4th][3]》。
+Don Box 的这本《[Essential .NET][14]》写得一般，远没有他的《[Essential COM][17]》出名。和《[Essential COM][17]》对标的书，是《[CLR via C#][3]》。
 
 
 ## 提高篇
@@ -58,11 +58,11 @@ Don Box 的这本《[Essential .NET][14]》写得一般，远没有他的《[Ess
  * 《[Customizing the Microsoft .NET Framework Common Language Runtime][15]》
  * 《[Concurrent Programming on Windows][16]》
 
-《[Depth in C#][2]》作者 Jon Skeet 也是个奇葩。明明是在 [Google 工作][19]，吃着火锅写着 Java，但业余时间喜欢玩 C#，一不小心，写了本最流行的 C# 书，成为了 Stack Overstack 上的 C# 最佳答主。Orz~
+《[Depth in C#][2]》作者 Jon Skeet 是个奇葩。明明是在 [Google 工作][19]，吃着火锅写着 Java，但业余时间居然在玩 C#，一不小心，写了本最流行的 C# 书，成为了 Stack Overstack 上的 C# 最佳答主。Orz~
 
-Jeffrey Richter 是个大骗子，最近几年写的书，每次序言都说"这是最后一次"，我很高兴，以为这是最后一次掏钱了。然后没过几年，就给你出本新的。《[CLR via C#][3]》书名和《[Windows via C/C++][21]》一样，很具有欺骗性，如果你以为这两本书很容易，那就上当了。Jeffrey Richter 早年写书，同一本书，不同版本，名字还tm不一样，我下回再细细批判这事。
+Jeffrey Richter 是个大骗子，最近几年写的书，每次序言都说"这是最后一次写书了"，我很高兴，以为这是最后一次掏钱了。然后没过几年，就给你出本新的。《[CLR via C#][3]》书名和《[Windows via C/C++][21]》一样，很具有欺骗性，如果你以为这两本书很容易，那就上当了。Jeffrey Richter 早年写书，同一本书，不同版本，名字还tm不一样，我下回再细细批判这事。
 
-《[Customizing the Microsoft .NET Framework Common Language Runtime][15]》，按[赵姐夫][22]的说法，这本书比《[CLR via C#][3]》还艰深一些。在没有 dotnet core 的时代，我猜，这本书就相当于《[Windows Internals][20]》，给你说了很多内部原理，就tm不给你看代码。让你云里雾里，隔空爽。嘿嘿~
+《[Customizing the Microsoft .NET Framework Common Language Runtime][15]》，按[赵姐夫][22]的说法，这本书比《[CLR via C#][3]》还艰深一些。在没有 .NET Core 的时代，我猜这本书就相当于《[Windows Internals][20]》，给你说了很多内部原理，就tm不给你看代码。让你云里雾里，隔空爽。嘿嘿~
 
 《[Concurrent Programming on Windows][16]》书名也很唬人，它不教你API的。而是从 kernel 的线程模型，一路披荆斩棘，解读到 managed code 的线程模型。相当艰深的一本书，还没读完 =_=!。
 
