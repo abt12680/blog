@@ -1,4 +1,4 @@
-# C#, set sail~
+# C#, Set Sail~
 
 一直没有系统地学习过 Java or C#，最近认识了好多 C# 大佬。抱紧大腿，好好学习，refactoring 这部分知识。
 
