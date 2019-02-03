@@ -88,7 +88,7 @@ Jeffrey Richter 是个大骗子，最近几年写的书，每次序言都说"这
 
 Linus Torvalds 说过 "别BB，show me the code"。看完代码实现，才是真的懂了。
 
-为了推广 .NET，Microsoft 在2001年推出了一份开源的.NET Framework实现，给高校作为学习、参考资料。史称 [Shared Source CLI][9]，其实现了 C# 1.0，能同时跑在 Windows 和 FreeBSD 上。然后还为其写了一本书《[Shared Source CLI Essentials][11]》。
+为了推广 .NET，Microsoft 在2001年推出了一份开源的.NET Framework实现，给高校作为学习、参考资料。史称 [Shared Source CLI][9]，实现了 C# 1.0，能同时跑在 Windows 和 FreeBSD 上。还有一本配套书籍《[Shared Source CLI Essentials][11]》。
 
 2006年，更新了一版 SSCLI 2.0，实现了 C# 2.0，对标 .NET Framework 2.0。作者也更新了一版书籍《[Shared Source CLI 2.0 Internals][12]》，不过没出版。
 
