@@ -93,11 +93,12 @@ ld -static  /usr/lib/x86_64-linux-gnu/crt1.o \
 
 **从书名可以知道，书里对这里的编译等环节并不太关注，比较关注链接环节，因此着重对链接的操作文件以及链接时发生的行为进行了分析。**
 
-## .o文件的构成
+## .o 文件的构成
 
-对于链接来说，输入就是汇编过程产生的各种.o文件，输出是可执行文件。
+对于链接来说，输入就是汇编过程产生的各种 .o 文件，输出是可执行文件。
 
 用书上建议的示例代码进行分析
+
 ```c
 // File Name: SimpleSection.c
 // Author: weikun
@@ -125,7 +126,7 @@ int main(void)
 }
 ```
 
-用file指令可以知道.o文件是ELF（Executable Linkable Format）格式的。
+用file指令可以知道 .o 文件是ELF（Executable Linkable Format）格式的。
 
 ```
 debian:~/LearnTest/StaticLink/3$ file SimpleSection.o 
@@ -134,7 +135,8 @@ SimpleSection.o: ELF 64-bit LSB relocatable, x86-64, version 1 (SYSV), not strip
 
 ### 主要结构段
 
-首先用objdump工具来分析下.o文件的结构
+首先用 objdump 工具来分析下 .o 文件的结构
+
 ```
 debian:~/LearnTest/StaticLink/3$ objdump -h SimpleSection.c.o 
 
@@ -157,13 +159,15 @@ Idx Name          Size      VMA               LMA               File off  Algn
   6 .eh_frame     00000058  0000000000000000  0000000000000000  000000d8  2**3
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
 ```
-可以看到，.o文件里存在代码段（.text）、数据段（.data）、BSS段、只读数据段（.rodata）、注释信息段（.comment）、堆栈提示段（.note.GNU-stack）、异常处理段（.eh_frame）。
+可以看到，.o 文件里存在代码段（.text）、数据段（.data）、BSS段、只读数据段（.rodata）、注释信息段（.comment）、堆栈提示段（.note.GNU-stack）、异常处理段（.eh_frame）。
 
-上面解析出的信息里，“File off”是对应段在文件中的起始字节数，“Size”是对应段的数据长度。
+上面解析出的信息里，"File off"是对应段在文件中的起始字节数，"Size"是对应段的数据长度。
 
-（从.text的size跟.data的起始字节，可以看到size本身是没有进行字节填充的，但是各个段在文件中的分布是进行了字节对齐的。
+（从 .text 的 size 跟 .data 的起始字节，可以看到 size 本身是没有进行字节填充的，但是各个段在文件中的分布是进行了字节对齐的。
 
-#### 代码段
+
+#### 代码段(.text)
+
 编译后的机器指令一般放在代码段。
 
 指令
@@ -173,7 +177,7 @@ objdump -d SimpleSection.c.o
 ```
 可以查看代码段的内容，不过没什么特殊，确实有两个函数。:)
 
-#### 数据段跟只读数据段
+#### 数据段(.rdata) & 只读数据段(.rodata)
 
 全局变量跟局部静态变量通常放在数据段
 
@@ -194,7 +198,8 @@ Contents of section .rodata:
 
 而"%d"正好是"printf("%d\n", i);"里的字符串常量。
 
-#### BSS段
+
+#### BSS段(.bss)
 
 按道理BSS段是未初始化的全局变量和局部静态变量的预留位置。
 
@@ -203,15 +208,18 @@ Contents of section .rodata:
 ```
   3 .rodata       00000004  0000000000000000  0000000000000000  000000a0  2**0
 ```
+
 可以看出，实际上满足BSS条件的global_unint_var跟static_var2只有一个保存在了BSS段。
 
 从后续章节可知，global_unint_var应该只预留了一个未定义的全局变量符号，并没有在BSS里占有空间。
 
 （如果同样代码的cpp文件，编译之后BSS段有8个字节，原因未知）
 
+
 #### 其他段
 
 不列举了。
+
 
 ### ELF文件描述
 
