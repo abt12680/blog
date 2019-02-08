@@ -26,7 +26,8 @@
 
 看这里《[bookdown: Authoring Books and Technical Documents with R Markdown][5]》
 
-    In short, you just prepare a few R Markdown book chapters, and bookdown can help you turn them into a beautiful book.
+    In short, you just prepare a few R Markdown book chapters, and
+    bookdown can help you turn them into a beautiful book.
 
 
 ## bookdown 实战
@@ -46,6 +47,8 @@
 install.packages("bookdown", dependencies = TRUE)
 ```
 
+ps. 后来发现，直接用 RStudio IDE 就好，上面这一段忽略。=_=!
+
 ### Quick Start
 
  1. 下载 demo，[https://github.com/rstudio/bookdown-demo][12]
@@ -56,7 +59,11 @@ install.packages("bookdown", dependencies = TRUE)
 
 接下来，读 bookdown-demo 内容就好。
 
-### bookdown 原理
+### 原理
+
+简单说，R Markdown 就是一套复杂的 template generator 系统。和 django、jsp、asp.net 等各种 html 模板生成系统没啥本质不同。所谓的 knitr，就是 template 里面嵌套代码。
+
+然后 RStudio IDE 提供了一整套"所见即所得"的编辑环境，配合上 R 这种统计语言，确实是技术死宅写 book & paper 的利器。
 
  * knitr，[https://yihui.name/knitr/][9]
  * Pandoc，[http://pandoc.org/][7]
