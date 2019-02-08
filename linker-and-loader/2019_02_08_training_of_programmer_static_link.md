@@ -348,9 +348,9 @@ ld a.o b.o -e main -o ab
 
 ### 空间与地址分配
 
-```
-debian:~/LearnTest/StaticLink/4$ objdump -h a.o
+"objdump -h a.o" 显示
 
+```
 a.o:     file format elf64-x86-64
 
 Sections:
@@ -367,8 +367,11 @@ Idx Name          Size      VMA               LMA               File off  Algn
                   CONTENTS, READONLY
   5 .eh_frame     00000038  0000000000000000  0000000000000000  000000a8  2**3
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
-debian:~/LearnTest/StaticLink/4$ objdump -h b.o
+```
 
+"objdump -h b.o" 显示
+
+```
 b.o:     file format elf64-x86-64
 
 Sections:
@@ -385,8 +388,12 @@ Idx Name          Size      VMA               LMA               File off  Algn
                   CONTENTS, READONLY
   5 .eh_frame     00000038  0000000000000000  0000000000000000  000000c0  2**3
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
-debian:~/LearnTest/StaticLink/4$ objdump -h ab
 
+```
+
+"objdump -h ab" 显示
+
+```
 ab:     file format elf64-x86-64
 
 Sections:
@@ -400,9 +407,11 @@ Idx Name          Size      VMA               LMA               File off  Algn
   3 .comment      0000002d  0000000000000000  0000000000000000  00001004  2**0
                   CONTENTS, READONLY
 ```
+
 可以看到，链接前各段的VMA都为0，而链接后各段都赋予了非0的VMA。这是由于虚拟空间是在链接时分配的。
 
 同时，链接后的ab的.text的size是80，也是a.o跟b.o的.text的size之和。
+
 
 ### 重定位
 
