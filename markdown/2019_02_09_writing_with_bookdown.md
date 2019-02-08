@@ -46,7 +46,20 @@
 install.packages("bookdown", dependencies = TRUE)
 ```
 
-### bookdown quick start
+### Quick Start
+
+ 1. 下载 demo，[https://github.com/rstudio/bookdown-demo][12]
+ 2. 下载 RStudio IDE，[https://www.rstudio.com/products/rstudio/download/][13]
+ 3. 安装 bookdown package，"install.packages("bookdown", dependencies = TRUE)"
+ 4. 用 RStudio IDE 打开 bookdown-demo/bookdown-demo.Rproj
+ 5. 打开 index.Rmd，然后 Build => Build Book
+
+接下来，读 bookdown-demo 内容就好。
+
+### bookdown 原理
+
+ * knitr，[https://yihui.name/knitr/][9]
+ * Pandoc，[http://pandoc.org/][7]
 
 R Markdown Cheat Sheet，下载
 
@@ -55,12 +68,6 @@ R Markdown Cheat Sheet，下载
  * R Studio 做的 Cheat Sheet 好漂亮，Orz
 
 ![](2019_02_09_writing_with_bookdown/rmarkdown_cheat_sheet.png)
-
-
-### bookdown 底层
-
- * knitr，[https://yihui.name/knitr/][9]
- * Pandoc，[http://pandoc.org/][7]
 
 
 ## 另类发现 - gitbook
@@ -81,3 +88,5 @@ R Markdown Cheat Sheet，下载
 [9]:https://yihui.name/knitr/
 [10]:https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf
 [11]:https://www.rstudio.com/resources/cheatsheets/
+[12]:https://github.com/rstudio/bookdown-demo
+[13]:https://www.rstudio.com/products/rstudio/download/
