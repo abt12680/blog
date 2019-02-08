@@ -4,22 +4,25 @@
 
 [TOC]
 
+
 ## 一次“编译”过程发生的事
+
 以一段最简单的代码的gcc编译作为例子
+
 ```c
 // File Name: hello.c
 // Author: weikun
 
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
     printf("Hello World!");
-    return 0 ;
+    return 0;
 }
 ```
 
-使用gcc编译，会输出a.out
+使用 gcc 编译，会输出 a.out。
 
 
 ```
@@ -28,7 +31,7 @@ gcc hello.c
 
 实际上这一句指令包含了四个阶段（预编译、编译、汇编、链接）的行为，而这四个阶段的行为均可以单独拆分执行。
 
-- 预编译
+### 01 - 预编译
 
 预编阶段分执行的行为比较单纯，主要是将宏展开、处理预编译指令、展开include跟删除注释，主要是文本级的处理。
 
@@ -36,15 +39,18 @@ gcc hello.c
 gcc -E hello.c -o hello.i
 ```
 
-- 编译
+### 02 - 编译
 
 编译阶段进行词法分析、语法分析、语义分析跟优化，然后生成汇编代码。
 
-```编译
+```
 gcc -S hello.i -o hello.s
+
 或者
+
 /usr/lib/gcc/x86_64-linux-gnu/6/cc1 -I/usr/include/x86_64-linux-gnu/ hello.c
 ```
+
 如果执行下面那句指令，会输出
 
 ```
@@ -62,19 +68,21 @@ Execution times (seconds)
  TOTAL                 :   0.00             0.01             0.01               1656 kB
 ```
 
-- 汇编
+### 03 - 汇编
 
 汇编阶段执行的行为也比较单纯，将汇编语句转变成可执行的机器指令。
 
-```汇编
+```
 gcc -c hello.s -o hello.o
 ```
 
-- 链接（这一步里除了hello.o，其他.o跟lib的路径在不同环境下可能不一样）
+### 04 - 链接
+
+这一步里除了 hello.o，其他 .o 跟 lib 的路径在不同环境下可能不一样。
 
 这一阶段将用到的模块就行拼装，执行地址和空间分配、符号决议跟重定位等过程，输出完整的可执行文件。
 
-```链接
+```
 ld -static  /usr/lib/x86_64-linux-gnu/crt1.o \
             /usr/lib/x86_64-linux-gnu/crti.o \
             /usr/lib/gcc/x86_64-linux-gnu/6/crtbeginT.o hello.o \
