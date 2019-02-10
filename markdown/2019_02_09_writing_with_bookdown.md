@@ -109,19 +109,32 @@ R Markdown Cheat Sheet，下载
 ![](2019_02_09_writing_with_bookdown/rmarkdown_cheat_sheet.png)
 
 
-## 另类发现 - gitbook
+## 另类发现
 
-快速创建文档的好帮手。
+### gitbook
+
+document hosting 好帮手。
 
  * [https://www.gitbook.com/][4]
 
+### R Language
 
-## 另类发现 - rosr
+统计学圈喜欢用的一门语言，打算开坑学学。=_=! oh, no~
+
+ * 《学 R：零基础学习 R 语言》
+ * [https://xuer.dapengde.com/][16]
+
+### 'rosr' in R
 
 教你如何管理科学研究的材料。
 
  * 'rosr' 包发布：开放科学与可重复性研究
  * [https://www.pzhao.org/zh/post/rosr/][15]
+
+### 几位大牛的 Blog
+
+ * Yihui Xie，'bookdown'作者，[http://yihui.name/][1]
+ * Zhao Peng，'rosr'作者，[https://www.pzhao.org/][17]
 
 
 [1]:https://yihui.name/
@@ -139,3 +152,5 @@ R Markdown Cheat Sheet，下载
 [13]:https://www.rstudio.com/products/rstudio/download/
 [14]:https://www.pzhao.org/zh/post/rmd/
 [15]:https://www.pzhao.org/zh/post/rosr/
+[16]:https://xuer.dapengde.com/
+[17]:https://www.pzhao.org/
