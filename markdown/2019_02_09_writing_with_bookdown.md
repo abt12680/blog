@@ -116,6 +116,14 @@ R Markdown Cheat Sheet，下载
  * [https://www.gitbook.com/][4]
 
 
+## 另类发现 - rosr
+
+教你如何管理科学研究的材料。
+
+ * 'rosr' 包发布：开放科学与可重复性研究
+ * [https://www.pzhao.org/zh/post/rosr/][15]
+
+
 [1]:https://yihui.name/
 [2]:https://bookdown.org/
 [3]:http://www.rstudio.com
@@ -130,3 +138,4 @@ R Markdown Cheat Sheet，下载
 [12]:https://github.com/rstudio/bookdown-demo
 [13]:https://www.rstudio.com/products/rstudio/download/
 [14]:https://www.pzhao.org/zh/post/rmd/
+[15]:https://www.pzhao.org/zh/post/rosr/
