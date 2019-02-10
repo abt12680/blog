@@ -47,7 +47,8 @@
 install.packages("bookdown", dependencies = TRUE)
 ```
 
-ps. 后来发现，直接用 RStudio IDE 就好，上面这一段忽略。=_=!
+ps. 使用 RStudio 需要先安装好 R。
+
 
 ### Quick Start
 
@@ -58,6 +59,7 @@ ps. 后来发现，直接用 RStudio IDE 就好，上面这一段忽略。=_=!
  5. 打开 index.Rmd，然后 Build => Build Book
 
 接下来，读 bookdown-demo 内容就好。
+
 
 ### 原理
 
