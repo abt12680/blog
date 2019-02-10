@@ -77,6 +77,8 @@ install.packages("rmd")
 require("rmd")
 ```
 
+![](2019_02_09_writing_with_bookdown/require_rmd.png)
+
 
 ### Quick Start
 
