@@ -32,6 +32,7 @@
 
 ## bookdown 实战
 
+
 ### 安装 R
 
 去任意 CRAN (the Comprehensive R Archive Network)镜像 下载 R 的安装包。
@@ -48,6 +49,33 @@ install.packages("bookdown", dependencies = TRUE)
 ```
 
 ps. 使用 RStudio 需要先安装好 R。
+
+
+### 安装 TinyTex
+
+```
+install.packages('tinytex')
+tinytex::install_tinytex()
+```
+
+ps. Build Book 需要 TinyTex
+
+
+### R Markdown 安装全家桶
+
+装完 R 和 TinyTex 我就发现 R Markdown 这货需要一堆依赖（作者大人，你就不能方便一下我们这些小白。。。）
+
+还好发现有 rmd 这货。
+
+ * 'rmd' 包发布：一键安装、加载和探索 R markdown 全家桶
+ * [https://www.pzhao.org/zh/post/rmd/][14]
+
+两个命令，搞定所有 R Markdown 依赖。
+
+```
+install.packages("rmd")
+require("rmd")
+```
 
 
 ### Quick Start
@@ -99,3 +127,4 @@ R Markdown Cheat Sheet，下载
 [11]:https://www.rstudio.com/resources/cheatsheets/
 [12]:https://github.com/rstudio/bookdown-demo
 [13]:https://www.rstudio.com/products/rstudio/download/
+[14]:https://www.pzhao.org/zh/post/rmd/
