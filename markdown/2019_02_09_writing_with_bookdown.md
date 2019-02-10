@@ -40,8 +40,8 @@
 
 启动 R，然后安装 bookdown package：
 
- * 注意，让选择 CRAN mirror 的时候，要选 shanghai。
- * =_=! guangzhou mirror 没有 bookdown package。oooh, sucks~
+ * 注意，让选择 CRAN mirror 的时候，要选 Hong Kong。
+ * =_=! 大陆的 mirrors 没有 bookdown package。oooh, sucks~
 
 ```
 install.packages("bookdown", dependencies = TRUE)
