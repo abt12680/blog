@@ -113,7 +113,7 @@ Linus Torvalds 说过 "别BB，show me the code"。看完代码实现，才是�
 
 ### Mono
 
-Miguel de Icaza 和 Mono，也是创奇故事。有空单独写一篇。
+Miguel de Icaza 和 Mono，也是传奇故事。有空单独写一篇。
 
  * [https://github.com/mono/mono][35]
 
