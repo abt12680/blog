@@ -24,6 +24,16 @@ TapTap上热门的像素游戏
  * [《The Last Night》美术分析][5]
  * [Sprite DLight - Instant normal maps for 2D graphics][7]，官网在 [这里][8]。
 
+## 一些像素游戏
+
+ * Into the Breath
+ * Celeste
+
+## Bossa Studio
+
+ * 做了一些有趣的创意游戏
+ * [https://www.bossastudios.com/][10]
+
 
 [1]:https://itch.io/jam/cyberpunk-jam
 [2]:https://bbs.gameres.com/thread_812017_1_1.html
@@ -34,3 +44,4 @@ TapTap上热门的像素游戏
 [7]:https://www.kickstarter.com/projects/2dee/sprite-dlight-instant-normal-maps-for-2d-graphics
 [8]:http://www.2deegameart.com/
 [9]:https://www.taptap.com/app/34751
+[10]:https://www.bossastudios.com/
