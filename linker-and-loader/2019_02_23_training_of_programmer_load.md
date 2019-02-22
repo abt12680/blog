@@ -1,21 +1,26 @@
 # 《程序员的自我修养》读书笔记之"装载与动态链接"
+
 ## 装载
+
 CPU只能访问到内存（其实应该是Cache，这里就不在意细节了），而程序文件跟所需资源是存储在硬盘上的，所以需要先将程序装载到内存。
 
 但是程序所需的内存可能大于实际内存，因此产生了动态装载的技术，典型的就是覆盖装入跟页映射两种，不细表。
 
 ### 装载过程发生的事
+
 进程建立的时候，会先创建独立的虚拟地址空间，然后读取可执行文件头，并建立虚拟空间与可执行文件的映射关系，再讲CPU指令寄存器设置成可执行文件的入口地址，启动运行。
 
 其中创建虚拟地址空间跟设置指令寄存器不需要特殊讨论，建立映射关系的目的是为了动态装载，由于我们可执行文件没有一次性加载到内存，因此需要能在发现程序某页数据缺失时有方法找到这部分数据在文件中的位置，然后加载。
 
 ### 虚地址分布
+
 按道理，ELF文件的每一个Section加载到内存，而加载的时候是以页为单位的，由于不同的Section有不同的权限，因此需要分开加载到不同页，这样每一个Section都有可能在最后一个页上浪费空间，浪费的期望值是页大小的二分之一，Section一多，浪费的就非常惊人了。
 
 为了解决这个问题，一般是把同权限的Section映射到连续的一块空间上，组合成Segment（其实链接器一般就会把可以拼成Segment的Section排在相邻位置）。
 
 测试文件sleepmain.c
-```
+
+```C++
 #include<stdlib.h>
 
 int main()
@@ -24,12 +29,16 @@ int main()
     {
         sleep(1);
     }
-    return 0 ;
+    return 0;
 }
 ```
-```
-debian:~/LearnTest/StaticLink/7$ gcc -static sleepmain.c -o sleepmain.elf
-debian:~/LearnTest/StaticLink/7$ readelf -S sleepmain.elf                
+
+运行结果
+
+```shell
+$ gcc -static sleepmain.c -o sleepmain.elf
+$ readelf -S sleepmain.elf      
+
 There are 32 section headers, starting at offset 0xc5658:
 
 Section Headers:
@@ -106,7 +115,7 @@ Key to Flags:
   C (compressed), x (unknown), o (OS specific), E (exclude),
   l (large), p (processor specific)
 
-debian:~/LearnTest/StaticLink/7$ readelf -l sleepmain.elf  
+$ readelf -l sleepmain.elf  
 
 Elf file type is EXEC (Executable file)
 Entry point 0x400990
@@ -137,6 +146,7 @@ Program Headers:
    04     
    05     .tdata .init_array .fini_array .jcr .data.rel.ro .got 
 ```
+
 Program Headers就是Segment，可以看见，sleepmain.elf的32个Section被分为6个Segment，相同属性的Section归类到Segment。其中前两个Segment会被加载进内存
 
 ```
@@ -157,7 +167,9 @@ ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsysca
 
 
 ## 动态链接
+
 ### 为何需要动态链接
+
 按照静态链接，所有程序段都会链接进可执行文件，然后在运行时加载到内存。但是这样存在一个问题，一些函数多个程序都会被用到（例如printf），如果每一个程序都链接一份进去然后加载到内存，会浪费空间。
 
 同时，由于静态链接发生在编译期，如果一些公共函数被修改，那就需要重新链接一遍可执行文件然后发布。
@@ -245,6 +257,7 @@ debian:~/LearnTest/StaticLink/7$ cat /proc/16413/maps
 7ffdd2d76000-7ffdd2d78000 r-xp 00000000 00:00 0                          [vdso]
 ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
 ```
+
 可以看到，虚拟地址空间里不仅有Lib.so跟Program1，还有libc跟ld，前者是运行库，后者是动态链接器。
 
 对于.so，也可以用readelf -l查看。
