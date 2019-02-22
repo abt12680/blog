@@ -121,7 +121,7 @@ var user = {
     name: 'bingo',
     id:'123'
 }
-const msg = ${user.name} + '-' + ${user.id};
+const msg = user.name + '-' + user.id;
 ```
 字符串模板功能非常实用，不用再书写大量的'+'号来拼接字符串，使得整个代码简洁很多，但要注意那个不是引号！！！！不是''或者"",而是``！！
 
