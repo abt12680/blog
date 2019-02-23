@@ -5,7 +5,7 @@
 TODO
 
 * OpenGL 1.2 - DirectX 7 (DirectDraw)
-* OpenGL 2.0 - DirectX 9.0a (HLSL/Cg)
-* OpenGL 3.0 - DirectX 9.0c
+* OpenGL 2.0 - DirectX 9.0a (HLSL/Cg) - OpenGL ES 2.0
+* OpenGL 3.0 - DirectX 9.0c - OpenGL ES 3.0
 * OpenGL 4.0 - DirectX 11
 * Vulcan - DirectX 12
