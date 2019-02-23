@@ -149,11 +149,11 @@ Program Headers:
 
 Program Headers就是Segment，可以看见，sleepmain.elf的32个Section被分为6个Segment，相同属性的Section归类到Segment。其中前两个Segment会被加载进内存
 
-```
-debian:~/LearnTest/StaticLink/7$ ./sleepmain.elf &
+```shell
+$ ./sleepmain.elf &
 [1] 12428
 
-debian:~/LearnTest/StaticLink/7$ cat /proc/12428/maps 
+$ cat /proc/12428/maps 
 00400000-004b2000 r-xp 00000000 fe:01 1058770                            sleepmain.elf
 006b1000-006b4000 rw-p 000b1000 fe:01 1058770                            sleepmain.elf
 006b4000-006b6000 rw-p 00000000 00:00 0 
@@ -178,7 +178,7 @@ ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsysca
 
 测试代码：
 
-```
+```cpp
 // File Name: Program1.c
 // Created Time: Mon 18 Feb 2019 09:33:09 PM CST
 
@@ -220,19 +220,19 @@ void foobar(int i);
 #endif
 ```
 
-```
-debian:~/LearnTest/StaticLink/7$ gcc -fPIC -shared -o Lib.so Lib.c
-debian:~/LearnTest/StaticLink/7$ gcc -o Program1 Program1.c ./Lib.so
-debian:~/LearnTest/StaticLink/7$ gcc -o Program2 Program2.c ./Lib.so
+```shell
+$ gcc -fPIC -shared -o Lib.so Lib.c
+$ gcc -o Program1 Program1.c ./Lib.so
+$ gcc -o Program2 Program2.c ./Lib.so
 ```
 这样Program1跟Program2里使用的foobar就都是从Lib.so里动态链接的了。
 
 
-```
-debian:~/LearnTest/StaticLink/7$ ./Program1 &
+```shell
+$ ./Program1 &
 [1] 16413
 
-debian:~/LearnTest/StaticLink/7$ cat /proc/16413/maps 
+$ cat /proc/16413/maps 
 560937d26000-560937d27000 r-xp 00000000 fe:01 1058618                    Program1
 560937f26000-560937f27000 r--p 00000000 fe:01 1058618                    Program1
 560937f27000-560937f28000 rw-p 00001000 fe:01 1058618                    Program1
@@ -262,8 +262,8 @@ ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsysca
 
 对于.so，也可以用readelf -l查看。
 
-```
-debian:~/LearnTest/StaticLink/7$ readelf -l Lib.so 
+```shell
+$ readelf -l Lib.so 
 
 Elf file type is DYN (Shared object file)
 Entry point 0x5c0
@@ -314,8 +314,8 @@ Program Headers:
 
 对于模块内的就直接用相对便宜位置访问即可，对于模块外的，ELF会建立一个指向这些变量的指针数组（GOT），然后访问时通过GOT里的相应项简介访问。
 
---- | 指令调用、跳转 | 数据访问
----|---|---
+---      | 指令调用、跳转 | 数据访问
+---      |       ---      |  ---
 模块内部 | 相对调用和跳转 | 相对地址访问
 模块外部 | 间接调用和跳转 | 间接访问
 
@@ -331,8 +331,8 @@ Program Headers:
 
 ELF文件里的.interp记录了动态链接器的路径
 
-```
-debian:~/LearnTest/StaticLink/7$ readelf -l Program1
+```shell
+$ readelf -l Program1
 
   INTERP         0x0000000000000238 0x0000000000000238 0x0000000000000238
                  0x000000000000001c 0x000000000000001c  R      0x1
@@ -341,8 +341,9 @@ debian:~/LearnTest/StaticLink/7$ readelf -l Program1
 
 #### .dynamic
 而动态链接器动态链接的时候需要的信息一般记录在.dynamic。
-```
-debian:~/LearnTest/StaticLink/7$ readelf -d Program1
+
+```shell
+$ readelf -d Program1
 
 Dynamic section at offset 0xde0 contains 27 entries:
   Tag        Type                         Name/Value
@@ -378,8 +379,9 @@ Dynamic section at offset 0xde0 contains 27 entries:
 
 #### 动态符号表
 ELF用动态符号表（.dynsym）来记录动态链接的导入导出关系，并且为了加快程序运行时的查找符号，还用了一个符号哈希表（.gnu.hash）来辅助查询
-```
-debian:~/LearnTest/StaticLink/7$ readelf -s Lib.so  
+
+```shell
+$ readelf -s Lib.so  
 
 Symbol table '.dynsym' contains 14 entries:
    Num:    Value          Size Type    Bind   Vis      Ndx Name
@@ -398,7 +400,7 @@ Symbol table '.dynsym' contains 14 entries:
     12: 00000000000006f4     0 FUNC    GLOBAL DEFAULT   13 _fini
     13: 00000000000006c0    51 FUNC    GLOBAL DEFAULT   12 foobar
     
-debian:~/LearnTest/StaticLink/7$ readelf -sD Lib.so 
+$ readelf -sD Lib.so 
 
 Symbol table of `.gnu.hash' for image:
   Num Buc:    Value          Size   Type   Bind Vis      Ndx Name
@@ -413,16 +415,15 @@ Symbol table of `.gnu.hash' for image:
 ## 从.c到.o再到.a&.so
 还是上文的Lib.c
 
-```
+```shell
 gcc -c Lib.c
 ar rc Lib.a Lib.o
 gcc Lib.o -fPIC -shared -o Lib.so
 ```
 ### .a跟.o
 用一段python代码来对.a跟.o的文件进行对比
-```
+```python
 #!/usr/bin/env python
-# Author: weikun
 # Created Time: Wed 20 Feb 2019 09:42:01 AM CST
 
 def readFile(fname):
@@ -436,8 +437,9 @@ s2 = readFile('Lib.a')
 print s1 == s2[len(s2) - len(s1):]
 ```
 输出结果是True
-```
-debian:~/LearnTest/StaticLink/7$ python difflast.py 
+
+```shell
+$ python difflast.py 
 True
 ```
 猜想：.a跟o的文件结构应该部分类似，所以单个.o静态链接成.a时不会做出修改（各种表/段也不会进行合并跟扩充，所以才能字符串相等）。
@@ -446,8 +448,8 @@ True
 下面对比.so跟.o：
 
 #### ELF Header
-```
-debian:~/LearnTest/StaticLink/7$ readelf -h Lib.o   
+```shell
+$ readelf -h Lib.o   
 ELF Header:
   Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 
   Class:                             ELF64
@@ -469,8 +471,8 @@ ELF Header:
   Number of section headers:         13
   Section header string table index: 12
 ```
-```
-debian:~/LearnTest/StaticLink/7$ readelf -h Lib.so 
+```shell
+$ readelf -h Lib.so 
 ELF Header:
   Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 
   Class:                             ELF64
@@ -500,8 +502,8 @@ ELF Header:
 
 #### 段表
 
-```
-debian:~/LearnTest/StaticLink/7$ readelf -S Lib.o   
+```shell
+$ readelf -S Lib.o   
 There are 13 section headers, starting at offset 0x330:
 
 Section Headers:
@@ -539,7 +541,7 @@ Key to Flags:
   C (compressed), x (unknown), o (OS specific), E (exclude),
   l (large), p (processor specific)
   
-debian:~/LearnTest/StaticLink/7$ readelf -S Lib.so 
+$ readelf -S Lib.so 
 There are 29 section headers, starting at offset 0x18a0:
 
 Section Headers:
@@ -609,10 +611,10 @@ Key to Flags:
   C (compressed), x (unknown), o (OS specific), E (exclude),
   l (large), p (processor specific)
   
-debian:~/LearnTest/StaticLink/7$ readelf -l Lib.o
+$ readelf -l Lib.o
 
 There are no program headers in this file.
-debian:~/LearnTest/StaticLink/7$ readelf -l Lib.so
+$ readelf -l Lib.so
 
 Elf file type is DYN (Shared object file)
 Entry point 0x5c0
@@ -648,9 +650,10 @@ Program Headers:
 ```
 .so的段表确实多了很多项，而且也有了真实的offset
 .o没有Segment但是.so有
+
 #### 重定位表
-```
-debian:~/LearnTest/StaticLink/7$ objdump -r Lib.o
+```shell
+$ objdump -r Lib.o
 
 Lib.o:     file format elf64-x86-64
 
@@ -666,7 +669,7 @@ OFFSET           TYPE              VALUE
 0000000000000020 R_X86_64_PC32     .text
 
 
-debian:~/LearnTest/StaticLink/7$ objdump -r Lib.so
+$ objdump -r Lib.so
 
 Lib.so:     file format elf64-x86-64
 ```
@@ -674,7 +677,7 @@ Lib.so:     file format elf64-x86-64
 
 #### 符号表
 ```
-debian:~/LearnTest/StaticLink/7$ readelf -s Lib.o
+$ readelf -s Lib.o
 
 Symbol table '.symtab' contains 13 entries:
    Num:    Value          Size Type    Bind   Vis      Ndx Name
@@ -691,7 +694,7 @@ Symbol table '.symtab' contains 13 entries:
     10: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND _GLOBAL_OFFSET_TABLE_
     11: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND printf
     12: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND sleep
-debian:~/LearnTest/StaticLink/7$ readelf -s Lib.so
+$ readelf -s Lib.so
 
 Symbol table '.dynsym' contains 14 entries:
    Num:    Value          Size Type    Bind   Vis      Ndx Name
@@ -772,5 +775,7 @@ Symbol table '.symtab' contains 58 entries:
     57: 0000000000000568     0 FUNC    GLOBAL DEFAULT    9 _init
 ```
 不仅.so的符号表多了许多内容，也多了.dynsym这个内容，由于生成.so的时候已经确认所有符号的情况（要不然不能load），所以是知道.o里原来需要重定位的printf跟sleep是在另一个动态链接库glibc里，因此符号名也与原来的不一样了。
+
+#### 小结
 
 所以一个.o在被链接成.so的时候，首先是会类似于普通可执行文件，将不同的Section按照属性的不同组成不同的Segment，这是因为.so会需要独立加载而.o不需要。同时.o里标记需要重定位的符号，在.so里都被扔到了动态符号表留待导入。
