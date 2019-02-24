@@ -1,6 +1,6 @@
 # 2D像素风格游戏 & 技术汇总
 
-![](2019_02_02_pixel_games/soul_knight.png)
+![](images/2019_02_02_pixel_games/soul_knight.png)
 
 好多好多年没上过 GameRes 了。看到一篇《[像素游戏盘点][2]》，好赞。
 
