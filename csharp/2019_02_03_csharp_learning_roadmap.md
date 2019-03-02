@@ -75,7 +75,26 @@ Jeffrey Richter 是个大骗子，最近几年写的书，每次序言都说"这
 《[Writing High-Performance .NET Code][36]》，发现一本挺新的书，看完再来评价。
 
 
-## 理论篇
+## 设计模式篇
+
+ * 《[Agile Principles, Patterns, and Practices in C#][41]》
+ * 《[Adaptive Code: Agile coding with design patterns and SOLID principles][43]》
+
+《[Agile Principles, Patterns, and Practices in C#][41]》是 [Uncle Bob(Robert C. Martin)][42] 的作品，从 OO 的设计原则（SRP、OCP、LSP 等等）讲起，再把所有设计模式（Factory、Composite、Observer 等等）全部用 C# 介绍一遍。
+
+《[Adaptive Code: Agile coding with design patterns and SOLID principles][43]》和上一本差不多，只不过是最近出版的，比较新。没读完，先占坑 :-)
+
+**面向对象的基本设计原则**
+
+ * SRP，The Single-Responsibility Principle
+ * OCP，The Open/Closed Principle
+ * LSP，The Liskov Substitution Principle
+ * DIP，The Dependency-Inversion Principle
+ * ISP，The Interface Segregation Principle
+
+
+
+## GC篇
 
  * 《[Garbage Collection][38]》
  * 《[The Garbage Collection Handbook][6]》
@@ -176,3 +195,6 @@ Miguel de Icaza 和 Mono，也是传奇故事。有空单独写一篇。
 [38]:https://www.amazon.com/Garbage-Collection-Algorithms-Management-1996-08-16/dp/B01JXRNMDW/
 [39]:https://www.amazon.com/Essential-7-0-Addison-Wesley-Microsoft-Technology/dp/1509303588/
 [40]:https://en.wikipedia.org/wiki/Don_Box
+[41]:https://www.amazon.com/Agile-Principles-Patterns-Practices-C/dp/0131857258/
+[42]:https://en.wikipedia.org/wiki/Robert_C._Martin
+[43]:https://www.amazon.com/Adaptive-Code-principles-Developer-Practices/dp/1509302581/
