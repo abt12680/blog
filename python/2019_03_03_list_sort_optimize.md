@@ -1,6 +1,6 @@
-# [Python] Optimizing list.sort() by performing safty checks in advance
+# [Python] Optimizing list.sort()
 
-Python 3 中对 list.sort() 做了[改进][1]，交给[坤队][4]帮忙研究下能否 backport to Python2.7。于是有了[此文][3]。
+Python 3 中对 list.sort() 做了《[Optimizing list.sort() by performing safty checks in advance][1]》，请[坤队][4]帮忙研究下能否 backport to Python2.7。遂有[此文][3]。
 
 -----------
 
