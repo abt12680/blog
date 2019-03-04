@@ -2,6 +2,8 @@
 
 Python 3 中对 list.sort() 做了《[Optimizing list.sort() by performing safty checks in advance][1]》，请[坤队][4]帮忙研究下能否 backport to Python2.7。遂有[此文][3]。
 
+ * [https://github.com/WeiKun/TestForListSort][10]
+
 -----------
 
 ## 来源
@@ -502,3 +504,4 @@ tuples of heterogeneous     | 13.46%
 [7]:https://github.com/WeiKun/cpython2.7.git
 [8]:https://github.com/WeiKun/TestForListSort/tree/master/ConformanceTest
 [9]:https://github.com/WeiKun/TestForListSort/tree/master/PerformanceTest
+[10]:https://github.com/WeiKun/TestForListSort
