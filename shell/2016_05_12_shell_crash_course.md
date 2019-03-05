@@ -325,10 +325,12 @@ $ ifconfig
 
 **lsof, ls opend file (看看哪些文件被打开了)**
 
+```Shell
 # OpenBSD 上默认没有这个命令，就没有具体的测试截图了
 # 查找被进程占用的文件，必须要把对应的进程关掉，才会释放硬盘
 $ lsof | grep deleted
 ...
+```
 
 
 ## 文本处理篇
