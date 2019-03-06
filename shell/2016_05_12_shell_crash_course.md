@@ -659,7 +659,7 @@ Introduction to the Command Line
 [1]:http://www.openbsd.org/cgi-bin/man.cgi
 [2]:http://www.socallinuxexpo.org/scale11x/presentations/linux-performance-analysis-and-tools
 [3]:http://www.freeos.com/guides/lsst/
-[4]:https://www.amazon.com/Mastering-Unix-Shell-Scripting-Administrators/dp/0470183012/ref=sr_1_fkmrnull_1?keywords=Mastering+Unix+Shell+Scripting+Bash+Bourne+and+Korn+Shell+Scripting&qid=1551829574&s=gateway&sr=8-1-fkmrnull
+[4]:https://www.amazon.com/Mastering-Unix-Shell-Scripting-Administrators/dp/0470183012/
 [5]:https://github.com/wuzhouhui/awk
 [6]:http://www.dabeaz.com/generators-uk/
 [7]:https://github.com/justjavac/free-programming-books-zh_CN
