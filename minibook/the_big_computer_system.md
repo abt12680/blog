@@ -8,7 +8,7 @@
 +------------------------------------------------------------------------------+
 
 +------------------------------------------------------+        +--------------+
-|                Game / Game Engine(L7)                |        |              |
+|         Web / App / Game / Game Engine(L7)           |        |              |
 +------------+------------------------+----------------+ <====> |              |
 |   GUI(L4)  |      Network/DB(L5)    |   2D/3D (L6)   |        | Programming  |
 +------------+------------------------+----------------+ <====> |   Languages  |
@@ -69,7 +69,7 @@
  * Assembly
  * C / C++
  * C# / Go
- * Python / Typescript
+ * Python / Javascript / Typescript
 
 
 ## Software Architecture Principle (L9)
