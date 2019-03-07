@@ -15,7 +15,7 @@
  * 更好的性能（利用多核）
  * 更好的实现分布式系统
 
-![](2018_11_28_actor_model_image_01.png)
+![](images/2018_11_28_actor_model/2018_11_28_actor_model_image_01.png)
 
 从嵌入式系统到通用操作系统，再到分布式系统，无不渗透着 [Actor Model][1] 的设计。
 
@@ -24,11 +24,11 @@
 
 uC/OS-II 本身是一个嵌入式的 Kernel，支持抢占式的 Task 调度。
 
-![](2018_11_28_actor_model_image_02.png)
+![](images/2018_11_28_actor_model/2018_11_28_actor_model_image_02.png)
 
 然后它周围的功能模块（KEY / CLK / TMR 等等），都是独立的 Task。
 
-![](2018_11_28_actor_model_image_03.png)
+![](images/2018_11_28_actor_model/2018_11_28_actor_model_image_03.png)
 
 模块之间如果有通讯需求，uC/OS-II 提供了 MailBox 这种 message-queue 机制。
 
