@@ -78,9 +78,9 @@ def genIndexFile(markdownFiles):
 	tags.insert(0, 'minibook')
 
 	# 'books' to 2nd
-	n = tags.index('books')
-	tags.pop(n)
-	tags.insert(0, 'books')
+	#n = tags.index('books')
+	#tags.pop(n)
+	#tags.insert(0, 'books')
 
 	# 'timeline' to 1st, recent 10 articles
 	timeline_tag_files = copy.copy(tag_files)
