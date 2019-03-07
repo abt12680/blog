@@ -28,7 +28,7 @@
 
 ## 读书
 
-![](2019_02_22_learning_pbr/pbr_book.png)
+![](images/2019_02_22_learning_pbr/pbr_book.png)
 
 
 

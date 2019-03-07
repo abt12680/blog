@@ -10,8 +10,6 @@ Python 3 中对 list.sort() 做了《[Optimizing list.sort() by performing safty
 
 在Python中，list的排序时，采用的是归并排序算法（有优化）。不过由于本次优化并不是在排序算法上进行，不分析。
 
-
-
 在实现细节上，排序时会不断调用 compare 函数，以 py2.7 为例，普通情况下，list.sort() 时调用的标准函数是 PyObject_RichCompareBool()。
 
 ```C
