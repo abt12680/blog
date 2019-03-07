@@ -14,7 +14,7 @@
 
 这两个块根据我的理解应该基本等于$(document).ready()执行之前与之后。而onload只是第二部分EventLoop的其中一个事件。
 
-![浏览器js执行过程](2019_03_04_settimeout_and_onload/js流程.jpeg "js流程.Jpg")
+![浏览器js执行过程](images/2019_03_04_settimeout_and_onload/js流程.jpeg "js流程.Jpg")
 
 > ##### H5多线程
 > 为了利用多核CPU的能力，HTML5提出了Web Worker标准，允许JavaScript脚本创建多个线程，但是线程完全受主线程控制，父子线程通过postMessage()相互传递消息。子线程可以执行任何代码，但不包括直接操作DOM节点，也不能使用window对象的默认方法和属性。然而可以使用大量window对象之下的东西，包括WebSockets,IndexedDB以及FireFox OS专用的Data Store API等数据存储机制。
@@ -31,7 +31,7 @@ EventQueue保存的只有已就绪的事件，比如已到达唤醒时间的setT
 
 > 在EventLoop中实际还存在两个队列，macrotask和microtask。本文不做详解，有兴趣自行查阅，可加深理解。
 
-![EventLoop图解](2019_03_04_settimeout_and_onload/js_eventloop.jpeg "js执行.Jpg")
+![EventLoop图解](images/2019_03_04_settimeout_and_onload/js_eventloop.jpeg "js执行.Jpg")
 
 ## setTimeOut
 setTimeout(func, timeout)计时器的主要功能就是在倒计时结束时将func，加入EventQueue中，所以setTimeout(func,0)，并不意味着会立即执行。而且其等待是见取决事件队列中，在该事件之前的事件数量以及各自的执行时间。因此会产生类似下面代码的执行结果。
