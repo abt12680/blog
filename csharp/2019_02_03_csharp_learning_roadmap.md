@@ -149,11 +149,12 @@ Miguel de Icaza 和 Mono，也是传奇故事。有空单独写一篇。
  * [https://github.com/Ourpalm/ILRuntime][33]
 
 
-## BLOGS
+## GITHUB & BLOGS
 
-  * Jon Skeet，[https://codeblog.jonskeet.uk/][18]
-  * Miguel de Icaza，[https://tirania.org/blog/][32]
-
+ * Anders Hejlsberg，[https://github.com/ahejlsberg][44]
+ * Jon Skeet，[https://codeblog.jonskeet.uk/][18]
+ * Miguel de Icaza，[https://tirania.org/blog/][32]
+ 
 
 [1]:https://book.douban.com/subject/27177382/
 [2]:https://www.amazon.com/CLR-via-4th-Developer-Reference/dp/0735667454
@@ -198,3 +199,4 @@ Miguel de Icaza 和 Mono，也是传奇故事。有空单独写一篇。
 [41]:https://www.amazon.com/Agile-Principles-Patterns-Practices-C/dp/0131857258/
 [42]:https://en.wikipedia.org/wiki/Robert_C._Martin
 [43]:https://www.amazon.com/Adaptive-Code-principles-Developer-Practices/dp/1509302581/
+[44]:https://github.com/ahejlsberg
