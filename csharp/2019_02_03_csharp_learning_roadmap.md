@@ -110,6 +110,8 @@ Jeffrey Richter 是个大骗子，最近几年写的书，每次序言都说"这
 
 ### .NET Core
 
+CLR & .NET Framework 几年前已开源，成为 .NET Core 或 dotnet core。
+
  * [.NET Core 文档][23]
  * [CoreCLR][24]，CLR 实现
  * [CoreFX][25]，.NET 标准库
