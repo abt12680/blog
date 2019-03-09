@@ -8,11 +8,11 @@ TODO，初稿。
 
 下图是最新的 [TIOBE Index][1]
 
-![](2019_01_27_programming_language_trends/tiobe_index.png)
+![](images/2019_01_27_programming_language_trends/tiobe_index.png)
 
 [TIOBE Index][1] 页面上还有一张图很有意思，展示了"几十年时间跨度上，一些流行语言的排名"。
 
-![](2019_01_27_programming_language_trends/long_term.png)
+![](images/2019_01_27_programming_language_trends/long_term.png)
 
 看着图，抛开个人的喜好偏见，单从流行度上，分析一下各个语言的未来。
 
