@@ -11,7 +11,7 @@ windows 过于庞大，经常会给你在后台启动一些服务，搞得 CPU �
  * 找到 Microsoft – Windows – Application Experience
  * 禁用 Microsoft Compatibility Appraiser
 
-![](2018_11_10_disable_useless_services_image_02.png)
+![](images/2018_11_10_disable_useless_services/compatibility_appraiser.png)
 
 
 ## SuperFetch - svchost.exe
@@ -23,7 +23,7 @@ windows 过于庞大，经常会给你在后台启动一些服务，搞得 CPU �
 * [Win] + R，运行 Services.msc.
 * 找到 Superfetch，禁用
 
-![](2018_11_10_disable_useless_services_image_03.png)
+![](images/2018_11_10_disable_useless_services/superfetch.png)
 
 
 ## tsvncache.exe
@@ -32,7 +32,7 @@ windows 过于庞大，经常会给你在后台启动一些服务，搞得 CPU �
 
 资源管理器/右键 => TortoiseSVN => Settings
 
-![](2018_11_10_disable_useless_services_image_01.png)
+![](images/2018_11_10_disable_useless_services/svn_status_cache.png)
 
 
 [1]:https://superuser.com/questions/944067/windows-disk-i-o-100-at-boot-for-20-minutes
