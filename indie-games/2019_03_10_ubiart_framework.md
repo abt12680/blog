@@ -11,7 +11,7 @@
 
 ![](images/2019_03_10_ubiart_framework/ubiart_logo.png)
 
-关于 [UbiArt Framework][2] 的介绍，只能在 Youtube 上看到 GDC 2014 的一个视频。
+关于 [UbiArt Framework][2]，GDC 2014 的一个视频，有简单的介绍。
 
  * [https://www.youtube.com/watch?v=WFu1utKAZ18][1]
  * 其中，时间轴 10:40 那一段演示，相当震撼
