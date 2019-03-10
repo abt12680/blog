@@ -129,12 +129,22 @@
  * RPG，《[Child of Light][3]》
  * 《[Valiant Hearts: The Great War][13]》
 
+
 ### 一些资料
 
 两篇 Blog
 
  * Playing with Art，[http://blog.ubi.com/en-GB/column-chris-mcentee-on-the-level-july-2013/][11]
  * Creating a World，[http://blog.ubi.com/en-GB/on-the-level-creating-20000-lums-under-the-sea/][12]
+
+
+### 反思
+
+ * 失败 & 验证
+ * 遵循美术限制（引擎限制）
+ * 自己先花时间 work-out，然后输出给团队（Don't waste others' time）
+
+![](images/2019_03_10_ubiart_framework/ubiart_thoughts.png)
 
 
 ## Unity3D 的野望
