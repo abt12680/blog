@@ -13,6 +13,7 @@
 
 关于 [UbiArt Framework][2]，GDC 2014 的一个视频，有简单的介绍。
 
+ * [https://en.wikipedia.org/wiki/UbiArt_Framework][2]
  * [https://www.youtube.com/watch?v=WFu1utKAZ18][1]
  * 其中，时间轴 10:40 那一段演示，相当震撼
 
@@ -54,7 +55,7 @@
 ![](images/2019_03_10_ubiart_framework/ubiart_sequence_editor_02.png)
 
 
-### Shadow Prototyping
+### GamePlay - Shadow Prototyping
 
  * 实现难度：？
  * Rayman 中有光影 + 碰撞，触发游戏逻辑
@@ -65,7 +66,7 @@
 ![](images/2019_03_10_ubiart_framework/ubiart_shadow_prototyping.png)
 
 
-### Digging Prototyping
+### GamePlay - Digging Prototyping
 
  * 实现难度：？
  * Separate functionality into different actors
@@ -76,6 +77,16 @@
  * 通过各种 component 组合来实现，简单说就是 hardcode
 
 ![](images/2019_03_10_ubiart_framework/ubiart_digging_prototyping.png)
+
+
+### GamePlay - Kung Foot
+
+ * 实现难度：？
+ * Rayman 踢球，会有几个连续不同的状态
+ * 通过 event 组合，去实现
+
+![](images/2019_03_10_ubiart_framework/ubiart_kung_foot.png)
+
 
 ### Extra：Physics
 
@@ -91,9 +102,45 @@
  * 实现不同的 rendering driver：dx9、dx11、OpenGL、OpenGL ES 等等
 
 
-## Unity3D 在追赶
+## 开发经验回顾
 
-这两年随着 pixel games 和 2d platform 的流行，unity3d 也一直在加强这一块的功能。
+
+### Postmortem: Waht went right?
+
+ * 快速迭代开发
+ * small team，便于沟通
+
+![](images/2019_03_10_ubiart_framework/postmortem_went_right.png)
+
+
+### Postmortem: What chould be improved?
+
+ * 敏捷迭代，因为缺乏文档
+ * 太敏捷了，所以有些功能改了，并没有知会其他人
+
+![](images/2019_03_10_ubiart_framework/postmortem_to_improved.png)
+
+
+### UbiArt Framework 制作的游戏
+
+除了 Rayman，[UbiArt Framework][2] 还做了啥。
+
+ * 手游，《[Rayman: Fiesta Run][10]》
+ * RPG，《[Child of Light][3]》
+ * 《[Valiant Hearts: The Great War][13]》
+
+### 一些资料
+
+ * 下面两篇文章已"失联"
+ * Playing with Art，[http://blog.ubicom/column-chris-mcentee-on-the-level-july-2013/][11]
+ * Creating a World，[http://blog.ubi.com/on-the-level-creating-20000-lums-under-the-sea/][12]
+
+
+## Unity3D 的野望
+
+ * 这两年随着 pixel games 和 2d platform 的流行
+ * unity3d 也一直在加强这一块的功能
+ * Unity All in One 全家桶
 
 
 ### 2D Animation System
@@ -129,3 +176,7 @@
 [7]:http://en.esotericsoftware.com/
 [8]:https://www.youtube.com/watch?v=p-8eNkUCvnw
 [9]:https://box2d.org/
+[10]:https://play.google.com/store/apps/details?id=com.ubisoft.rayman.fiestarun&hl=en
+[11]:http://blog.ubicom/column-chris-mcentee-on-the-level-july-2013/
+[12]:http://blog.ubi.com/on-the-level-creating-20000-lums-under-the-sea/
+[13]:https://en.wikipedia.org/wiki/Valiant_Hearts:_The_Great_War
