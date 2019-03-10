@@ -131,9 +131,10 @@
 
 ### 一些资料
 
- * 下面两篇文章已"失联"
- * Playing with Art，[http://blog.ubicom/column-chris-mcentee-on-the-level-july-2013/][11]
- * Creating a World，[http://blog.ubi.com/on-the-level-creating-20000-lums-under-the-sea/][12]
+两篇 Blog
+
+ * Playing with Art，[http://blog.ubi.com/en-GB/column-chris-mcentee-on-the-level-july-2013/][11]
+ * Creating a World，[http://blog.ubi.com/en-GB/on-the-level-creating-20000-lums-under-the-sea/][12]
 
 
 ## Unity3D 的野望
@@ -177,6 +178,6 @@
 [8]:https://www.youtube.com/watch?v=p-8eNkUCvnw
 [9]:https://box2d.org/
 [10]:https://play.google.com/store/apps/details?id=com.ubisoft.rayman.fiestarun&hl=en
-[11]:http://blog.ubicom/column-chris-mcentee-on-the-level-july-2013/
-[12]:http://blog.ubi.com/on-the-level-creating-20000-lums-under-the-sea/
+[11]:http://blog.ubi.com/en-GB/column-chris-mcentee-on-the-level-july-2013/
+[12]:http://blog.ubi.com/en-GB/on-the-level-creating-20000-lums-under-the-sea/
 [13]:https://en.wikipedia.org/wiki/Valiant_Hearts:_The_Great_War
