@@ -27,8 +27,8 @@ JS Runtime就是运行着JS引擎的环境，它提供接口给开发者调用�
 至于移动端，大部分使用的均为webkit这一套，基本兼容webkit就OK。
 
 ## 渲染引擎和JS引擎的关系
-![渲染引擎和JS引擎关系](http://mayun.itc.cmbchina.cn/uploads/images/2019/0311/112712_af105213_2213.jpeg "render&js_engine.Jpg")
-![一张网页的历程](http://mayun.itc.cmbchina.cn/uploads/images/2019/0311/112741_2539be6f_2213.jpeg "render_process.Jpg")
+![渲染引擎和JS引擎关系](images/render&js.png "render&js_engine.Jpg")
+![一张网页的历程](images/htmlprocess.png "render_process.Jpg")
 
 ## microtask和macrotask
 * 一个事件循环(event loop)会有一个或多个任务队列(task queue)，task queue就是macrotask queue
