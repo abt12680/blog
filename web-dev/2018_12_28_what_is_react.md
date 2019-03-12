@@ -2,11 +2,11 @@
 
 by bingochaos
 
-React、Vue和Angular应该是近几年来最火的三个前端框架了，React一直保持着较高的热度，发展迅猛，而Vue则更像是一匹黑马占据了大量市场，反而是之前更热的Angular，关注度大不如前了。本次主要探究的是React框架的内容。
+React、Vue和 Angular 应该是近几年来最火的三个前端框架了，React一直保持着较高的热度，发展迅猛，而 Vue 则更像是一匹黑马占据了大量市场，反而是之前更热的Angular，关注度大不如前了。本次主要探究的是 React 框架的内容。
 
 > A JavaScript library for building user interfaces
 
-一个为UI而生的库，React作为一个前端框架，就是为了解决最本质的前端诉求。官方描述中有三个特点： **声明式，组件化和一次学习 ，随处编写**。本文先讲一下我对这三个特点的理解。
+一个为 UI 而生的库，React作为一个前端框架，就是为了解决最本质的前端诉求。官方描述中有三个特点： **声明式，组件化和一次学习 ，随处编写**。本文先讲一下我对这三个特点的理解。
 
 
 ## 声明式(Declarative)
@@ -46,7 +46,7 @@ const toLowerCase = arr => arr.map(
 }
 ```
 
-输入数组的元素传递给map的函数，然后返回包含小写值的新数组
+输入数组的元素传递给 map 的函数，然后返回包含小写值的新数组
 
 
 ### 从 raw js 到 react
@@ -79,12 +79,12 @@ marker.setMap(map);
 
 ### declare programming 小结
 
-从代码书写的角度看声明式编程就像是告诉了标签，我要一个什么样的UI你给我变出来。命令式就是你这么变这么变，好了是我要的样子了。 
-> 采用declare方式，代码看上去更短，其本质是在命令式代码之上添加了添加了rendering的过程，其本质还是html，只是React把自定义的标签转化成标准Html的过程
+从代码书写的角度看声明式编程就像是告诉了标签，我要一个什么样的 UI 你给我变出来。命令式就是你这么变这么变，好了是我要的样子了。 
+> 采用 declare 方式，代码看上去更短，其本质是在命令式代码之上添加了添加了 rendering 的过程，其本质还是html，只是 React 把自定义的标签转化成标准Html的过程
 
 ## 组件化 (Component-Based)
 
-驱动React高效性能的虚拟DOM技术最基础的单元就是一个个组件，而使用组件化最直观的就是标签化
+驱动 React 高效性能的虚拟DOM技术最基础的单元就是一个个组件，而使用组件化最直观的就是标签化
 
 ```html
 <div class='map'></div>
@@ -108,7 +108,7 @@ Class Page extends Component {
 }
 ```
 
-组件包含两个重要内容props和state，个人理解props就是用于组件展现自身的，而使用怎样的props就是根据state分发组装完成的。
+组件包含两个重要内容 props 和state，个人理解 props 就是用于组件展现自身的，而使用怎样的 props 就是根据state分发组装完成的。
 
 
 ## 一次学习，随处编写
@@ -123,7 +123,7 @@ Class Page extends Component {
 const element = <h1>Hello, world!</h1>;
 ```
 
-上面这种写法就是JSX，是JavaScript的一种扩展，React中会大量用到这个。
+上面这种写法就是JSX，是 JavaScript 的一种扩展，React中会大量用到这个。
 
 ### Render()
 
@@ -140,7 +140,7 @@ function tick() {
 setInterval(tick, 1000);
 ```
 
-当发生UI变化是即使每秒改变整个DOM，React DOM也只会渲染差异部分，有效降低了开发成本。
+当发生 UI 变化是即使每秒改变整个DOM，React DOM也只会渲染差异部分，有效降低了开发成本。
 
 ### props
 
@@ -188,12 +188,12 @@ ReactDOM.render(
 );
 ```
 
-若要改变Component状态，应该是用state代替props，state属于Component对象属性。再具体使用中可以配合生命周期函数配合使用，在修改state状态时，使用this.setState({comment:'Hello'});而非this.state.comment = 'Hello';
+若要改变 Component 状态，应该是用 state 代替props，state属于 Component 对象属性。再具体使用中可以配合生命周期函数配合使用，在修改 state 状态时，使用this.setState({comment:'Hello'});而非this.state.comment = 'Hello';
 
 
 ## 总结
 
-本文大概描述了一些React入门的概念，后续将会深入挖掘React的开发。
+本文大概描述了一些 React 入门的概念，后续将会深入挖掘 React 的开发。
 
 
 

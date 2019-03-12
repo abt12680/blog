@@ -15,7 +15,7 @@ typescript
 
  * [https://nodejs.org/en/][2]
 
-创建react项目，初始为使用 typescript 的项目。
+创建 react 项目，初始为使用 typescript 的项目。
 
 ```
 > npx create-react-app myapp --scripts-version=react-scripts-ts
