@@ -59,7 +59,10 @@ Scrum 作者 [Ken Schwaber][7] 创立了 Scrum Aliance，用商业的方式，�
 I'm still on the way.
 ```
 
-![](images/2019_03_14_scrum_books/csm.png)
+
+### 上岗证
+
+![](images/2019_03_14_scrum_books/seal-csm.png)
 
 
 [1]:https://scrumguides.org/
