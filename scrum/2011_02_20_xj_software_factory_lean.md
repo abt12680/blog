@@ -64,7 +64,7 @@
 
 也带来了一些职业道路上的思考~ 感谢作者。:-)
 
-![](2011_02_20_xj_software_factory_lean/cant_stop.png)
+![](images/2011_02_20_xj_software_factory_lean/cant_stop.png)
 
 
 [1]:http://www.infoq.com/cn/presentations/xj-software-factory-lean
