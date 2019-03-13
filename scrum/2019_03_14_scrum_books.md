@@ -48,7 +48,7 @@ Scrum 作者 [Ken Schwaber][7] 创立了 Scrum Aliance，用商业的方式，�
 
  * [https://www.scrumalliance.org/][10]
 
-2018年初，去成都认真复习了一遍 Scrum 的课程（CSM，Certified Scrum Master）课程。把所学，再理论化了一遍。顺便考了 CSM 的证，持证上岗。:-)
+2018年初，去成都认真学了一遍 Scrum 的课程（CSM，Certified Scrum Master）。把之前的实践，再理论化了一遍。顺便考了 CSM 的证，持证上岗。:-)
 
  * [成都CSM培训 - Day 1][4]
  * [成都CSM培训 - Day 2][5]
@@ -58,6 +58,8 @@ Scrum 作者 [Ken Schwaber][7] 创立了 Scrum Aliance，用商业的方式，�
 ```
 I'm still on the way.
 ```
+
+![](images/2019_03_14_scrum_books/csm.png)
 
 
 [1]:https://scrumguides.org/
