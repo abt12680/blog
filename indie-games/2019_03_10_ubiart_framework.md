@@ -52,7 +52,7 @@
  * 类似 [spine][7] 的东西，参考
  * [GDC Vault: Rayman Reinvented][8]
 
-![](images/2019_03_10_ubiart_framework/ubiart_sequence_editor_02.png)
+![](images/2019_03_10_ubiart_framework/ubiart_genanim.png)
 
 
 ### GamePlay - Shadow Prototyping
