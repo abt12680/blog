@@ -27,7 +27,7 @@
 
 scrum 框架的由来。
 
-Jeff & Ken 看了《New New Product Development Game》的论文，然后在自己项目中实践敏捷方法论。名曰 Scrum。
+Jeff & Ken 看了《[New New Product Development Game][1]》的论文，然后在自己项目中实践敏捷方法论。名曰 Scrum。
 
  * 相信人（相信每个人都是active，会改变的）
  * 持续改进
@@ -84,3 +84,5 @@ Scrum Master 和传统 PM 有何不同？
 
  * Scrum Master 关注团队成长 (be a coach)
  * PM 关注 deadline
+
+[1]:https://hbr.org/1986/01/the-new-new-product-development-game

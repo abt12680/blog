@@ -1,0 +1,76 @@
+# Scrum Books
+
+上一次读 Scrum 的书，还是在 2008 - 2010 年之间。当时第一次带团队，边读书，边验证，磕磕碰碰，颇为不易。
+
+将看过和计划要看的书单列于此，今年读完它们。:-)
+
+
+## 正本清源
+
+Jeff & Ken 看了《[New New Product Development Game][6]》的论文，然后在自己的软件开发中实践敏捷方法论。名曰 Scrum。
+
+Scrum 最核心的内容，只有几页纸，称为 Scrum Guide。
+
+ * [https://scrumguides.org/][1]
+ * [https://scrumguides.org/scrum-guide.html][2]
+
+发明者之一 [Ken Schwaber][7] 有两本书
+
+ * 《[Agile Software Development with Scrum][8]》，2002年
+ * 《[The Enterprise and Scrum][9]》，2007年
+
+《[Agile Software Development with Scrum][8]》基本就是 Scrum Guide 的简单扩容，讲解了 Scrum 的各种基本概念。比如：Backlog、Scrum Master、Product Owner 等等。
+
+《[The Enterprise and Scrum][9]》，讲解一个大企业如何去应用 Scrum 的。读了一点，还没读完。TODO
+
+
+## 开卷有益
+
+近十年过去，Scrum 又有了新的延展，列出一些好书，just reading。
+
+ * 《[Agile Game Development with Scrum][13]》，2010年
+ * 《[Essential Scrum][3]》，2012年
+ * 《[The Great Scrum Master][11]》，2017年
+ * 《[Large-Scale Scrum: More with LeSS][12]》，2016年（[https://less.works/][14]）
+
+《[Agile Game Development with Scrum][13]》，TODO，早年读过，忘光光了，复习之后，来补充评价。
+
+《[Essential Scrum][3]相当于《[Agile Software Development with Scrum][8]》的超级加强版，写了很多案例，让你更好的理解 Scrum 中的每一个概念。
+
+《[The Great Scrum Master][11]》，TODO
+
+《[Large-Scale Scrum: More with LeSS][12]》，TODO
+
+
+## 同业交流
+
+Scrum 作者 [Ken Schwaber][7] 创立了 Scrum Aliance，用商业的方式，让 Scrum 能更广地传播。
+
+ * [https://www.scrumalliance.org/][10]
+
+2018年初，去成都认真复习了一遍 Scrum 的课程（CSM，Certified Scrum Master）课程。把所学，再理论化了一遍。顺便考了 CSM 的证，持证上岗。:-)
+
+ * [成都CSM培训 - Day 1][4]
+ * [成都CSM培训 - Day 2][5]
+
+其实 Scrum Master 这个名词很有欺骗性，如果是新手，学完CSM培训，只算简单入门。想用好 Scrum，需要不断地实践&总结，才能臻至化境。
+
+```
+I'm still on the way.
+```
+
+
+[1]:https://scrumguides.org/
+[2]:https://scrumguides.org/scrum-guide.html
+[3]:https://www.amazon.com/Essential-Scrum-Practical-Addison-Wesley-Signature/dp/0137043295/
+[4]:https://github.com/kasicass/blog/blob/master/scrum/2018_04_13_scrum_master_day_1.md
+[5]:https://github.com/kasicass/blog/blob/master/scrum/2018_04_14_scrum_master_day_2.md
+[6]:https://hbr.org/1986/01/the-new-new-product-development-game
+[7]:https://en.wikipedia.org/wiki/Ken_Schwaber
+[8]:https://www.amazon.com/Agile-Software-Development-Scrum/dp/0130676349/
+[9]:https://www.amazon.com/Enterprise-Scrum-Developer-Best-Practices/dp/0735623376/
+[10]:https://www.scrumalliance.org/
+[11]:https://www.amazon.com/Great-ScrumMaster-ScrumMasterWay-Addison-Wesley-Signature/dp/013465711X/
+[12]:https://www.amazon.com/Large-Scale-Scrum-More-Addison-Wesley-Signature/dp/0321985710/
+[13]:https://www.amazon.com/Agile-Development-Scrum-Addison-Wesley-Signature/dp/0321618521
+[14]:https://less.works/
