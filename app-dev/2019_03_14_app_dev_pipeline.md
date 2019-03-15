@@ -12,10 +12,22 @@
  * 先学会抄
 
 
-## 制作原型工具
+## 原型制作工具
 
  * [Axure RP 8][2]
  * [Sketch][3]
+
+
+### Axure RP 8
+
+ * 更接近 app 的各种功能
+ * 相对负责，不怎么敏捷
+
+
+### Sketch
+
+ * 相比 Axure 功能更简单一些
+ * 更轻量级，更敏捷
  * 阿里 Art Design 库，可以保证 Sketch 和 React Native 之间的样式保持一致
 
 
