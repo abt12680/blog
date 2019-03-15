@@ -44,7 +44,7 @@ CSSOM 树和 DOM 树合并成渲染树，然后用于计算每个可见元素的
 
 从下面图片中我们可以看到 CSSOM 和 DOM 虽然有着相似的树结构，但是他们是完全不同作用的两颗树， CSSOM 更多的作为一套树形规则，从根节点往下匹配， DOM 依据这套规则来给每个节点增加样式形成渲染树。
 
-![DOM & CSSOM](http://mayun.itc.cmbchina.cn/uploads/images/2019/0315/151240_63618875_2213.png "DOM&CSSOM.png")
+![DOM & CSSOM](images/2019_03_15_browser_noun_explanation/render-tree-construction.png "DOM&CSSOM.png")
 
 ### 渲染树 （render-tree）
 为构建渲染树，浏览器大体上完成了下列工作：
@@ -75,7 +75,7 @@ CSSOM 树和 DOM 树合并成渲染树，然后用于计算每个可见元素的
 客户端的 Web API 是为了扩展 Web 浏览器的功能或者其他的 Http 客户端设计的编程接口。常见的 Web API 一开始都是通过浏览器内置扩展程序实现的，而现在更加倾向于使用 JS binding 来完成。Web API 不是 JS 引擎提供的，而是宿主环境（浏览器）。
 Browser Web APIs:浏览器创建的 C++ 实现的线程，其专门用于处理异步时间，如 DOM 事件， http request，setTimeout等。Web APIs 本身无法将执行代码放置到栈中进行执行，每一个 WebAPI 在执行完成以后将回调放入我们的事件队列中。而 Event Loop 就是检查执行栈和时间队列，如果执行栈已经为空，那么将事件队列中的第一个回调函数放到栈中执行。
 
-![webapi](http://mayun.itc.cmbchina.cn/uploads/images/2019/0315/165903_9fe45b07_2213.png "webapi.png")
+![webapi](images/2019_03_15_browser_noun_explanation/webapi.png  "webapi.png")
 
 ### JS Binding
 在html页面中，我们可以通过JavaScript语句来访问DOM节点，例如document.createElement(“canvas”); 可是document所指向的对象HTMLDocument存在于WebKit中，通过C++实现的，并不存在于JavaScript的引擎中，所以如果想要在web页面中也能通过JavaScript来访问webkit定义的对象，这就需要把WebKit中的对象注入到JavaScript引擎中，而JavaScript引擎中对象的表示方式与WebKit中对象的表示方式存在差别，就需要存在一种方式，把WebKit中的对象转换成JavaScript引擎能识别的对象，这一过程就称为JavaScript Binding。
