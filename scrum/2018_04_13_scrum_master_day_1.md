@@ -16,29 +16,29 @@
  * 引发"没有不可能，寻求改变"的思考
  * 然后介绍敏捷历史：agile 和 XP/Kanban/Lean/Scrum/Crystal/FDD 等的关系。
 
-![](2018_04_13_scrum_master_day_1/image_01.png)
+![](images/2018_04_13_scrum_master_day_1/image_01.png)
 
 比较了一下，传统瀑布模型和敏捷的区别。
 
-![](2018_04_13_scrum_master_day_1/image_02.png)
+![](images/2018_04_13_scrum_master_day_1/image_02.png)
 
 
 ### 什么是 scrum？
 
 scrum 框架的由来。
 
-Jeff & Ken 看了《New New Product Development Game》的论文，然后在自己项目中实践敏捷方法论。名曰 Scrum。
+Jeff & Ken 看了《[New New Product Development Game][1]》的论文，然后在自己项目中实践敏捷方法论。名曰 Scrum。
 
  * 相信人（相信每个人都是active，会改变的）
  * 持续改进
 
-![](2018_04_13_scrum_master_day_1/image_03.png)
+![](images/2018_04_13_scrum_master_day_1/image_03.png)
 
 Scrum 是一种基于经验的模型，它会反馈出一个团队的问题。
 
 节奏，每周迭代。
 
-![](2018_04_13_scrum_master_day_1/image_04.png)
+![](images/2018_04_13_scrum_master_day_1/image_04.png)
 
 梳理 Scrum 框架的具体内容。
 
@@ -47,7 +47,7 @@ Scrum 是一种基于经验的模型，它会反馈出一个团队的问题。
  * Sprint Planning/Sprint Backlog，定期将 Backlog 内容放入 planning，通过 Sprint (1-3周)去完成。
  * Review/Retrospective，回顾会/自省，每次 Sprint 之后，大家反馈哪些流程可以改进。
 
-![](2018_04_13_scrum_master_day_1/image_05.png)
+![](images/2018_04_13_scrum_master_day_1/image_05.png)
 
 Scrum 下不同角色的定位。
 
@@ -55,7 +55,7 @@ Scrum 下不同角色的定位。
  * Team（开发团队），干活
  * Scrum Master，服务PO、服务team、服务组织(org)
 
-![](2018_04_13_scrum_master_day_1/image_06.png)
+![](images/2018_04_13_scrum_master_day_1/image_06.png)
 
 谈到 backlog 定制和时间预估的问题。
 
@@ -66,7 +66,7 @@ Scrum 下不同角色的定位。
 
 story point 这个很有意思，相当于一个基本的度量单位。
 
-![](2018_04_13_scrum_master_day_1/image_07.png)
+![](images/2018_04_13_scrum_master_day_1/image_07.png)
 
 
 ## 总结
@@ -84,3 +84,5 @@ Scrum Master 和传统 PM 有何不同？
 
  * Scrum Master 关注团队成长 (be a coach)
  * PM 关注 deadline
+
+[1]:https://hbr.org/1986/01/the-new-new-product-development-game

@@ -12,4 +12,4 @@
  
  任务分配下去之前，需要程序/策划/QC同时讨论过文档，统一意见，程序做好基本的结构设计、估计开发时间。一旦开发时间敲定，程序每天将按计划，完成工作。开发过程中，所有新的改动需求，一律汇总到 leader 处，再统一安排时间，分派下去，减少程序的正常计划被打断。
 
-![](2008_09_26_project_management_for_gamedev/sg_pm.png)
+![](images/2008_09_26_project_management_for_gamedev/sg_pm.png)

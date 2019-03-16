@@ -73,7 +73,7 @@ static void TmrTask(void *data)
 
 写过 Win32 API 程序的同学，都应该对 Win32 message-queue 很熟悉。每个 Win32 窗体，都可以看成一个 Actor。
 
-在 Windows 上，进程中的**每条线程(Thread)**都会有自己的 message-queue。通过 [GetMessage()][6] 从 message-queue 中获取消息，然后处理业务。
+在 Windows 上，进程中的 **每条线程(Thread)** 都会有自己的 message-queue。通过 [GetMessage()][6] 从 message-queue 中获取消息，然后处理业务。
 
 窗体之间、线程之间、进程之间，可以通过
 
