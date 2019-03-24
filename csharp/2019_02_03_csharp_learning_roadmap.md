@@ -42,7 +42,7 @@ Basic 是以简单见长的语言，到了 VB.NET，那就不叫 Basic 了，那
 
  * 《[The C# Programming Language][27]》
  * 《[C# 7.0 in a Nutshell][1]》
- * 《[Essential C# 7.0][39]》
+ * 《[Effective C#][39]》
  * 《[Inside Microsoft .Net Il Assembler][7]》
  * 《[Essential .NET, Volume I: The Common Language Runtime][14]》
 
@@ -50,7 +50,7 @@ Anders Hejlsberg 很少写书，《[The C# Programming Language][27]》大约是
 
 《[C# 7.0 in a Nutshell][1]》从全面的角度来说，比《[The C# Programming Language][27]》更适合入门，除了讲解语言本身之外，讲解了 .NET Framework 中的各种库。
 
-《[Essential C# 7.0][39]》相当于《Effective C++》。
+《[Effective C#][39]》相当于《Effective C++》。
 
 [Don Box][40] 的这本《[Essential .NET][14]》写得一般，远没有他的《[Essential COM][17]》出名。和《[Essential COM][17]》对标的书，是《[CLR via C#][3]》。
 
@@ -196,7 +196,7 @@ Miguel de Icaza 和 Mono，也是传奇故事。有空单独写一篇。
 [36]:https://www.amazon.com/Writing-High-Performance-NET-Code-Watson/dp/0990583457/
 [37]:https://www.cs.kent.ac.uk/people/staff/rej/gc.html
 [38]:https://www.amazon.com/Garbage-Collection-Algorithms-Management-1996-08-16/dp/B01JXRNMDW/
-[39]:https://www.amazon.com/Essential-7-0-Addison-Wesley-Microsoft-Technology/dp/1509303588/
+[39]:https://www.amazon.com/Effective-Covers-Content-Update-Program/dp/0672337878/
 [40]:https://en.wikipedia.org/wiki/Don_Box
 [41]:https://www.amazon.com/Agile-Principles-Patterns-Practices-C/dp/0131857258/
 [42]:https://en.wikipedia.org/wiki/Robert_C._Martin
