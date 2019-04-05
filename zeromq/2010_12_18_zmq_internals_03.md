@@ -1,6 +1,6 @@
 # [ZeroMQ] 深入分析(3) -- 进程间通讯"tcp://"  
 
-![](images/2010_12_17_zmq_internals_03/tcp_proto.png)
+![](images/2010_12_18_zmq_internals_03/tcp_proto.png)
 
 
 ## epoll在哪里？
@@ -80,7 +80,7 @@ zmq_init_t 只是个中间过程, 对于 listen 而言, zmq_init_t 用来创建 
 
 connect 的过程与 listen 类似。
 
-![](images/2010_12_17_zmq_internals_03/io_thread.png)
+![](images/2010_12_18_zmq_internals_03/io_thread.png)
 
 
 ## zmq_init_t 的工作流程
@@ -104,7 +104,7 @@ Process B
   6. xxx_t::xattach_pipes()
 ```
 
-![](images/2010_12_17_zmq_internals_03/connection_established.png)
+![](images/2010_12_18_zmq_internals_03/connection_established.png)
 
 
 ## multi-endpoints
