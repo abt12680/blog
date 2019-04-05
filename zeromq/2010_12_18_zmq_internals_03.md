@@ -3,7 +3,7 @@
 ![](images/2010_12_18_zmq_internals_03/tcp_proto.png)
 
 
-## epoll在哪里？
+### epoll 在哪里？
 
 poller_base_t, 定义了统一的事件reactor接口
 
@@ -17,7 +17,7 @@ select/poll/epoll/kqueue/devpoll
  * poller.hpp, 根据平台不同，干了 typedef select_t(epoll_t/...) poller_t; 这么个事情。
 
 
-## io_thread_t
+### io_thread_t
 
 io_thread_t
 
@@ -29,7 +29,7 @@ poller_t
  * 使用 thread_t 创建一个操作系统的 thread
 
 
-## listen/accept and connect
+### listen/accept and connect
 
 ```
          i_poll_events
@@ -83,7 +83,7 @@ connect 的过程与 listen 类似。
 ![](images/2010_12_18_zmq_internals_03/io_thread.png)
 
 
-## zmq_init_t 的工作流程
+### zmq_init_t 的工作流程
 
 ```
 Process A
@@ -107,7 +107,7 @@ Process B
 ![](images/2010_12_18_zmq_internals_03/connection_established.png)
 
 
-## multi-endpoints
+### multi-endpoints
 
 一个 socket_base_t(继承自own_t), 可以拥有多个 zmq_listener_t(继承自own_t), 达到同时监听多个 endpoints 的目的。
 
@@ -118,7 +118,7 @@ Process B
 ```
 
 
-## multi-io-threads
+### multi-io-threads
 
 一个 ctx 包含多个 io_thread_t, 一个 io_thread_t 为多个 io_object_t 服务。
 
