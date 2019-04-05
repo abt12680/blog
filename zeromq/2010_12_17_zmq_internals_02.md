@@ -3,13 +3,13 @@
 
 ## 基本原理
 
-mb, mailbox, 线程间的事件通知domain socket, 每次send的command_t都很小，认为此一定是原子的（< PIPE_BUF）
+mb, mailbox, 线程间的事件通知（用 domain socket 实现），每次 send 的 command_t 都很小，认为此一定是原子的（< PIPE_BUF）
 
 mq, msg queue, 线程间 zmq_msg_t 传递的 lock-free queue。
 
 ![](images/2010_12_17_zmq_internals_02/inproc.png)
 
-"inproc://" thread 间通讯，通过 domain socket 连接 thread，告知 command_t 之类的信息。
+"inproc://"，thread 间通讯，通过 domain socket 连接 thread，告知 command_t 之类的信息。
 
 而 zmq_msg_t 通过 reader_t/writer_t(ypipe) 的 lock-less queue 来直接传递 pointer。
 
