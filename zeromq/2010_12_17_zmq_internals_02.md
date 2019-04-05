@@ -75,4 +75,4 @@ push_t -> lb_t -> writer_t/reader_t -/
  * lb_t ==> [w1|w2|...], writer_t的数组
  * send() 时, 从 writer_t数组 中选择一个 active 来写
 
-ps. ZeroMQ 还有个 "sys://"，内部实现和 "inproc://" 是一个东西，其用于 ZeroMQ kernel 给 app 发送内部的 log，由 app 自己 write to file。当然，2.1.0的 "sys://" 还没有向 app 发送任何具体的log内容。
+ps. ZeroMQ 还有个 "sys://"，内部实现和 "inproc://" 是一个东西，其用于 ZeroMQ kernel 给 app 发送内部的 log，由 app 自己 write to file。当然，2.1.0 的 "sys://" 还没有向 app 发送任何具体的 log内容。
