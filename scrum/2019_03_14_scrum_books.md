@@ -44,11 +44,28 @@ Scrum 最核心的内容，只有几页纸，称为 Scrum Guide。
 如何在多团队下，跑 Scrum。LeSS 是其中一种方法论。
 
  * [https://less.works/][14]
- * 《[Scaling Lean & Agile Development: Thinking and Organizational Tools for Large-Scale Scrum][15]》，2008年
- * 《[Practices for Scaling Lean & Agile Development: Large, Multisite, and Offshore Product Development with Large-Scale Scrum][16]》，2010年
+ * 《[Scaling Lean & Agile Development][15]》，2008年
+ * 《[Practices for Scaling Lean & Agile Development][16]》，2010年
  * 《[Large-Scale Scrum: More with LeSS][12]》，2016年
 
-我的 LeSS 心得，在 [这里][17]。
+LeSS 的理论模型
+
+ * Principles - 核心原则
+ * Frameworks(Rules) - 最基本的方法
+ * Guides - 一些普世的方法论
+ * Experiments - 特定条件下才适用的具体经验
+
+书籍关系
+
+ * 《[Large-Scale Scrum: More with LeSS][12]》，入门书，讲 Principles / Frameworks(Rules) / Guides
+ * 其它两本，讲 Experiments
+
+My LeSS Learning Road
+
+ * [CLP 培训的预习作业][17]
+ * 《Large-Scale Scrum: More with LeSS》读书笔记，TODO
+ * 《Scaling Lean & Agile Development》读书笔记，TODO
+ * 《Practices for Scaling Lean & Agile Development》读书笔记，TODO
 
 
 ## 学习交流
