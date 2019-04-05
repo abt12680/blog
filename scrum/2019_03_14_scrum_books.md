@@ -31,7 +31,6 @@ Scrum 最核心的内容，只有几页纸，称为 Scrum Guide。
  * 《[Agile Game Development with Scrum][13]》，2010年
  * 《[Essential Scrum][3]》，2012年
  * 《[The Great Scrum Master][11]》，2017年
- * 《[Large-Scale Scrum: More with LeSS][12]》，2016年（[https://less.works/][14]）
 
 《[Agile Game Development with Scrum][13]》，TODO，早年读过，忘光光了，复习之后，来补充评价。
 
@@ -39,10 +38,20 @@ Scrum 最核心的内容，只有几页纸，称为 Scrum Guide。
 
 《[The Great Scrum Master][11]》，TODO
 
-《[Large-Scale Scrum: More with LeSS][12]》，TODO
+
+## LeSS (Large-Scale Scrum)
+
+如何在多团队下，跑 Scrum。LeSS 是其中一种方法论。
+
+ * [https://less.works/][14]
+ * 《[Scaling Lean & Agile Development: Thinking and Organizational Tools for Large-Scale Scrum][15]》，2008年
+ * 《[Practices for Scaling Lean & Agile Development: Large, Multisite, and Offshore Product Development with Large-Scale Scrum][16]》，2010年
+ * 《[Large-Scale Scrum: More with LeSS][12]》，2016年
+
+我的 LeSS 心得，在 [这里][17]。
 
 
-## 同业交流
+## 学习交流
 
 Scrum 作者 [Ken Schwaber][7] 创立了 Scrum Aliance，用商业的方式，让 Scrum 能更广地传播。
 
@@ -79,3 +88,6 @@ I'm still on the way.
 [12]:https://www.amazon.com/Large-Scale-Scrum-More-Addison-Wesley-Signature/dp/0321985710/
 [13]:https://www.amazon.com/Agile-Development-Scrum-Addison-Wesley-Signature/dp/0321618521
 [14]:https://less.works/
+[15]:https://www.amazon.com/Scaling-Lean-Agile-Development-Organizational/dp/0321480961/
+[16]:https://www.amazon.com/Practices-Scaling-Lean-Agile-Development/dp/0321636406/
+[17]:https://github.com/kasicass/blog/blob/master/scrum/2019_03_31_less_preview_homework.md
