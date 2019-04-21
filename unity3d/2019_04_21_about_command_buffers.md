@@ -110,6 +110,7 @@ namespace FI
 ### 解读 shader 文件
 
  * sampler2D _BlurredGrabTex，采样的贴图，由 .cs文件 中的 "Command Buffers 代码" 生成
+ * 相当于 diffuse map 从 .cs 中生成
 
 ```Cg
 Shader "FI/BlurredDistortion"
