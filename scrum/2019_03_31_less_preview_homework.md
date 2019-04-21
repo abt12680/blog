@@ -15,6 +15,14 @@
 测试题
 
  * [https://less.works/less/test/scrum.html][3]
+ * [One-Team Scrum 资料][9]
+
+![](images/2019_03_31_less_preview_homework/scrum-testing.png)
+
+Scrum 模型
+
+ * 对 Development Team 的绝对授权和信任
+ * 完美模型，需要每一个人都 active
 
 
 ## About LeSS
@@ -22,7 +30,6 @@
  * 官网，[https://less.works][4]
  * [LeSS Guide 中文版][5]
  * [LeSS Guide 英文版][6]
-
 
 测试题
 
@@ -42,3 +49,4 @@
 [6]:https://less.works/less/rules/index.html
 [7]:https://less.works/less/test/pre-course.html
 [8]:https://yihuode.io/articles/337
+[9]:https://less.works/less/scrum/overview.html
