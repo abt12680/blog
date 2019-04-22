@@ -31,7 +31,7 @@ D:
 
 Woo! See uC/OS-II runs again~
 
-![](2018_11_18_see_ucos2_runs_image_01.png)
+![](images/2018_11_19_ucos2_examples/example01.png)
 
 把光盘内容和 dosbox.conf 打包放在 [github 上][3]。备查。
 
