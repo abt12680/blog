@@ -1,6 +1,6 @@
 # [Unity3D] About Graphics Command Buffers
 
-听各种美术同学多次说起 Unity3D 的 Command Buffers，花10分钟学了下，写个 blog，备忘。:-)
+听美术同学多次说起 Unity3D 的 Command Buffers，花10分钟学了下，写个 blog，备忘。:-)
 
 
 ## 原理
