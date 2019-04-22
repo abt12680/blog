@@ -1,10 +1,10 @@
 # [ESBB] Embeded Systems Build Blocks
 
-![](2018_11_20_esbb_starts_image_01.png)
+![](images/2018_11_20_esbb_starts/book_cover.png)
 
 [《Embeded Systems Build Blocks》][1]也是 uC/OS-II 作者的作品，主要介绍了一些嵌入式开发中可重用的库。
 
-![](2018_11_20_esbb_starts_image_02.png)
+![](images/2018_11_20_esbb_starts/modules.png)
 
 
 ## Real-Time System Concepts
@@ -15,7 +15,7 @@
 
 执行流程只会被中断（ISR）打断。
 
-![](2018_11_20_esbb_starts_image_03.png)
+![](images/2018_11_20_esbb_starts/isr.png)
 
 
 ### Multi-tasking
@@ -25,14 +25,14 @@ uC/OS-II Kernel 设计为 multi-tasking 的模式。
  * 任务可以模块化拆分
  * 抢占式优先级
 
-![](2018_11_20_esbb_starts_image_04.png)
+![](images/2018_11_20_esbb_starts/multi_tasking.png)
 
 
 ### Task states
 
 Task 的状态机
 
-![](2018_11_20_esbb_starts_image_05.png)
+![](images/2018_11_20_esbb_starts/task_states.png)
 
 
 ### 可重入
@@ -68,7 +68,8 @@ void swap(int *x, int y)
 
 访问了全局的数据，context swtich 有可能会有问题
 
-![](2018_11_20_esbb_starts_image_06.png)
+![](images/2018_11_20_esbb_starts/reentrant_func.png)
+
 
 ### 优先级反转问题（Priority Inversion）
 
@@ -76,14 +77,14 @@ void swap(int *x, int y)
  * Task 1(H) 需要 此Semaphore
  * 导致一段时间内，获得了比 Task 1(H) 更高的优先级
 
-![](2018_11_20_esbb_starts_image_07.png)
+![](images/2018_11_20_esbb_starts/priority_inversion_01.png)
 
 一些 Kernel 支持 priority inheritance，可以缩短 priority inversion 的时间
 
  * Task 3(L) 拿了 semaphore 之后，短暂的优先级提高到与 Task 1(H) 一样
  * uC/OS-II 不支持 priority inheritance
 
-![](2018_11_20_esbb_starts_image_07.png)
+![](images/2018_11_20_esbb_starts/priority_inversion_02.png)
 
 
 [1]:https://book.douban.com/subject/1840113/
