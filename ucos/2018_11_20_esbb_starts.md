@@ -75,7 +75,7 @@ void swap(int *x, int y)
 
  * Task 3(L) 拿了一个 Semaphore
  * Task 1(H) 需要 此Semaphore
- * 导致一段时间内，获得了比 Task 1(H) 更高的优先级
+ * 导致一段时间内，Task 3(L) 获得了比 Task 1(H) 更高的优先级
 
 ![](images/2018_11_20_esbb_starts/priority_inversion_01.png)
 
