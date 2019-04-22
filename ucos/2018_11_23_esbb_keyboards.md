@@ -5,13 +5,13 @@
  * 键盘按下的时候，要不就是高电压，要不就是底电压，就知道"按下"这个事情了
  * 按下前后有 edge bounce，程序读取按键信息，需要处理这种情况
 
-![](2018_11_23_esbb_keyboards_image_01.png)
+![](images/2018_11_23_esbb_keyboards/hardware01.png)
 
 为了节约线路，整个 keyboard 肯定是设计为一个 matrix 的。
 
  * row/col 交会点，给一个 scan code，表示一个按键
 
-![](2018_11_23_esbb_keyboards_image_02.png)
+![](images/2018_11_23_esbb_keyboards/hardware02.png)
 
 加上 Ctrl, Shift 之类
 
@@ -19,11 +19,11 @@
  * 带不带 Shift，就是给不同的 scan code
  * 注意，这里的键盘，对应我们在超时看到的那种 MxN 的键盘
 
-![](2018_11_23_esbb_keyboards_image_03.png)
+![](images/2018_11_23_esbb_keyboards/hardware03.png)
 
 如果一个按键一直按下，我们希望 app 收到"此按钮反复按下的消息"。需要 keyboard module 模拟一个 auto repeat 的行为。
 
-![](2018_11_23_esbb_keyboards_image_04.png)
+![](images/2018_11_23_esbb_keyboards/hardware04.png)
 
 
 ## 代码解读
@@ -33,13 +33,14 @@ ESBB 中 keyboard module 的代码就很简单了。下面是整体的结构图�
  * 左边是 keyboard module 暴露给 app 使用的接口
  * 右边是 keyboard module 内部使用的接口
 
-![](2018_11_23_esbb_keyboards_image_06.png)
+![](images/2018_11_23_esbb_keyboards/keyboard_api.png)
 
 基本原理就是 KeyInit() 启动了一个 KeyScanTask()，然后不停的扫描硬件，看看有没有按键按下，并把这个信息，写入 buffer，缓存起来。
 
 KeyScanTask() 通过状态机，用来处理上面说的 edge bounce 和 auto repeat。
 
-![](2018_11_23_esbb_keyboards_image_05.png)
+![](images/2018_11_23_esbb_keyboards/keyboard_flow_chart.png)
+
 
 ### KeyFlush()
 
@@ -55,6 +56,7 @@ void Task(void *pdata)
     }
 }
 ```
+
 
 ### KeyGetKey()
 
@@ -79,6 +81,7 @@ void Task(void *pdata)
 }
 ```
 
+
 ### KeyGetKeyDownTime()
 
 返回"某个 key 一直被按下的持续时长"，并不关心是哪个 key。
@@ -97,6 +100,7 @@ void Task(void *pdata)
 }
 ```
 
+
 ### KeyHit()
 
 是否按下了某个 key，不关心具体哪个 key。
@@ -114,4 +118,3 @@ void Task(void *pdata)
     }
 }
 ```
-
