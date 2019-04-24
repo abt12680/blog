@@ -36,7 +36,7 @@ C:\DEVEL\OW\OWSETENV.BAT
 
 可以在 DOSBox 里面写程序了。
 
-![](2018_11_18_compile_ucos2_image_01.png)
+![](images/2018_11_18_compile_ucos2/owcc_runs.png)
 
 
 **参考资料**

@@ -1,5 +1,4 @@
 ==== TODO ====
- * zeromq, http://kasicass.blog.163.com/blog/static/39561920101118112913724/
  * git, context needs update, http://kasicass.blog.163.com/blog/static/39561920133494116606/
  * shell, http://kasicass.blog.163.com/blog/static/39561920106135629645/
  * net, http://kasicass.blog.163.com/blog/#m=0&t=1&c=fks_087066081082087074093074085074081080080074
@@ -23,6 +22,9 @@
  * html-gen, a crontab, auto run html-gen
 
 ==== DONE ====
+
+2019.04.23
+ * [zeromq] is moved.
 
 2019.01.29
  * [scrum] is moved.

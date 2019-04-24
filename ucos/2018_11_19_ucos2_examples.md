@@ -1,13 +1,14 @@
-# [uC/OS-II] 第一章 - 初始 uC/OS-II
+# [uC/OS-II] 第一章 - 初识 uC/OS-II
 
 嵌入式操作系统，和普通操作系统不同。
 
  * 把嵌入式操作系统看成一个 Library
  * 你的 App 和操作系统的 Library 链接到一起，成为一个 binary
 
+
 ## 范例1 - 多任务处理能力
 
-![](2018_11_18_see_ucos2_runs_image_01.png)
+![](images/2018_11_19_ucos2_examples/example01.png)
 
  * OSxxx 的函数，属于 uC/OS-II 的
  * PC_xxx 函数，属于 x86 平台相关
@@ -52,6 +53,7 @@ void  main(void)
 }
 ```
 
+
 ## 范例2
 
-![](2018_11_19_ucos2_examples_image_01.png)
+![](images/2018_11_19_ucos2_examples/example02.png)
