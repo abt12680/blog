@@ -61,6 +61,7 @@
  * 2d game engine
  * 3d game engine ([Unity3D][4] / [UE4][3])
  * asset producting pipeline (model editor / particle editor / world editor)
+ * [客户端引擎程序员 - 打怪升级路线图][5]
 
 
 ## Language Zoo (L8)
@@ -104,3 +105,4 @@
 [2]:https://github.com/kasicass/blog/blob/master/design-principle/2018_11_28_actor_model.md
 [3]:https://www.unrealengine.com/
 [4]:https://unity.com/
+[5]:https://github.com/kasicass/blog/blob/master/game-dev/2019_04_30_road_to_game_client_coder.md
