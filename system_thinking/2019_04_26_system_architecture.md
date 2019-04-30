@@ -16,7 +16,7 @@ System Architecture
  * 来完成某个特定的功能 (Feature)
 
 
-## 公司组织构建推演
+## 组织系统构建推演
 
 ### 一个人
 
