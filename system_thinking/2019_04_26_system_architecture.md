@@ -50,7 +50,7 @@ System Architecture
  * 家庭系统排列
 
 
-### 7~10个人(Team/创业公司)
+### 7~10个人 (Team/创业公司)
 
  * 创业公司
  * 一个大企业中的某个部门
@@ -58,12 +58,24 @@ System Architecture
 管理方法
 
  * 团队领导力
+ * Scrum [day1][3] / [day2][4]
 
 
-### 公司、集团公司(100+ ~ 10000+ 人)
+### 公司 (100 ~ 1000 人)
 
  * 组织结构慢慢演化
  * 一点一点加人，各种职能部门慢慢分化
+
+管理方法
+
+ * [贝尔宾团队理论(belbin)][2]
+ * LeSS [day1][5] / [day2][6] / [day3][7]
+
+
+### 公司 (1000+ ~ 10000+ 人)
+
+ * 组织非常庞大
+ * 事业群结构
 
 管理方法
 
@@ -96,3 +108,9 @@ System Architecture
 
 
 [1]:https://github.com/kasicass/blog/blob/master/design-principle/2018_11_28_actor_model.md
+[2]:https://github.com/kasicass/blog/blob/master/team-leadership/2019_03_22_belbin.md
+[3]:https://github.com/kasicass/blog/blob/master/scrum/2018_04_13_scrum_master_day_1.md
+[4]:https://github.com/kasicass/blog/blob/master/scrum/2018_04_14_scrum_master_day_2.md
+[5]:https://github.com/kasicass/blog/blob/master/scrum/2019_04_25_clp_day_1.md
+[6]:https://github.com/kasicass/blog/blob/master/scrum/2019_04_26_clp_day_2.md
+[7]:https://github.com/kasicass/blog/blob/master/scrum/2019_04_27_clp_day_3.md
