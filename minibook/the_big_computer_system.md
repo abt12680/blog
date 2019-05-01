@@ -62,6 +62,7 @@
  * 3d game engine ([Unity3D][4] / [UE4][3])
  * asset producting pipeline (model editor / particle editor / world editor)
  * [客户端引擎程序员 - 打怪升级路线图][5]
+ * [Unity3D 学习&进阶之路][6]
 
 
 ## Language Zoo (L8)
@@ -106,3 +107,4 @@
 [3]:https://www.unrealengine.com/
 [4]:https://unity.com/
 [5]:https://github.com/kasicass/blog/blob/master/game-dev/2019_04_30_road_to_game_client_coder.md
+[6]:https://github.com/kasicass/blog/blob/master/unity3d/2019_05_01_road_to_unity3d_coder.md
