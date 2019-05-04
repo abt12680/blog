@@ -25,7 +25,7 @@ Lua or Python
 ## 操作系统API + Linker & Loader
 
  * Steven 的 APUE: 《[Advanced Programming in the UNIX Environment][9]》
- * 《[The Linux Programming Interface: A Linux and UNIX System Programming Handboo][10]》
+ * 《[The Linux Programming Interface: A Linux and UNIX System Programming Handbook][10]》
  * 《[程序员的自我修养--链接、装载与库][12]》
  * 《[Programming PThread][11]》
 
