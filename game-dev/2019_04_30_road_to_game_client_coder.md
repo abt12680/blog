@@ -1,4 +1,4 @@
-# 客户端引擎程序员 - 打怪升级路线图
+# 游戏客户端引擎程序员 - 打怪升级路线图
 
 ## 语言基础
 
@@ -22,10 +22,10 @@ Lua or Python
  * 《[Python源码分析][1]》
 
 
-## 操作系统 + Linker&Loader
+## 操作系统 + Linker & Loader
 
  * 《[Programming Windows 5th][9]》
- * 《[Multithreading Applications in Win32][11]》，侯捷有个翻译版，翻得很好。
+ * 《[Multithreading Applications in Win32][11]》
  * 《[Windows Via C/C++ 5th][10]》
  * 《[程序员的自我修养--链接、装载与库][12]》
 
