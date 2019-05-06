@@ -4,7 +4,7 @@
 
 C
 
- * C语言最佳入门，[http://c.learncodethehardway.org/book/][8]
+ * C语言最佳入门，[https://learncodethehardway.org/c/][8]
  * 《[The C Programming Language][3]》
  * 《[Expert C Programming][4]》
  * 《[C Traps and Pitfalls][5]》
@@ -140,7 +140,7 @@ Single-Process Multi-Threading
 [5]:https://www.amazon.com/C-Traps-Pitfalls-Andrew-Koenig/dp/0201179288/
 [6]:https://www.amazon.com/Interfaces-Implementations-Techniques-Creating-Reusable/dp/0201498413/
 [7]:https://github.com/kasicass/blog/blob/master/cpp/2018_11_23_farewell_cpp.md
-[8]:http://c.learncodethehardway.org/book/
+[8]:https://learncodethehardway.org/c/
 [9]:https://www.amazon.com/Advanced-Programming-UNIX-Environment-3rd/dp/0321637739/
 [10]:https://www.amazon.com/Linux-Programming-Interface-System-Handbook/dp/1593272200/
 [11]:https://github.com/kasicass/blog/blob/master/minibook/programming_pthread.md
