@@ -59,7 +59,7 @@ CPU: Intel(R) Xeon(R) CPU 5130  @ 2.00GHz (1995.01-MHz 686-class CPU)
 
 再画了个图，just for fun~
 
-![](2010_12_06_game_vs_web_image_01.png)
+![](images/2010_12_06_game_vs_web/multi-workers.png)
 
  * gateway, 任务分发, 保证时序
  * db, 修改数据, 保证时序(比如数据库, 保证时序也可能是通过row-lock来保证的, 并不代表db不可以并发)
