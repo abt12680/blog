@@ -4,7 +4,7 @@
 
 许嵩唱的主题曲很好听，[推荐][1]。
 
-![](2018_11_29_tianxia3_ten_years_image_01.png)
+![](images/2018_11_29_tianxia3_ten_years/ten_years.png)
 
 
 [1]:https://music.163.com/#/song?id=1327456179
