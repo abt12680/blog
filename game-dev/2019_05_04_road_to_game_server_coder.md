@@ -84,7 +84,7 @@ POSA Vol.2，[ACE][17] 作者 [Douglas C. Schmidt][18] 的名著，各种 networ
 
 ## Shell入门
 
- * 《[Shell命令偷偷教][13]》
+ * 《[Shell命令偷偷教][13]》，一些 shell 的推荐数目，在这篇文章的附录里。
 
 
 ## Database
@@ -123,7 +123,7 @@ TODO，数据库是弱项，过五年来填坑。:-)
 
 ## Game Server Design
 
-Single-Process Multi-Threading
+Single-Process Multi-Threading Design
 
  * select/epoll/kqueue/IOCP
  * timer (priority-heap / time-wheel)
@@ -131,6 +131,13 @@ Single-Process Multi-Threading
  * AOI
  * Python/Lua embeded
  * database, ORM
+
+Multi-Process Multi-Threading Design
+
+ * 自己的一个玩具项目 (on working)
+ * 设计思路参考 [Akka.NET][42] 和 [ET][43]
+ * [fatserver design][40]
+ * [fatuv benchmark][41]
 
 
 [1]:https://book.douban.com/subject/3117898/
@@ -172,3 +179,7 @@ Single-Process Multi-Threading
 [37]:http://www.redbook.io/
 [38]:https://item.jd.com/11681556.html
 [39]:https://item.jd.com/12458713.html
+[40]:https://github.com/kasicass/blog/blob/master/fatserver/2018_11_29_fatserver_design.md
+[41]:https://github.com/kasicass/blog/blob/master/fatserver/2018_11_03_fatuv_benchmark.md
+[42]:https://github.com/kasicass/blog/blob/master/fatserver/2018_11_28_akka_net.md
+[43]:https://github.com/egametang/ET
