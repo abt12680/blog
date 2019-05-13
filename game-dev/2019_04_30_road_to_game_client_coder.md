@@ -44,10 +44,7 @@ Lua or Python
 
 按着下面的练习做一遍，碰到不懂就看书。图形学是个填不完的坑~
 
-二选一，我推荐 handmadehero，因为有很详细的视频教程。
-
  * [https://handmadehero.org/][14]
- * [http://frustum.org/3d/][15]，从最开始的 demo 开始，用 DX 全部写一遍。
 
 
 ### 基础篇
@@ -101,4 +98,3 @@ Lua or Python
 [12]:https://book.douban.com/subject/3652388/
 [13]:https://en.wikipedia.org/wiki/Windows_Presentation_Foundation
 [14]:https://handmadehero.org/
-[15]:http://frustum.org/3d/
