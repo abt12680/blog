@@ -31,12 +31,51 @@ Scrum 最核心的内容，只有几页纸，称为 Scrum Guide。
  * 《[Agile Game Development with Scrum][13]》，2010年
  * 《[Essential Scrum][3]》，2012年
  * 《[The Great Scrum Master][11]》，2017年
+ * 《[Coaching Agile Teams][18]》，2010年
+ * 《[Coaching the Agile Enterprise][19]》，2019年
 
 《[Agile Game Development with Scrum][13]》，TODO，早年读过，忘光光了，复习之后，来补充评价。
 
 《[Essential Scrum][3]》相当于《[Agile Software Development with Scrum][8]》的威力加强版，写了很多案例，让你更好的理解 Scrum 中的每一个概念。
 
 《[The Great Scrum Master][11]》，TODO
+
+《[Coaching Agile Teams][18]》，TODO
+
+《[Coaching the Agile Enterprise][19]》，TODO
+
+
+## Scrum 伴侣 -- eXtreme Programming
+
+Scrum 只给出了一个框架，很多举例实践细节，可以从 XP 中寻找。Pair Programming、Continuous Integration 等概念，都是出自 XP。
+
+ * 《[Extreme Programming Explained: Embrace Change][20]》，2004年
+ * 《[Planning Extreme Programming][24]》，2000年
+ * 《[Extreme Programming Installed][23]》，2000年
+ * 《[A Practical Guide to eXtreme Programming][24]》，2002年
+ * 《超越传统的软件开发方法——极限编程的幻想与真实》
+
+TODO，重读这些书，再来写笔记。
+
+ * 十年前写的一篇文章《[XP之我见][26]》，将XP中12条practices和游戏行业做了对应
+
+
+## Scrum Alliance (CSM / A-CSM / CSP-SM / CST)
+
+Scrum 作者 [Ken Schwaber][7] 创立了 Scrum Aliance，用商业的方式，让 Scrum 能更广地传播。
+
+ * [https://www.scrumalliance.org/][10]
+
+2018年初，去成都认真学了一遍 Scrum 的课程（CSM，Certified Scrum Master）。把之前的实践，再理论化了一遍。顺便拿了 CSM 的证，持证上岗。:-)
+
+ * [成都CSM培训 - Day 1][4]
+ * [成都CSM培训 - Day 2][5]
+
+其实 Scrum Master 这个名词很有欺骗性，如果是新手，学完 CSM 培训，只算简单入门。想用好 Scrum，需要不断地实践&总结，才能臻至化境。
+
+```
+I'm still on the way.
+```
 
 
 ## LeSS (Large-Scale Scrum)
@@ -63,32 +102,17 @@ LeSS 的理论模型
 My LeSS Learning Road
 
  * [CLP 培训的预习作业][17]
+ * LeSS [day1][20] / [day2][21] / [day3][22]
  * 《Large-Scale Scrum: More with LeSS》读书笔记，TODO
  * 《Scaling Lean & Agile Development》读书笔记，TODO
  * 《Practices for Scaling Lean & Agile Development》读书笔记，TODO
 
 
-## 学习交流
-
-Scrum 作者 [Ken Schwaber][7] 创立了 Scrum Aliance，用商业的方式，让 Scrum 能更广地传播。
-
- * [https://www.scrumalliance.org/][10]
-
-2018年初，去成都认真学了一遍 Scrum 的课程（CSM，Certified Scrum Master）。把之前的实践，再理论化了一遍。顺便考了 CSM 的证，持证上岗。:-)
-
- * [成都CSM培训 - Day 1][4]
- * [成都CSM培训 - Day 2][5]
-
-其实 Scrum Master 这个名词很有欺骗性，如果是新手，学完CSM培训，只算简单入门。想用好 Scrum，需要不断地实践&总结，才能臻至化境。
-
-```
-I'm still on the way.
-```
-
-
 ### 上岗证
 
-![](images/2019_03_14_scrum_books/seal-csm.png)
+![](images/2019_03_14_scrum_books/csm-certificate.png)
+
+![](images/2019_03_14_scrum_books/clp-certificate.png)
 
 
 [1]:https://scrumguides.org/
@@ -108,3 +132,12 @@ I'm still on the way.
 [15]:https://www.amazon.com/Scaling-Lean-Agile-Development-Organizational/dp/0321480961/
 [16]:https://www.amazon.com/Practices-Scaling-Lean-Agile-Development/dp/0321636406/
 [17]:https://github.com/kasicass/blog/blob/master/scrum/2019_03_31_less_preview_homework.md
+[18]:https://www.amazon.com/Coaching-Agile-Teams-ScrumMasters-Addison-Wesley/dp/0321637704/
+[19]:https://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0321278658/
+[20]:https://github.com/kasicass/blog/blob/master/scrum/2019_04_25_clp_day_1.md
+[21]:https://github.com/kasicass/blog/blob/master/scrum/2019_04_26_clp_day_2.md
+[22]:https://github.com/kasicass/blog/blob/master/scrum/2019_04_27_clp_day_3.md
+[23]:https://www.amazon.com/Extreme-Programming-Installed-Ron-Jeffries/dp/0201708426/
+[24]:https://www.amazon.com/Planning-Extreme-Programming-Kent-Beck/dp/0201710919/
+[25]:https://www.amazon.com/Practical-Guide-eXtreme-Programming/dp/0130674826/
+[26]:https://github.com/kasicass/blog/blob/master/scrum/2008_02_28_about_xp.md
