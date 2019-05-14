@@ -219,7 +219,7 @@ emake
 
 龙爷某天给我发了个截图，发现编译好的 .so，import 的时候，会提示：
 
-![](2018_11_07_cmake_and_emake_image_01.png)
+![](images/2018_11_07_cmake_and_emake/link-problem.png)
 
 ```
 /boost/boost/iostreams$ find . -name "*.hpp" | xargs grep sync_flush
