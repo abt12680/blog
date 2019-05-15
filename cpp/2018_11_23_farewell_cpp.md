@@ -25,7 +25,7 @@ jjhou 个人网站（[http://www.jjhou.com][29]）已经无法访问，随着 C+
 
 侯捷还有本《左手程序右手诗》，可惜没能出版。
 
-![](2018_11_23_farewell_cpp_image_07.png)
+![](images/2018_11_23_farewell_cpp/jjhou_books.png)
 
 云课堂上还能看到 [jjhou的课程][31]，还在讲 C++。偶尔也能收到技术培训公司的广告邮件，还能看到 jjhou 的身影。:-)
 
@@ -51,7 +51,7 @@ C++ 有了基础之后，在老师推荐下，开始看 Scott Meyers 的《[Effe
 
 当年人邮出版的这一堆 C++ 书籍，都是红色封面，放在书架上，煞是好看。
 
-![](2018_11_23_farewell_cpp_image_06.png) ![](2018_11_23_farewell_cpp_image_04.png) ![](2018_11_23_farewell_cpp_image_05.png) ![](2018_11_23_farewell_cpp_image_01.png) ![](2018_11_23_farewell_cpp_image_02.png) ![](2018_11_23_farewell_cpp_image_03.png)
+![](images/2018_11_23_farewell_cpp/book_effective_cpp.png) ![](images/2018_11_23_farewell_cpp/book_more_effective_cpp.png) ![](images/2018_11_23_farewell_cpp/book_effective_stl.png) ![](images/2018_11_23_farewell_cpp/book_exceptional_cpp.png) ![](images/2018_11_23_farewell_cpp/book_more_exceptional_cpp.png) ![](images/2018_11_23_farewell_cpp/book_exceptional_cpp_style.png)
 
 上面这些 Effective XXX 太多了，[Herb Sutter][11] 又总结出精华，出了本《[C++ Coding Standards][18]》。我觉得有骗稿费的嫌疑。其实这一大堆 Effective XXX，只需读最早的两本《[Effective C++][8]》《[More Effective C++][9]》就好。
 
@@ -341,7 +341,7 @@ Microsoft、Google 为啥要招牛人？因为**写 C++ 比较耗脑力，一般
 
 最新标准可以看 [https://isocpp.org/std/status][45]
 
-![](2018_11_23_farewell_cpp_image_08.png)
+![](images/2018_11_23_farewell_cpp/cpp_iso.png)
 
 越来越多的模块加入到标准库了，但，对比 Java、Go 等语言，标准库还是不够丰富。
 
