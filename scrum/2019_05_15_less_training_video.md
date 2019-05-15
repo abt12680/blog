@@ -1,5 +1,9 @@
 # LeSS - Training Videos
 
+TODO
+
+https://less.works/user-content/member/Learning-Resources/training-videos.html
+
 ## Ben Maynard - Certified LeSS Practitioner
 
  * [Peter Senge Introduction to Organizational Learning][1]
