@@ -19,6 +19,8 @@ Scrum 最核心的内容，只有几页纸，称为 Scrum Guide。
  * 《[Agile Software Development with Scrum][8]》，2002年
  * 《[The Enterprise and Scrum][9]》，2007年
 
+2008年3月，第一次带项目，关于《[Agile Software Development with Scrum][8]》的[读书笔记]。
+
 《[Agile Software Development with Scrum][8]》基本就是 Scrum Guide 的简单扩容，讲解了 Scrum 的各种基本概念。比如：Backlog、Scrum Master、Product Owner 等等。推荐直接读《[Essential Scrum][3]》，跳过本书就好。
 
 《[The Enterprise and Scrum][9]》，讲解一个大企业如何去应用 Scrum 的。读了一点，还没读完。TODO
@@ -141,3 +143,4 @@ My LeSS Learning Road
 [24]:https://www.amazon.com/Planning-Extreme-Programming-Kent-Beck/dp/0201710919/
 [25]:https://www.amazon.com/Practical-Guide-eXtreme-Programming/dp/0130674826/
 [26]:https://github.com/kasicass/blog/blob/master/scrum/2008_02_28_about_xp.md
+[27]:https://github.com/kasicass/blog/blob/master/scrum/2008_09_26_scrum_basics.md
