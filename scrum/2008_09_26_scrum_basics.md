@@ -1,7 +1,7 @@
 # 关于 Scrum 各个阶段的琐碎记录
 
 
-最近在看Ken Schwaber的《Agile Software Development with Scrum》，多多少少有些感悟，记之。
+最近在看Ken Schwaber的《[Agile Software Development with Scrum][1]》，多多少少有些感悟，记之。
 
 ## The Scrum Master
 
@@ -69,3 +69,6 @@ sprint 开始前的一个讨论会，从 Backlog 中选取优先级高的任务�
  * 程序员本身的能力、经验
  * 开发流程的好坏（与策划/美术的沟通配合）
  * 开发团队的氛围、成员的工作态度
+
+
+[1]:https://www.amazon.com/Agile-Software-Development-Scrum/dp/0130676349/
