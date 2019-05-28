@@ -160,7 +160,7 @@ void ClassName::MethodName(int a, float b) {
 }
 ```
 
-不知道有多少人能记得 [&], [_] 的区别。哈哈。
+不知道有多少人能记得 [&], [=] 的区别。哈哈。
 
 而且内存问题，写得不好就 SEGMENT FAULT，coredump 没商量。
 
