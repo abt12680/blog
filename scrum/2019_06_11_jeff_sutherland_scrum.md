@@ -3,10 +3,10 @@
 "知其然，知其所以然"，理解 Scrum 设计者设计这套规则的由来，可以更好地理解 Scrum。
 
 
-## 推荐视频
+## Useful URL
 
  * [Jeff Sutherland - "Scrum" Talks at Google][1]
-
+ * [Jeff Sutherland - wikipedia][3]
 
 ## 后记
 
@@ -14,4 +14,4 @@
 
 [1]:https://www.youtube.com/watch?v=2L1oBLTICx4
 [2]:https://www.youtube.com/watch?v=oheekef7oJk
-
+[3]:https://en.wikipedia.org/wiki/Jeff_Sutherland
