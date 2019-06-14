@@ -62,7 +62,13 @@ paper airplanes (three roles)
 
 ## CH03 - Teams
 
-TODO
+ * Communication channels = n * (n-1) / 2
+ * Keep your teams small
+ * System Thinking - 环境决定团队的能力/行为
+
+
+## CH04 - Time
+
 
 
 ## Useful URL
