@@ -84,6 +84,18 @@ Lua or Python
  * 《Real-Time Shadows》
 
 
+## 代码
+
+Engine Code
+
+ * [DOOM3 Source Review][16]
+ * [Quake3 Source Review][17]
+
+Collision Detection
+
+ * [OPCODE][15]
+
+
 [1]:https://book.douban.com/subject/3117898/
 [2]:https://book.douban.com/subject/27108476/
 [3]:https://www.amazon.com/Programming-Language-2nd-Brian-Kernighan/dp/0131103628/
@@ -98,3 +110,6 @@ Lua or Python
 [12]:https://book.douban.com/subject/3652388/
 [13]:https://en.wikipedia.org/wiki/Windows_Presentation_Foundation
 [14]:https://handmadehero.org/
+[15]:http://www.codercorner.com/Opcode.htm
+[16]:http://fabiensanglard.net/doom3/index.php
+[17]:http://fabiensanglard.net/quake3/index.php
