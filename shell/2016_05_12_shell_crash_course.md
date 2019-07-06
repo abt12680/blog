@@ -645,6 +645,10 @@ Introduction to the Command Line
  * [https://launchschool.com/books/command_line][8]
  * 这也有本 shell 入门的小书，可以看看
 
+《[Advanced Bash-Scripting Guide][9]》
+
+ * 还没看过 :-)
+
 自己用过的一些 shell 命令的汇总帖 :-)
 
  * TODO
@@ -664,3 +668,4 @@ Introduction to the Command Line
 [6]:http://www.dabeaz.com/generators-uk/
 [7]:https://github.com/justjavac/free-programming-books-zh_CN
 [8]:https://launchschool.com/books/command_line
+[9]:http://tldp.org/LDP/abs/html/
