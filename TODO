@@ -3,7 +3,6 @@
  * net, http://kasicass.blog.163.com/blog/#m=0&t=1&c=fks_087066081082087074093074085074081080080074
  * scm, 
  * freebsd, 
- * django, http://kasicass.blog.163.com/blog/#m=0&t=1&c=fks_087070084084081075085085095095087095084069085095
  * 3d, http://kasicass.blog.163.com/blog/#m=0&t=1&c=fks_094075086082083064083094074064093083087066093
  * 3d_dx11, http://kasicass.blog.163.com/blog/#m=0&t=1&c=fks_085067086082084064086082087095087095084069085095
  * 3d_3dmax, http://kasicass.blog.163.com/blog/#m=0&t=1&c=fks_084064084083084074082082082095087095084069085095
@@ -23,6 +22,7 @@
 ==== DONE ====
 
 2019.07.06
+ * drop all [django] articles.
  * drop all [shell] articles.
 
 2019.04.23
