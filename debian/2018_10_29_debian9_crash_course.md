@@ -223,6 +223,11 @@ bind l select-pan -R
 bind r source ~/.tmux.conf\; display "/.tmux.conf sourced!"
 ```
 
+## 参考资料
+
+ * 《[The Debian Administrator's Handbook - Debian 9][12]》
+
+
 ## 附录1 - 手工配置网络
 
 安装过程中，没找到网络，无法 apt 安装各种 packages。万恶的是，ifconfig 这种工具，都不在 basic system 中。
@@ -271,6 +276,9 @@ $ lsusb -t
 
 [https://wiki.debian.org/WiFi][11]
 
+
+
+
 [1]:http://mirrors.163.com/debian-cd/9.6.0/amd64/iso-cd/
 [2]:http://mirrors.163.com/debian/
 [3]:http://www.freedesktop.org/wiki/Software/systemd/
@@ -282,3 +290,5 @@ $ lsusb -t
 [9]:http://mirrors.163.com/debian-cd/
 [10]:https://item.jd.com/618066.html
 [11]:https://wiki.debian.org/WiFi
+[12]:http://l.github.io/debian-handbook/html/en-US/
+
