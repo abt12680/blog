@@ -464,7 +464,7 @@ int main(int argc, char* argv[])
 
 SecureCRT 中，需要设置 ANSI Color off，才能看到 bold 效果。
 
-![](2018_11_06_ncurses_crash_course_image_02.png)
+![](images/2018_11_06_ncurses_crash_course/ncurses_bold.png)
 
 看看效果。
 
@@ -473,7 +473,7 @@ $ emake simple_attr.c
 $ ./simple_attr simple_attr.c
 ```
 
-![](2018_11_06_ncurses_crash_course_image_01.png)
+![](images/2018_11_06_ncurses_crash_course/securecrt_ansi_color_off.png)
 
 ### 8.2 chgat() functions
 
