@@ -79,6 +79,10 @@
 
  * [SAP01 - Actor Model][2]
 
+参考资料
+
+ * 《[The Architecture of Open Source Applications][7]》
+
 
 ## NOTE
 
@@ -108,3 +112,4 @@
 [4]:https://unity.com/
 [5]:https://github.com/kasicass/blog/blob/master/game-dev/2019_04_30_road_to_game_client_coder.md
 [6]:https://github.com/kasicass/blog/blob/master/unity3d/2019_05_01_road_to_unity3d_coder.md
+[7]:http://aosabook.org/en/index.html

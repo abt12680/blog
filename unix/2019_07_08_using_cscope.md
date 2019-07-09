@@ -3,7 +3,7 @@
 
 ## 官网
 
- * [https://blog.easwy.com/archives/vim-cscope-ctags/][1]
+ * [http://cscope.sourceforge.net/][1]
 
 
 ## 创建索引
@@ -40,4 +40,4 @@ cs add /path/to/cscope.out
 
 vim 中 :help scope 可以看详细介绍。
 
-[1]:https://blog.easwy.com/archives/vim-cscope-ctags/
+[1]:http://cscope.sourceforge.net/
