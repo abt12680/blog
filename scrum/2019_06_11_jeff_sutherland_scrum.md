@@ -70,11 +70,16 @@ paper airplanes (three roles)
 ## CH04 - Time
 
 
+## CH05 - Waste Is a Crime
+
+
+
 
 ## Useful URL
 
  * [Jeff Sutherland - "Scrum" Talks at Google][1]
  * [Jeff Sutherland - wikipedia][3]
+
 
 ## 后记
 
