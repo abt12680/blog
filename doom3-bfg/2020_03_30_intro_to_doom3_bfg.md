@@ -24,6 +24,9 @@ git https://github.com/kasicass/doom3-bfg
 
 ![](images/2020_03_30_intro_to_doom3_bfg/vs2012-setting.png)
 
+Have fun!
+
+![](images/2020_03_30_intro_to_doom3_bfg/doom3.png)
 
 ## 参考资料
 
