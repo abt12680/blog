@@ -30,6 +30,8 @@ Have fun!
 
 ## 参考资料
 
- * [DOOM3 BFG SOURCE CODE REVIEW: INTRODUCTION][1]
+ * [Doom3 Source Code Review][1]
+ * [Doom3-bfg Source Code Review][2]
 
-[1]:https://fabiensanglard.net/doom3_bfg/
+[1]:http://fabiensanglard.net/doom3/
+[2]:https://fabiensanglard.net/doom3_bfg/
